@@ -1,0 +1,259 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=1]
+[ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Menus/Menu.gd" type="Script" id=3]
+[ext_resource path="res://recursos/Imagens/Botão verde.png" type="Texture" id=5]
+[ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=6]
+[ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=7]
+[ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=8]
+[ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=9]
+[ext_resource path="res://recursos/Imagens/Botão verde apertado.png" type="Texture" id=10]
+[ext_resource path="res://Cenas/Animacoes/Genios_animado.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=3]
+size = 75
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 75
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Animacao_texto_botoes"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/comecar/Label_comecar:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/configs_botao/Label_configs:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VBoxContainer/saiba_mais/Label_saiba mais:percent_visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("VBoxContainer/sair/Label_sair:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1110, 699 ), Vector2( 0, 707 ) ]
+}
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="animacao" parent="." instance=ExtResource( 11 )]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Botôes" type="CenterContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1213.0
+margin_bottom = -1.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Botôes"]
+margin_top = 59.0
+margin_right = 1080.0
+margin_bottom = 1152.0
+rect_min_size = Vector2( 1080, 0 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = -5
+alignment = 1
+
+[node name="comecar" type="TextureButton" parent="Botôes/VBoxContainer"]
+margin_left = 75.0
+margin_right = 1005.0
+margin_bottom = 278.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_comecar" type="Label" parent="Botôes/VBoxContainer/comecar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -127.0
+margin_right = 538.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 3 )
+text = "começar"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="configs_botao" type="TextureButton" parent="Botôes/VBoxContainer"]
+margin_left = 75.0
+margin_top = 273.0
+margin_right = 1005.0
+margin_bottom = 551.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_configs" type="Label" parent="Botôes/VBoxContainer/configs_botao"]
+anchor_left = 0.419
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -464.67
+margin_top = -134.0
+margin_right = 538.0
+margin_bottom = 101.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 3 )
+text = "Configurações"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="saiba_mais" type="TextureButton" parent="Botôes/VBoxContainer"]
+margin_left = 75.0
+margin_top = 546.0
+margin_right = 1005.0
+margin_bottom = 824.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_saiba mais" type="Label" parent="Botôes/VBoxContainer/saiba_mais"]
+anchor_left = -0.0769231
+anchor_top = 0.117647
+anchor_right = 1.07479
+anchor_bottom = 0.783088
+custom_fonts/font = SubResource( 4 )
+text = "Saiba mais"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="sair" type="TextureButton" parent="Botôes/VBoxContainer"]
+margin_left = 75.0
+margin_top = 819.0
+margin_right = 1005.0
+margin_bottom = 1093.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_sair" type="Label" parent="Botôes/VBoxContainer/sair"]
+anchor_left = 0.419
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -464.67
+margin_top = -129.0
+margin_right = 538.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 3 )
+text = "Sair"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Animacao_botoes" type="AnimationPlayer" parent="Botôes"]
+playback_process_mode = 0
+method_call_mode = 1
+anims/Animacao_texto_botoes = SubResource( 6 )
+
+[connection signal="pressed" from="Botôes/VBoxContainer/comecar" to="." method="_on_comecar_pressed"]
+[connection signal="pressed" from="Botôes/VBoxContainer/configs_botao" to="." method="_on_configs_botao_pressed"]
+[connection signal="pressed" from="Botôes/VBoxContainer/sair" to="." method="_on_sair_pressed"]

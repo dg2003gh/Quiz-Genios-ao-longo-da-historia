@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pergunta = "Nikola Tesla, não descobriu, mas desiminou e aprimorou o uso da corrente:"
+opcoes = [ "Continua", "Alternada", "Vermelha", "Inversa" ]
+correta = "Alternada"

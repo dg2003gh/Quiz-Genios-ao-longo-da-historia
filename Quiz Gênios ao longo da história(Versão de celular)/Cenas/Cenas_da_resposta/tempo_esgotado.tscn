@@ -1,0 +1,220 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=1]
+[ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=3]
+[ext_resource path="res://recursos/Imagens/relogio.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/cenas_da_resposta/Tempo_esgotado.gd" type="Script" id=5]
+[ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=7]
+[ext_resource path="res://recursos/Audios/Sons/Tempo_acabou.ogg" type="AudioStream" id=8]
+
+[sub_resource type="DynamicFont" id=6]
+size = 100
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 75
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texto:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "animacao_botoes"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Botôes/VBoxContainer/tentar_novamente/txt_tentar_novamente:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Botôes/VBoxContainer/voltar_menu3/txt_voltar:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Texto:percent_visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "animacao_relogio"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Relogio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 550, 376 ), Vector2( 550, 350 ), Vector2( 550, 380 ), Vector2( 550, 350 ), Vector2( 550, 380 ) ]
+}
+
+[node name="tempo_esgotado" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.87451, 0.227451, 0.227451, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Relogio" type="Sprite" parent="."]
+position = Vector2( 550, 376 )
+scale = Vector2( 1.14013, 1.07953 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Texto" type="Label" parent="."]
+anchor_top = 0.453646
+anchor_right = 1.0
+anchor_bottom = 0.603647
+custom_fonts/font = SubResource( 6 )
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Botôes" type="CenterContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = -663.0
+margin_right = 8.0
+margin_bottom = 7.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Botôes"]
+margin_left = 1.0
+margin_top = 61.0
+margin_right = 1081.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 1080, 0 )
+custom_constants/separation = -5
+alignment = 1
+
+[node name="tentar_novamente" type="TextureButton" parent="Botôes/VBoxContainer"]
+margin_left = 75.0
+margin_right = 1005.0
+margin_bottom = 278.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="txt_tentar_novamente" type="Label" parent="Botôes/VBoxContainer/tentar_novamente"]
+anchor_left = -0.0806452
+anchor_right = 1.07312
+anchor_bottom = 0.874101
+custom_fonts/font = SubResource( 1 )
+text = "Tentar 
+novamente"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="voltar_menu3" type="TextureButton" parent="Botôes/VBoxContainer"]
+margin_left = 75.0
+margin_top = 273.0
+margin_right = 1005.0
+margin_bottom = 547.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="txt_voltar" type="Label" parent="Botôes/VBoxContainer/voltar_menu3"]
+anchor_left = -0.0806452
+anchor_top = 0.0182482
+anchor_right = 1.07312
+anchor_bottom = 0.854015
+custom_fonts/font = SubResource( 1 )
+text = "Voltar ao menu"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="voltar_ao_menu" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="animacao" type="AnimationPlayer" parent="."]
+autoplay = "animacao_relogio"
+anims/RESET = SubResource( 7 )
+anims/animacao_botoes = SubResource( 5 )
+anims/animacao_relogio = SubResource( 4 )
+
+[node name="Som_tempo_acabou" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[connection signal="pressed" from="Botôes/VBoxContainer/tentar_novamente" to="." method="_on_tentar_novamente_pressed"]
+[connection signal="pressed" from="Botôes/VBoxContainer/voltar_menu3" to="." method="_on_voltar_menu3_pressed"]
+[connection signal="timeout" from="voltar_ao_menu" to="." method="_on_voltar_ao_menu_timeout"]

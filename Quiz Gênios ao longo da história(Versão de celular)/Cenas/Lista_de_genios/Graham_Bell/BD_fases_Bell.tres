@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=12 format=2]
+
+[ext_resource path="res://resources/banco_de_dados.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_7.tres" type="Resource" id=2]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_9.tres" type="Resource" id=3]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_1.tres" type="Resource" id=4]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_3.tres" type="Resource" id=5]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_10.tres" type="Resource" id=6]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_4.tres" type="Resource" id=7]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_2.tres" type="Resource" id=8]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_8.tres" type="Resource" id=9]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_6.tres" type="Resource" id=10]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/pergunta_5.tres" type="Resource" id=11]
+
+[resource]
+script = ExtResource( 1 )
+questoes = [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 6 ) ]

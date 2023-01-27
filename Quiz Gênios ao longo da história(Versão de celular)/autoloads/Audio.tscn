@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://recursos/Audios/Sons/Resposta_correta.ogg" type="AudioStream" id=1]
+[ext_resource path="res://autoloads/Audio.gd" type="Script" id=2]
+[ext_resource path="res://recursos/Audios/Sons/Temporizador.ogg" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("tocar_musica:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "diminuir_volume"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("tocar_musica:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -80.0 ]
+}
+
+[node name="Audio" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="tocar_musica" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+bus = "Musica"
+
+[node name="Som_botao" type="AudioStreamPlayer2D" parent="."]
+volume_db = -5.0
+bus = "Sons"
+
+[node name="Som_errou" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0
+bus = "Sons"
+
+[node name="Som_acertou" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = 10.0
+bus = "Sons"
+
+[node name="temporizador" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 1
+stream = ExtResource( 3 )
+bus = "Sons"
+
+[node name="Diminuir_volume_animacao" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/diminuir_volume = SubResource( 2 )

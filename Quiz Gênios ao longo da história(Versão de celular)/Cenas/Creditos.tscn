@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Outros/Creditos.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texto:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -21, 1920 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texto:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "txt"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texto:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1920 ), Vector2( 0.5, 319.5 ) ]
+}
+
+[node name="creditos" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="cor_fundo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.462745, 0.772549, 0.290196, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Texto" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -561.0
+margin_top = 960.0
+margin_right = 523.0
+margin_bottom = 2241.0
+custom_fonts/font = SubResource( 3 )
+text = "Créditos
+
+O jogo “Quiz Gênios ao longo da
+História”  foi produzido no programa 
+de pós-graduação EBS/IOC/Fiocruz
+durante a pesquisa de 
+doutoramento 
+de Aline Rinco Dutra Salgado,
+Sob orientação da prof.ª 
+Dra. Cristina Delou, e 
+desenvolvido por
+Douglas Gabriel O. Guimarães
+em parceria com Artur L. Casarim
+e Heitor N. Crochet.
+"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sair" type="TextureButton" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Animacao_txt" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/txt = SubResource( 2 )
+
+[connection signal="pressed" from="Sair" to="." method="_on_Sair_pressed"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pergunta = "Qual destas pinturas não é de da vinci?"
+opcoes = [ "Mona Lisa", "A última Ceia", "A ronda noturna", "Ginevra de'Benci" ]
+correta = "A ronda noturna"

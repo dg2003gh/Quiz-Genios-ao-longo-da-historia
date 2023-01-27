@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://recursos/Bootsplash/bootsplash0.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bootsplash/Bootsplash.gd" type="Script" id=2]
+[ext_resource path="res://recursos/Bootsplash/bootsplash2.png" type="Texture" id=3]
+[ext_resource path="res://recursos/Audios/Músicas/música do bootsplash.ogg" type="AudioStream" id=4]
+[ext_resource path="res://recursos/Bootsplash/bootsplash3.png" type="Texture" id=5]
+[ext_resource path="res://recursos/Bootsplash/bootsplash4.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "bootsplash"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("imagem_bootsplash:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 1, 2.6, 3, 3.5, 4, 5, 5.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cor_in_out:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.6, 5.4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="Bootsplash" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bootsplash_animacao" type="AnimationPlayer" parent="."]
+anims/bootsplash = SubResource( 1 )
+
+[node name="imagem_bootsplash" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cor_in_out" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Musica_bootsplash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+bus = "Musica"

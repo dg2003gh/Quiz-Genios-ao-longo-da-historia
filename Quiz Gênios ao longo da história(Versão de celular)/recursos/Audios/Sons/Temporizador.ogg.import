@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Temporizador.ogg-0a4f508af6ad299ec6bf44e327b94bec.oggstr"
+
+[deps]
+
+source_file="res://recursos/Audios/Sons/Temporizador.ogg"
+dest_files=[ "res://.import/Temporizador.ogg-0a4f508af6ad299ec6bf44e327b94bec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

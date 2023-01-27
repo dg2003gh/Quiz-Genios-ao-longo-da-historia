@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pergunta = "Qual destes filmes conta a história de Turing?"
+opcoes = [ "A teoria de tudo", "O jogo da imitação", "O Mestre dos gênios", "A criação" ]
+correta = "O jogo da imitação"

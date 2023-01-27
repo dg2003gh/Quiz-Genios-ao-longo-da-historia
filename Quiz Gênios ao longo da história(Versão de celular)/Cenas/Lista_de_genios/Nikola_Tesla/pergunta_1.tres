@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pergunta = "Em qual ano Tesla nasceu?"
+opcoes = [ "1856", "1889", "1902", "1872" ]
+correta = "1856"

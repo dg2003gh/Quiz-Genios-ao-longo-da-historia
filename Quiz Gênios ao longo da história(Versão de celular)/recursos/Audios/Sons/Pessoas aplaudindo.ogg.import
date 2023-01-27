@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pessoas aplaudindo.ogg-6ede5b756c67ad925f8bf47fc23b70d5.oggstr"
+
+[deps]
+
+source_file="res://recursos/Audios/Sons/Pessoas aplaudindo.ogg"
+dest_files=[ "res://.import/Pessoas aplaudindo.ogg-6ede5b756c67ad925f8bf47fc23b70d5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

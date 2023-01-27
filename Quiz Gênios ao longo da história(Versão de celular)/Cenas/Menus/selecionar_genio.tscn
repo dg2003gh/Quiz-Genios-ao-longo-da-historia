@@ -1,0 +1,657 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://recursos/Imagens/Albert Einstein(Caixa de Diálogo).png" type="Texture" id=1]
+[ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://recursos/Imagens/Quadro.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Menus/selecionar_genio.gd" type="Script" id=5]
+[ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=7]
+[ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=8]
+[ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=9]
+[ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Seleção:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -8, 370 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "animacao_botoes_texto"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Caixa de diálogo/Quadro:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1601, 186 ), Vector2( 660.271, 185.905 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Caixa de diálogo/genio:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, -192 ), Vector2( 154, 190 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Caixa de diálogo/genio:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 5.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Seleção/VBoxContainer/turing/Label_turing:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Seleção/VBoxContainer/einstein/Label_einstein:percent_visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Seleção/VBoxContainer/darwin/Label_darwin:percent_visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Seleção/VBoxContainer/galileu/Label_galileu:percent_visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Seleção/VBoxContainer/bell/Label_bell:percent_visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Seleção/VBoxContainer/newton/Label_newton:percent_visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Seleção/VBoxContainer/vinci/Label_davinci:percent_visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Seleção:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1417, 369 ), Vector2( -8, 370 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("voltar:rect_position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65, 2051 ), Vector2( 75, 1567 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Caixa de diálogo/Texto_quadro:percent_visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Caixa de diálogo/Texto_quadro:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1232, 88 ), Vector2( 296, 80 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("voltar/Label_voltar:percent_visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="DynamicFont" id=14]
+size = 43
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 75
+font_data = ExtResource( 3 )
+
+[node name="selecionar_genio" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="animacao" type="AnimationPlayer" parent="."]
+autoplay = "animacao_botoes_texto"
+anims/RESET = SubResource( 15 )
+anims/animacao_botoes_texto = SubResource( 8 )
+
+[node name="Caixa de diálogo" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.229687
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Quadro" type="Sprite" parent="Caixa de diálogo"]
+position = Vector2( 660.271, 185.905 )
+scale = Vector2( 0.398382, 0.199182 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="genio" type="Sprite" parent="Caixa de diálogo"]
+position = Vector2( 154, 190 )
+rotation = 0.0174533
+scale = Vector2( 0.256389, 0.244038 )
+texture = ExtResource( 1 )
+
+[node name="Texto_quadro" type="Label" parent="Caixa de diálogo"]
+anchor_left = 0.437036
+anchor_top = -0.253969
+anchor_right = 0.437036
+anchor_bottom = -0.253969
+margin_left = -175.999
+margin_top = 192.0
+margin_right = 1336.0
+margin_bottom = 624.0
+custom_fonts/font = SubResource( 14 )
+text = "Vamos, escolha um destes gênios 
+incríveis e teste seus conhecimentos 
+sobre ele!"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Seleção" type="ScrollContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -548.0
+margin_top = -590.0
+margin_right = 544.0
+margin_bottom = 578.0
+rect_min_size = Vector2( 1080, 0 )
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Seleção"]
+margin_right = 1080.0
+margin_bottom = 2735.0
+rect_min_size = Vector2( 1080, 1080 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = -5
+alignment = 1
+
+[node name="turing" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_right = 1005.0
+margin_bottom = 278.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 2
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_turing" type="Label" parent="Seleção/VBoxContainer/turing"]
+anchor_left = -0.0741935
+anchor_top = 0.0467626
+anchor_right = 1.0871
+anchor_bottom = 0.852518
+margin_bottom = -1.52588e-05
+custom_fonts/font = SubResource( 2 )
+text = "O pai da computação"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="einstein" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 273.0
+margin_right = 1005.0
+margin_bottom = 551.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_einstein" type="Label" parent="Seleção/VBoxContainer/einstein"]
+anchor_left = -0.0741935
+anchor_top = 0.0431655
+anchor_right = 1.09355
+anchor_bottom = 0.848921
+custom_fonts/font = SubResource( 2 )
+text = "O físico teórico 
+que mudou o mundo"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="darwin" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 546.0
+margin_right = 1005.0
+margin_bottom = 824.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_darwin" type="Label" parent="Seleção/VBoxContainer/darwin"]
+anchor_left = -0.0741935
+anchor_top = 0.0359712
+anchor_right = 1.09355
+anchor_bottom = 0.874101
+custom_fonts/font = SubResource( 2 )
+text = "O desbravador da 
+origem das espécies"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="galileu" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 819.0
+margin_right = 1005.0
+margin_bottom = 1097.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_galileu" type="Label" parent="Seleção/VBoxContainer/galileu"]
+anchor_left = -0.0741935
+anchor_top = 0.0359712
+anchor_right = 1.0871
+anchor_bottom = 0.841727
+margin_bottom = -1.52588e-05
+custom_fonts/font = SubResource( 2 )
+text = "O pai da ciência 
+moderna"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="bell" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 1092.0
+margin_right = 1005.0
+margin_bottom = 1370.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_bell" type="Label" parent="Seleção/VBoxContainer/bell"]
+anchor_left = -0.0741935
+anchor_top = 0.0899281
+anchor_right = 1.09355
+anchor_bottom = 0.83813
+custom_fonts/font = SubResource( 2 )
+text = "O homem que 
+conectou o mundo"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="newton" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 1365.0
+margin_right = 1005.0
+margin_bottom = 1643.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_newton" type="Label" parent="Seleção/VBoxContainer/newton"]
+anchor_left = -0.0741935
+anchor_top = 0.136691
+anchor_right = 1.0871
+anchor_bottom = 0.741007
+custom_fonts/font = SubResource( 2 )
+text = "O sir da ciência"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="vinci" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 1638.0
+margin_right = 1005.0
+margin_bottom = 1916.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_davinci" type="Label" parent="Seleção/VBoxContainer/vinci"]
+anchor_left = -0.0741935
+anchor_top = 0.129496
+anchor_right = 1.0871
+anchor_bottom = 0.751799
+custom_fonts/font = SubResource( 2 )
+text = "O inventor a frente 
+do seu tempo"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="dumont" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 1911.0
+margin_right = 1005.0
+margin_bottom = 2189.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_dumont" type="Label" parent="Seleção/VBoxContainer/dumont"]
+anchor_left = -0.0741935
+anchor_top = 0.129496
+anchor_right = 1.09355
+anchor_bottom = 0.748201
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+text = "O homem que voou"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="tesla" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 2184.0
+margin_right = 1005.0
+margin_bottom = 2462.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_tesla" type="Label" parent="Seleção/VBoxContainer/tesla"]
+anchor_left = -0.0741935
+anchor_top = 0.136691
+anchor_right = 1.09355
+anchor_bottom = 0.758993
+margin_bottom = 1.52588e-05
+custom_fonts/font = SubResource( 2 )
+text = "O mestre da 
+eletricidade"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="edison" type="TextureButton" parent="Seleção/VBoxContainer"]
+margin_left = 75.0
+margin_top = 2457.0
+margin_right = 1005.0
+margin_bottom = 2735.0
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_edison" type="Label" parent="Seleção/VBoxContainer/edison"]
+anchor_left = -0.0655914
+anchor_top = 0.136691
+anchor_right = 1.0871
+anchor_bottom = 0.740728
+margin_bottom = 7.07768
+custom_fonts/font = SubResource( 2 )
+text = "O homem de 1001
+Facetas"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="voltar" type="TextureButton" parent="."]
+margin_left = 75.0
+margin_top = 1567.0
+margin_right = 1005.0
+margin_bottom = 1841.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_voltar" type="Label" parent="voltar"]
+anchor_left = -0.0806452
+anchor_top = 0.0328467
+anchor_right = 1.08065
+anchor_bottom = 0.824534
+margin_bottom = 7.07768
+custom_fonts/font = SubResource( 2 )
+text = "Voltar ao menu"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 0.7
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="Seleção/VBoxContainer/turing" to="." method="_on_turing_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/einstein" to="." method="_on_einstein_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/darwin" to="." method="_on_darwin_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/galileu" to="." method="_on_galileu_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/bell" to="." method="_on_bell_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/newton" to="." method="_on_newton_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/vinci" to="." method="_on_vinci_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/dumont" to="." method="_on_dumont_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/tesla" to="." method="_on_tesla_pressed"]
+[connection signal="pressed" from="Seleção/VBoxContainer/edison" to="." method="_on_edison_pressed"]
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

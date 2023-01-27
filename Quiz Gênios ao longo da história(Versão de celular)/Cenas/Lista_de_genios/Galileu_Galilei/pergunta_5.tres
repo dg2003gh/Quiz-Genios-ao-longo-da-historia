@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pergunta = "Quantos filhos ele teve?"
+opcoes = [ "3 filhos", "8 filhos", "7 filhos", "Nenhum" ]
+correta = "3 filhos"

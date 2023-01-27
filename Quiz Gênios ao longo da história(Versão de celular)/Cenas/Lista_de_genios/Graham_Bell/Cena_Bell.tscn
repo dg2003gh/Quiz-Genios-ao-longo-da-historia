@@ -1,0 +1,284 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Cenas/Lista_de_genios/script_jogo.gd" type="Script" id=1]
+[ext_resource path="res://recursos/Imagens/configurações apertado.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Imagens/configurações.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Menus/menu_de_pausa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://recursos/Imagens/Quadro.png" type="Texture" id=5]
+[ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Lista_de_genios/Graham_Bell/BD_fases_Bell.tres" type="Resource" id=7]
+[ext_resource path="res://recursos/Imagens/Graham bell(Caixa de Diálogo).png" type="Texture" id=8]
+[ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=10]
+[ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 35
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 35
+font_data = ExtResource( 9 )
+
+[sub_resource type="Animation" id=17]
+resource_name = "animacao_cena"
+tracks/0/type = "value"
+tracks/0/path = NodePath("texto_quadro:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("foto_genio:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1300, 190 ), Vector2( 150, 190 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("nivel_atual:percent_visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pausar:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1123, 1899 ), Vector2( 975, 1812 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Botoes:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1431, 321 ), Vector2( 43.9999, 394.5 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("nivel_atual:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1456, 248 ), Vector2( 312, 264 ) ]
+}
+
+[sub_resource type="DynamicFont" id=23]
+size = 75
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 930, 278 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 933, 249 )
+
+[node name="pergunta" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+BD = ExtResource( 7 )
+cor_certo = Color( 0.109804, 0.803922, 0.0156863, 1 )
+cor_errado = Color( 0.788235, 0, 0, 1 )
+temporizador_quase_acabando = Color( 0.909804, 0.752941, 0.00392157, 1 )
+temporizador_acabou = Color( 0.788235, 0, 0, 1 )
+infinito = Color( 0.109804, 0.803922, 0.0156863, 1 )
+
+[node name="Fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Gui" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="foto_genio" type="Sprite" parent="Gui"]
+position = Vector2( 150, 190 )
+scale = Vector2( 0.256389, 0.244038 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Quadro" type="Sprite" parent="Gui/foto_genio"]
+position = Vector2( 1974.62, -16.7782 )
+scale = Vector2( 1.55382, 0.816193 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="texto_quadro" type="RichTextLabel" parent="Gui"]
+margin_left = 287.0
+margin_top = 75.0
+margin_right = 1048.0
+margin_bottom = 302.0
+custom_fonts/normal_font = SubResource( 4 )
+
+[node name="Tempo" type="Label" parent="Gui"]
+anchor_left = 0.622222
+anchor_top = 0.1375
+anchor_right = 0.987963
+anchor_bottom = 0.167187
+custom_fonts/font = SubResource( 24 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Timer" type="Timer" parent="Gui/Tempo"]
+pause_mode = 1
+autostart = true
+
+[node name="nivel_atual" type="Label" parent="Gui"]
+anchor_left = 1.34815
+anchor_top = 0.129167
+anchor_right = 1.49352
+anchor_bottom = 0.17429
+margin_left = -1144.0
+margin_top = 15.9993
+margin_right = -987.002
+margin_bottom = 102.635
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Pausar" type="TouchScreenButton" parent="Gui"]
+position = Vector2( 975, 1812 )
+scale = Vector2( 0.292079, 0.310976 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 2 )
+action = "pausar"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="animacao_cena" type="AnimationPlayer" parent="Gui"]
+autoplay = "animacao_cena"
+anims/animacao_cena = SubResource( 17 )
+
+[node name="Botoes" type="VBoxContainer" parent="Gui"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -496.0
+margin_top = -565.5
+margin_right = 495.995
+margin_bottom = 801.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="resposta_1" type="Button" parent="Gui/Botoes"]
+margin_right = 991.0
+margin_bottom = 338.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 20 )
+icon_align = 1
+
+[node name="resposta_2" type="Button" parent="Gui/Botoes"]
+margin_top = 342.0
+margin_right = 991.0
+margin_bottom = 681.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 20 )
+icon_align = 1
+
+[node name="resposta_3" type="Button" parent="Gui/Botoes"]
+margin_top = 685.0
+margin_right = 991.0
+margin_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 20 )
+icon_align = 1
+
+[node name="resposta_4" type="Button" parent="Gui/Botoes"]
+margin_top = 1028.0
+margin_right = 991.0
+margin_bottom = 1367.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 20 )
+icon_align = 1
+
+[node name="menu_de_pausa" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[connection signal="timeout" from="Gui/Tempo/Timer" to="." method="_on_Timer_timeout"]
