@@ -31,51 +31,52 @@ func alterar_foto():
 #---------------------------======---------------------------			
 func animacoes():
 		animacao.play("animacao_botoes_texto")
-	
+		yield(animacao, "animation_finished")
+		animacao.play("loop_genio")
 #---------------------------======---------------------------
 
 #LISTA DE GÊNIOS
 
 func _on_turing_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Alan_Turing/Cena_Turing.tscn")
-	
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "turing"
 func _on_einstein_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Albert_Einstein/Cena_Einstein.tscn")
-
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "einstein"
 func _on_darwin_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Charles_Darwin/Cena_Darwin.tscn")
-
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "darwin"
 func _on_galileu_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Galileu_Galilei/Cena_Galilei.tscn")
-			
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "galilei"	
 func _on_bell_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Graham_Bell/Cena_Bell.tscn") 
-
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "bell"
 func _on_newton_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Issac_Newton/Cena_Newton.tscn")
-
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "newton"
 func _on_vinci_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Leonardo_Davinci/Cena_Davinci.tscn")
-	
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "vinci"
 func _on_dumont_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Santos_Dumont/Cena_Dumont.tscn") 
-	
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "dumont"
 func _on_tesla_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Nikola_Tesla/Cena_Tesla.tscn")
-	
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "tesla"
 func _on_edison_pressed():
 	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Thomas_Edison/Cena_Edison.tscn")
-	
+	Transicao.jogar_transicao("res://Cenas/Lista_de_genios/Cena_principal.tscn")
+	Globais.genio = "edison"
 #---------------------------======---------------------------
 
 func _on_voltar_pressed():

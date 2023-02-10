@@ -17,7 +17,7 @@ var Genio9 = preload("res://recursos/Imagens/Leonardo_Da_Vinci(Caixa de Diálogo
 var Genio10 = preload("res://recursos/Imagens/Thomas Edison(Caixa de Diálogo).png") 
 
 func _ready() -> void:
-		verificar_modo_txt()
+		modo_txt.set_text("Modo atual: Pode relaxar!")
 		alterar_foto()
 		animacoes()
 		
@@ -41,7 +41,9 @@ func verificar_modo_txt():
 
 func animacoes():
 		$animacao.play("animacao_cena")	
-			
+		yield($animacao, "animation_finished")
+		$animacao.play("loop_genio")
+		
 # MODOS DE JOGO.
 		
 func _on_Modo_1_pressed() -> void:

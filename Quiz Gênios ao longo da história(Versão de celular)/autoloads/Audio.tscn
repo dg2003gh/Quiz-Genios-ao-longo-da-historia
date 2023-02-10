@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://recursos/Audios/Sons/Resposta_correta.ogg" type="AudioStream" id=1]
 [ext_resource path="res://autoloads/Audio.gd" type="Script" id=2]
@@ -19,6 +19,21 @@ tracks/0/keys = {
 "values": [ -10.0 ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "aumentar_volume"
+tracks/0/type = "value"
+tracks/0/path = NodePath("tocar_musica:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -25.0, -10.0 ]
+}
+
 [sub_resource type="Animation" id=2]
 resource_name = "diminuir_volume"
 length = 2.0
@@ -32,7 +47,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -10.0, -80.0 ]
+"values": [ -10.0, -25.0 ]
 }
 
 [node name="Audio" type="Node2D"]
@@ -76,6 +91,7 @@ bus = "Sons"
 volume_db = 10.0
 bus = "Sons"
 
-[node name="Diminuir_volume_animacao" type="AnimationPlayer" parent="."]
+[node name="volume_animacao" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
+anims/aumentar_volume = SubResource( 3 )
 anims/diminuir_volume = SubResource( 2 )

@@ -26,13 +26,13 @@ func animacoes():
 		animacao.play("animacao_relogio")
 
 #---------------------------======---------------------------			
-func _on_tentar_novamente_pressed():
+func _on_Jogar_Novamente_pressed():
 	Audio.som_botao()
 	Transicao.jogar_transicao(Globais.cena_anterior)
 
 #---------------------------======---------------------------
 	
-func _on_voltar_menu3_pressed():
+func _on_voltar_menu_pressed():
 	Audio.som_botao()
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
@@ -43,5 +43,3 @@ func _on_voltar_ao_menu_timeout():
 	Audio.som_botao()
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
-
-

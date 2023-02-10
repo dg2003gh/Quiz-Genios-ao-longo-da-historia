@@ -29,7 +29,7 @@ func texto():
 						
 #---------------------------======---------------------------
 	
-func _on_tentar_novamente_pressed():
+func _on_Jogar_Novamente_pressed():
 	Audio.som_botao()
 	Transicao.jogar_transicao(Globais.cena_anterior)
 #---------------------------======---------------------------	
@@ -43,5 +43,4 @@ func _on_voltar_menu_pressed():
 func _on_voltar_ao_menu_timeout():
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
-
 

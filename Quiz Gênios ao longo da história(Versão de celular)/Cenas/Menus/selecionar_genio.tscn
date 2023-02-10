@@ -10,21 +10,6 @@
 [ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=9]
 [ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=10]
 
-[sub_resource type="Animation" id=15]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Seleção:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -8, 370 ) ]
-}
-
 [sub_resource type="Animation" id=8]
 resource_name = "animacao_botoes_texto"
 length = 2.0
@@ -158,7 +143,7 @@ tracks/10/keys = {
 "times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1417, 369 ), Vector2( -8, 370 ) ]
+"values": [ Vector2( 77, 369 ), Vector2( -8, 370 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("voltar:rect_position")
@@ -167,10 +152,10 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 65, 2051 ), Vector2( 75, 1567 ) ]
+"values": [ Vector2( 1200, 1566 ), Vector2( 75, 1567 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("Caixa de diálogo/Texto_quadro:percent_visible")
@@ -208,6 +193,107 @@ tracks/14/keys = {
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
+tracks/15/type = "value"
+tracks/15/path = NodePath("Seleção/VBoxContainer/turing:rect_position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 0 ), Vector2( 75, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Seleção/VBoxContainer/einstein:rect_position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 273 ), Vector2( 75, 273 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Seleção/VBoxContainer/darwin:rect_position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 546 ), Vector2( 75, 546 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Seleção/VBoxContainer/galileu:rect_position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 819 ), Vector2( 75, 819 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Seleção/VBoxContainer/bell:rect_position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 1092 ), Vector2( 75, 1092 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Seleção/VBoxContainer/newton:rect_position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 1365 ), Vector2( 75, 1365 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Seleção/VBoxContainer/vinci:rect_position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 1638 ), Vector2( 75, 1638 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "loop_genio"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Caixa de diálogo/genio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 154, 190 ), Vector2( 154, 195 ), Vector2( 154, 190 ) ]
+}
 
 [sub_resource type="DynamicFont" id=14]
 size = 43
@@ -237,8 +323,8 @@ __meta__ = {
 
 [node name="animacao" type="AnimationPlayer" parent="."]
 autoplay = "animacao_botoes_texto"
-anims/RESET = SubResource( 15 )
 anims/animacao_botoes_texto = SubResource( 8 )
+anims/loop_genio = SubResource( 15 )
 
 [node name="Caixa de diálogo" type="Label" parent="."]
 anchor_right = 1.0
@@ -258,7 +344,6 @@ __meta__ = {
 
 [node name="genio" type="Sprite" parent="Caixa de diálogo"]
 position = Vector2( 154, 190 )
-rotation = 0.0349066
 scale = Vector2( 0.256389, 0.244038 )
 texture = ExtResource( 1 )
 
@@ -270,7 +355,7 @@ anchor_bottom = -0.253969
 margin_left = -175.999
 margin_top = 192.0
 margin_right = 1336.0
-margin_bottom = 623.999
+margin_bottom = 623.994
 custom_fonts/font = SubResource( 14 )
 text = "Vamos, escolha um destes gênios 
 incríveis e teste seus conhecimentos 
@@ -330,7 +415,6 @@ text = "O pai da computação"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -361,7 +445,6 @@ que mudou o mundo"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -392,7 +475,6 @@ origem das espécies"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -424,7 +506,6 @@ moderna"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -455,7 +536,6 @@ conectou o mundo"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -485,7 +565,6 @@ text = "O sir da ciência"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -516,7 +595,6 @@ do seu tempo"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -638,7 +716,6 @@ text = "Voltar ao menu"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true

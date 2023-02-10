@@ -12,15 +12,18 @@ onready var botoes := $Gui/Botoes
 onready var nivel_atual := $Gui/nivel_atual
 onready var tempo :=  $Gui/Tempo
 onready var animacao := $Gui/animacao_cena
+onready var foto := $Gui/foto_genio
 
 var txt_botoes := []
-var segundos1 = 61
-var segundos2= 51
-var segundos3 = 31
+var segundos1 = 60
+var segundos2= 50
+var segundos3 = 30
 var indice := 0
 #---------------------------======---------------------------
 
 func _ready() -> void:
+	
+	genio_escolhido()
 	
 	Globais.cena_anterior = get_tree().current_scene.filename
 	for _botao in botoes.get_children():
@@ -31,8 +34,42 @@ func _ready() -> void:
 #---------------------------======---------------------------
 func animacoes():
 		animacao.play("animacao_cena")
+		yield(animacao, "animation_finished")
+		animacao.play("loop_genio")
 #---------------------------======---------------------------
+func genio_escolhido() -> void:
+	if Globais.genio == "turing":
+		BD = preload("res://Cenas/Lista_de_genios/Alan_Turing/BD_fases_Turing.tres")
+		foto.texture = preload("res://recursos/Imagens/Alan Turing(Caixa de Diálogo).png")
+	elif Globais.genio == "einstein":
+		BD = preload("res://Cenas/Lista_de_genios/Albert_Einstein/BD_fases_Einstein.tres")
+		foto.texture = preload("res://recursos/Imagens/Albert Einstein(Caixa de Diálogo).png")
+	elif Globais.genio == "darwin":
+		BD = preload("res://Cenas/Lista_de_genios/Charles_Darwin/BD_fases_Darwin.tres")
+		foto.texture = preload("res://recursos/Imagens/Charles_Darwin(Caixa de Diálogo).png")		
+	elif Globais.genio == "galilei":
+		BD = preload("res://Cenas/Lista_de_genios/Galileu_Galilei/BD_fases_Galilei.tres")
+		foto.texture = preload("res://recursos/Imagens/Galileu_Galilei(Caixa de Diálogo).png")
+	elif Globais.genio == "bell":
+		BD = preload("res://Cenas/Lista_de_genios/Graham_Bell/BD_fases_Bell.tres")
+		foto.texture = preload("res://recursos/Imagens/Graham bell(Caixa de Diálogo).png")
+	elif Globais.genio == "newton":
+		BD = preload("res://Cenas/Lista_de_genios/Issac_Newton/BD_fases_Newton.tres")
+		foto.texture = preload("res://recursos/Imagens/Issac_Newton(Caixa de Diálogo).png")
+	elif Globais.genio == "vinci":
+		BD = preload("res://Cenas/Lista_de_genios/Leonardo_Davinci/BD_fases_Davinci.tres")
+		foto.texture = preload("res://recursos/Imagens/Leonardo_Da_Vinci(Caixa de Diálogo).png")
+	elif Globais.genio == "dumont":
+		BD = preload("res://Cenas/Lista_de_genios/Santos_Dumont/BD_fases_Dumont.tres")
+		foto.texture = preload("res://recursos/Imagens/Santos Dumont(Caixa de Diálogo).png")
+	elif Globais.genio == "tesla":
+		BD = preload("res://Cenas/Lista_de_genios/Nikola_Tesla/BD_fases_Tesla.tres")
+		foto.texture = preload("res://recursos/Imagens/Nikola Tesla(Caixa de Diálogo).png")
+	else:
+		BD = preload("res://Cenas/Lista_de_genios/Thomas_Edison/BD_fases_Edison.tres")
+		foto.texture = preload("res://recursos/Imagens/Thomas Edison(Caixa de Diálogo).png")
 		
+#---------------------------======---------------------------
 func carregamento_jogo() -> void:
 	if indice >= BD.questoes.size():
 		Transicao.mudar_cena("res://Cenas/Cenas_da_resposta/Certo.tscn") 
@@ -192,7 +229,11 @@ func _on_Timer_timeout():
 				tempo.set_text(str("Tempo restante: 0:0", segundos1))
 				tempo.modulate = temporizador_acabou
 		if segundos1 == -1:
-			Audio.som_temp.stop()
+			Audio.temporizador.stop()
 			if get_tree().change_scene("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
 				print("ERRO AO MUDAR CENA PARA TEMPO ESGOTADO") 
 	
+
+
+func _on_Pausar_pressed():
+	Audio.som_botao()

@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=1]
 [ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=3]
-[ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=4]
-[ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=5]
+[ext_resource path="res://recursos/Imagens/Botão amarelo pressionada.png" type="Texture" id=4]
+[ext_resource path="res://recursos/Imagens/Botão amarelo.png" type="Texture" id=5]
 [ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=8]
 [ext_resource path="res://recursos/Imagens/Quadro.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/Menus/modo_de_jogo.gd" type="Script" id=10]
@@ -13,8 +13,8 @@
 size = 47
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
-size = 30
+[sub_resource type="DynamicFont" id=9]
+size = 35
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -196,16 +196,57 @@ tracks/13/keys = {
 "values": [ 0.0, 1.0 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Caixa_de_diálogo/modo_atual:percent_visible")
+tracks/14/path = NodePath("Caixa_de_diálogo/texto_quadro:rect_position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1627, 69 ), Vector2( 302, 77 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Caixa_de_diálogo/modo_atual:rect_position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1629, 272 ), Vector2( 300, 268 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Caixa_de_diálogo/modo_atual:percent_visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "loop_genio"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Caixa_de_diálogo/genio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 154, 190 ), Vector2( 154, 195 ), Vector2( 154, 190 ) ]
 }
 
 [node name="modo_de_jogo" type="Control"]
@@ -254,27 +295,26 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="modo_atual" type="Label" parent="Caixa_de_diálogo"]
-anchor_left = -0.962018
-anchor_top = -0.0997735
-anchor_right = -0.962018
-anchor_bottom = -0.0997735
-margin_left = -10.9952
-margin_top = 0.000152588
-margin_right = 1688.98
-margin_bottom = 355.0
-custom_fonts/font = SubResource( 6 )
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
 [node name="genio" type="Sprite" parent="Caixa_de_diálogo"]
-position = Vector2( 154, 190 )
+position = Vector2( 154, 191 )
 scale = Vector2( 0.256389, 0.244038 )
 __meta__ = {
 "_edit_lock_": true
+}
+
+[node name="modo_atual" type="Label" parent="Caixa_de_diálogo"]
+anchor_left = 1.50833
+anchor_top = 0.616781
+anchor_right = 1.87685
+anchor_bottom = 0.732428
+margin_left = -1329.0
+margin_top = -3.99985
+margin_right = -1329.0
+margin_bottom = -3.99985
+custom_fonts/font = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
 [node name="Modo_1" type="TextureButton" parent="."]
@@ -411,8 +451,8 @@ margin_right = 1007.0
 margin_bottom = 1883.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -437,6 +477,7 @@ __meta__ = {
 
 [node name="animacao" type="AnimationPlayer" parent="."]
 anims/animacao_cena = SubResource( 8 )
+anims/loop_genio = SubResource( 10 )
 
 [connection signal="pressed" from="Modo_1" to="." method="_on_Modo_1_pressed"]
 [connection signal="pressed" from="Modo_2" to="." method="_on_Modo_2_pressed"]

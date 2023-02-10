@@ -212,7 +212,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Tempo" type="Timer" parent="voltar_menu"]
+[node name="voltar_ao_menu" type="Timer" parent="voltar_menu"]
 wait_time = 60.0
 autostart = true
 
@@ -225,3 +225,7 @@ position = Vector2( 589, -271 )
 rotation = 0.174533
 scale = Vector2( 0.833333, 0.845628 )
 texture = ExtResource( 6 )
+
+[connection signal="pressed" from="Jogar_Novamente" to="." method="_on_Jogar_Novamente_pressed"]
+[connection signal="pressed" from="voltar_menu" to="." method="_on_voltar_menu_pressed"]
+[connection signal="timeout" from="voltar_menu/voltar_ao_menu" to="." method="_on_voltar_ao_menu_timeout"]

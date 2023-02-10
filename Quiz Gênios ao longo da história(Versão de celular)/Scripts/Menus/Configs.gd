@@ -21,18 +21,10 @@ func animacoes():
 func _on_Musica_pressed():
 	Audio.som_botao()
 	AudioServer.set_bus_mute(musicabus, not AudioServer.is_bus_mute(musicabus))
-	if Globais.musica == 0:
-		Globais.musica = 1
-	else:
-		Globais.musica = 0
 	
 func _on_Sons_pressed():
 	Audio.som_botao()
 	AudioServer.set_bus_mute(sonsbus, not AudioServer.is_bus_mute(sonsbus))
-	if Globais.sons == 0:	
-		Globais.sons = 1
-	else:
-		Globais.sons = 0	
 #---------------------------======---------------------------
 		
 func _on_creditos_pressed():

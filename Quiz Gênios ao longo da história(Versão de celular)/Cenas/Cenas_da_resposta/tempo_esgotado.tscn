@@ -217,4 +217,6 @@ autoplay = "animacao_relogio"
 anims/animacao_botoes = SubResource( 9 )
 anims/animacao_relogio = SubResource( 4 )
 
+[connection signal="pressed" from="Jogar_Novamente" to="." method="_on_Jogar_Novamente_pressed"]
+[connection signal="pressed" from="voltar_menu" to="." method="_on_voltar_menu_pressed"]
 [connection signal="timeout" from="voltar_menu/voltar_ao_menu" to="." method="_on_voltar_ao_menu_timeout"]
