@@ -1,26 +1,28 @@
 extends Node2D
 
-onready var player = $tocar_musica
-onready var som_botao_player = $Som_botao
-onready var som_errou = $Som_errou
-onready var som_acertou = $Som_acertou
-onready var som_temp = $temporizador
+onready var tocarMusica = $tocar_musica
 
-
+var musicaBootplash = load("res://recursos/Audios/Músicas/musica_do_bootsplash.ogg")
 var Musica = load("res://recursos/Audios/Músicas/musica_principal.ogg")
-var sombotao = load("res://recursos/Audios/Sons/Som_Botão.ogg")
-var somtransicao = load("res://recursos/Audios/Sons/Começar.ogg")
-var errou = load("res://recursos/Audios/Sons/Errou.ogg")
+var somBotao = load("res://recursos/Audios/Sons/Som_Botão.ogg")
+var somTransicao = load("res://recursos/Audios/Sons/Começar.ogg")
 var acertou = load("res://recursos/Audios/Sons/Resposta_correta.ogg")
+var errou = load("res://recursos/Audios/Sons/Resposta_errada.ogg")
+var cenaAcertou = load("res://recursos/Audios/Sons/cena_resposta_correta.ogg")
+var cenaErrou = load("res://recursos/Audios/Sons/cena_resposta_errada.ogg")
+var cenaTempoEsgotado = load("res://recursos/Audios/Sons/cena_tempo_esgotado.ogg")
 var temp = load("res://recursos/Audios/Sons/Temporizador.ogg")
 
-#MÚSICA
+func musica_bootsplash():
+		$musica_bootsplash.stream = musicaBootplash
+		$musica_bootsplash.play()
+		
 func tocar_musica():
 	
-	player.stream = Musica
-	if player.playing == false:
-		player.play()
-		player.volume_db = 0
+	tocarMusica.stream = Musica
+	if tocarMusica.playing == false:
+		tocarMusica.play()
+		tocarMusica.volume_db = 0
 	
 func diminuir_volume():
 	$Diminuir_volume_animacao.play("diminuir_volume")		
@@ -29,18 +31,30 @@ func diminuir_volume():
 
 #SONS
 func som_botao():
-		som_botao_player.stream = sombotao
-		som_botao_player.play()
-		yield(som_botao_player, "finished")
+		$Som_botao.stream = somBotao
+		$Som_botao.play()
+		yield($Som_botao, "finished")
 
+func cena_resposta_errada_som():
+	$Som_cena_errou.stream = cenaErrou
+	$Som_cena_errou.play()
+	
 func errou_som():
-	som_errou.stream = errou
-	som_errou.play()
+	$Som_errou.stream = errou
+	$Som_errou.play()
 
+func cena_resposta_correta_som():
+	$Som_cena_acertou.stream = cenaAcertou
+	$Som_cena_acertou.play()
+	
 func acertou_som():
-	som_acertou.stream = acertou
-	som_acertou.play()
+	$Som_acertou.stream = acertou
+	$Som_acertou.play()
 
+func cena_tempo_esgotado_som():
+	$Som_cena_tempo_esgotado.stream = cenaTempoEsgotado
+	$Som_cena_tempo_esgotado.play()
+	
 func temporizador():	
-		som_temp.stream = temp
-		som_temp.play()
+		$temporizador.stream = temp
+		$temporizador.play()

@@ -6,6 +6,8 @@ func _process(_delta):
 	if Input.is_action_pressed("pausar") && self.visible == false:
 		$"som_botão".play()
 		animacao.play("animacao_botoes")
+		yield(animacao,"animation_finished")
+		animacao.play("animacao_pausado")
 		get_tree().paused = true 
 		self.visible = true
 	else: 

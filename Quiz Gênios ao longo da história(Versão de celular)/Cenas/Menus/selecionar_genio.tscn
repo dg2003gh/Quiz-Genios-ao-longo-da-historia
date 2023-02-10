@@ -155,10 +155,10 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.7 ),
+"times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -1417, 369 ), Vector2( -8, 370 ) ]
+"values": [ Vector2( 1417, 369 ), Vector2( -8, 370 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("voltar:rect_position")
@@ -258,7 +258,7 @@ __meta__ = {
 
 [node name="genio" type="Sprite" parent="Caixa de diálogo"]
 position = Vector2( 154, 190 )
-rotation = 0.0174533
+rotation = 0.0349066
 scale = Vector2( 0.256389, 0.244038 )
 texture = ExtResource( 1 )
 
@@ -270,7 +270,7 @@ anchor_bottom = -0.253969
 margin_left = -175.999
 margin_top = 192.0
 margin_right = 1336.0
-margin_bottom = 624.0
+margin_bottom = 623.999
 custom_fonts/font = SubResource( 14 )
 text = "Vamos, escolha um destes gênios 
 incríveis e teste seus conhecimentos 
@@ -330,7 +330,7 @@ text = "O pai da computação"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -361,7 +361,7 @@ que mudou o mundo"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -392,7 +392,7 @@ origem das espécies"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -424,7 +424,7 @@ moderna"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -455,7 +455,7 @@ conectou o mundo"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -485,7 +485,7 @@ text = "O sir da ciência"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -516,7 +516,7 @@ do seu tempo"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -638,7 +638,7 @@ text = "Voltar ao menu"
 align = 1
 valign = 1
 uppercase = true
-percent_visible = 0.7
+percent_visible = 0.55
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true

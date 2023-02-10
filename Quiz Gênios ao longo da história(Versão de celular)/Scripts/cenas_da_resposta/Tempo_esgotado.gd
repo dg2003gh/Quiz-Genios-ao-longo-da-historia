@@ -20,6 +20,7 @@ func texto():
 		$Texto.set_text(str(txt))
 #---------------------------======---------------------------	
 func animacoes():
+		Audio.cena_tempo_esgotado_som()
 		animacao.play("animacao_botoes")
 		yield(animacao, "animation_finished")
 		animacao.play("animacao_relogio")

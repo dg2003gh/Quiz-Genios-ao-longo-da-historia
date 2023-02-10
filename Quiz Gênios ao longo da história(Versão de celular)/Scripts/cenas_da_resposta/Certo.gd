@@ -13,28 +13,29 @@ var textos = [
 	"Legal,\n  você respondeu tão rápido!",
 	"Clica, clica, clica. \n Você sabe todas! "	
 ]
+
 func _ready():
-	
 	animacoes()
-	if Globais.modo_de_jogo == 2 or Globais.modo_de_jogo == 4:
+	if Globais.modo_de_jogo == 2 or  4:
 		texto2()
 		pontuacao()
 	else:
-			texto()
+		texto()
 func animacoes():
+		Audio.cena_resposta_correta_som()
 		animacao.play("animacao_botoes")
 		yield(animacao,"animation_finished" )
 		animacao.play("animacao_simbolo_certo")
-		$som_acertou.play()
 		
 #---------------------------======---------------------------
 
 func texto():
-		for txt in textos:
+		for texto in textos:
 			randomize()
 			textos.shuffle()
-			$Texto.set_text(str(txt))
+			$Texto.set_text(str(texto))
 
+#---------------------------======---------------------------
 func texto2():
 	if Globais.pontos <= 4:
 		txt.set_text(str("É... parece que você precisa dar",
@@ -48,26 +49,28 @@ func texto2():
 		
 #---------------------------======---------------------------		
 func pontuacao():
-	if Globais.modo_de_jogo == 2:
+	if Globais.modo_de_jogo == 2 or 4:
 		pontuacao_txt.show()
 		pontuacao_txt.set_text(str("Parabéns, sua pontuação foi ", Globais.pontos, "/10!!!")) 
 		Globais.pontos = 0
 	else:
 		pontuacao_txt.hide()
-#---------------------------======---------------------------
 
-func _on_Tempo_timeout():
-	Audio.tocar_musica()
-	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
 #---------------------------======---------------------------
 
 func _on_Jogar_Novamente_pressed():
 	Audio.som_botao()
 	Transicao.mudar_cena("res://Cenas/Menus/modo_de_jogo.tscn")
+	
 #---------------------------======---------------------------
 
-func _on_voltar_menu3_pressed():
+func _on_voltar_menu_pressed():
 	Audio.som_botao()
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
+	
+#---------------------------======---------------------------
 
+func _on_voltar_ao_menu_timeout():
+	Audio.tocar_musica()
+	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")

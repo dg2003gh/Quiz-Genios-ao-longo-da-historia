@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bootsplash1.png-7396e63c2f6d909fdab5fde735d4c106.stex"
+path="res://.import/Godot3.png-961fb708384c1023778ebfef53360c4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/Bootsplash/bootsplash1.png"
-dest_files=[ "res://.import/bootsplash1.png-7396e63c2f6d909fdab5fde735d4c106.stex" ]
+source_file="res://recursos/Bootsplash/Godot3.png"
+dest_files=[ "res://.import/Godot3.png-961fb708384c1023778ebfef53360c4a.stex" ]
 
 [params]
 

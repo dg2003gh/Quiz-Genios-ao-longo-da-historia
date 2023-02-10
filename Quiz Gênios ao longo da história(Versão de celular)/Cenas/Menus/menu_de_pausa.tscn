@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Menus/menu_de_pausa.gd" type="Script" id=1]
 [ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
@@ -21,6 +21,21 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=4]
 size = 75
 font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Pausado_frase:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 60, 171 ) ]
+}
 
 [sub_resource type="Animation" id=5]
 tracks/0/type = "value"
@@ -70,6 +85,23 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "animacao_pausado"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Pausado_frase:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, 170 ), Vector2( 55, 180 ), Vector2( 55, 170 ) ]
 }
 
 [sub_resource type="DynamicFont" id=6]
@@ -133,6 +165,7 @@ text = "voltar ao jogo"
 align = 1
 valign = 1
 uppercase = true
+percent_visible = 0.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -161,6 +194,7 @@ text = "saiba mais"
 align = 1
 valign = 1
 uppercase = true
+percent_visible = 0.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -189,6 +223,7 @@ text = "avalie-nos"
 align = 1
 valign = 1
 uppercase = true
+percent_visible = 0.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -217,6 +252,7 @@ text = "Voltar ao menu"
 align = 1
 valign = 1
 uppercase = true
+percent_visible = 0.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -226,12 +262,14 @@ __meta__ = {
 pause_mode = 2
 root_node = NodePath("../Botôes/VBoxContainer")
 autoplay = "animacao_botoes"
+anims/RESET = SubResource( 7 )
 anims/animacao_botoes = SubResource( 5 )
+anims/animacao_pausado = SubResource( 8 )
 
 [node name="Pausado_frase" type="Label" parent="."]
-margin_left = 57.0
+margin_left = 60.0
 margin_top = 171.0
-margin_right = 1096.0
+margin_right = 1099.0
 margin_bottom = 575.0
 custom_fonts/font = SubResource( 6 )
 text = "Pausado"

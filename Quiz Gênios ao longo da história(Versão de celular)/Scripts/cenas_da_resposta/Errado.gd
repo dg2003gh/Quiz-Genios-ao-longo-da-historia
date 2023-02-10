@@ -14,8 +14,8 @@ func _ready():
 #---------------------------======---------------------------	
 
 func animacoes():
+		Audio.cena_resposta_errada_som()
 		animacao.play("animacao_botoes")
-		$Som_resposta_errada.play()
 		yield(animacao, "animation_finished")
 		animacao.play("animacao_simbolo")
 			
@@ -34,7 +34,7 @@ func _on_tentar_novamente_pressed():
 	Transicao.jogar_transicao(Globais.cena_anterior)
 #---------------------------======---------------------------	
 
-func _on_voltar_menu3_pressed():
+func _on_voltar_menu_pressed():
 	Audio.som_botao()
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")

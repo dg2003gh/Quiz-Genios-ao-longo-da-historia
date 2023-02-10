@@ -1,18 +1,15 @@
 extends Control
 
-onready var animacao_genios := $animacao/AnimationPlayer
-onready var animacao_botoes := $"Botôes/Animacao_botoes"
-
 func _ready():
 	animacoes()
 	
 #---------------------------======---------------------------
 
 func animacoes():
-		animacao_genios.play("Genios")
-		animacao_botoes.play("Animacao_texto_botoes")
-		yield(animacao_genios,"animation_finished")
-		animacao_genios.play("Genios2")
+		$animacoes.play("animacao_inicial")
+		yield($animacoes,"animation_finished")
+		$animacoes.play("animacao_genios_loop")
+		
 #---------------------------======---------------------------
 
 func _on_comecar_pressed():

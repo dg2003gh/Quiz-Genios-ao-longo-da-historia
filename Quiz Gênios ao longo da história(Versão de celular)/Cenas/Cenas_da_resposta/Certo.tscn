@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://recursos/Audios/Sons/Pessoas aplaudindo.ogg" type="AudioStream" id=1]
 [ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://recursos/Imagens/Sinal_acerto.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/cenas_da_resposta/Certo.gd" type="Script" id=6]
@@ -9,58 +8,43 @@
 [ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=10]
 [ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=11]
 
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=6]
 size = 75
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 60
-font_data = ExtResource( 3 )
-
-[sub_resource type="Animation" id=8]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Texto:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-
 [sub_resource type="Animation" id=7]
 resource_name = "animacao_botoes"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Pontuacao:percent_visible")
+tracks/0/path = NodePath("voltar_menu:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Vector2( -1000, 1606 ), Vector2( 77, 1606 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Botôes/VBoxContainer/Jogar_Novamente/txt_jogar_novamente:percent_visible")
+tracks/1/path = NodePath("Jogar_Novamente:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Vector2( 1100, 1334 ), Vector2( 77, 1334 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Botôes/VBoxContainer/voltar_menu3/txt_voltar:percent_visible")
+tracks/2/path = NodePath("Jogar_Novamente/txt_jogar_novamente:percent_visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -72,12 +56,36 @@ tracks/2/keys = {
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Texto:percent_visible")
+tracks/3/path = NodePath("voltar_menu/txt_voltar:percent_visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pontuacao:percent_visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Texto:percent_visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -125,32 +133,40 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Botôes" type="CenterContainer" parent="."]
-anchor_top = 1.0
+[node name="Texto" type="Label" parent="."]
+anchor_top = 0.5125
 anchor_right = 1.0
+anchor_bottom = 0.662501
+custom_fonts/font = SubResource( 5 )
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Pontuacao" type="Label" parent="."]
+visible = false
+anchor_top = 0.435417
+anchor_right = 1.0
+anchor_bottom = 0.465104
+custom_fonts/font = SubResource( 5 )
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Jogar_Novamente" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = -702.0
-margin_right = 8.0
-margin_bottom = -32.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Botôes"]
-margin_left = 3.0
-margin_top = 61.0
-margin_right = 1083.0
-margin_bottom = 608.0
-rect_min_size = Vector2( 1080, 0 )
-size_flags_horizontal = 4
-size_flags_vertical = 4
-custom_constants/separation = -5
-alignment = 1
-
-[node name="Jogar_Novamente" type="TextureButton" parent="Botôes/VBoxContainer"]
-margin_left = 75.0
-margin_right = 1005.0
-margin_bottom = 278.0
+margin_left = 558.0
+margin_top = -586.0
+margin_right = 1488.0
+margin_bottom = -308.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 8 )
@@ -159,7 +175,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="txt_jogar_novamente" type="Label" parent="Botôes/VBoxContainer/Jogar_Novamente"]
+[node name="txt_jogar_novamente" type="Label" parent="Jogar_Novamente"]
 anchor_left = -0.0806452
 anchor_right = 1.07312
 anchor_bottom = 0.874101
@@ -169,16 +185,21 @@ Novamente"
 align = 1
 valign = 1
 uppercase = true
+percent_visible = 0.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="voltar_menu3" type="TextureButton" parent="Botôes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 273.0
-margin_right = 1005.0
-margin_bottom = 547.0
+[node name="voltar_menu" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1542.0
+margin_top = -314.0
+margin_right = -612.0
+margin_bottom = -40.0
 size_flags_horizontal = 4
 size_flags_vertical = 2
 texture_normal = ExtResource( 11 )
@@ -187,7 +208,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="txt_voltar" type="Label" parent="Botôes/VBoxContainer/voltar_menu3"]
+[node name="txt_voltar" type="Label" parent="voltar_menu"]
 anchor_left = -0.0892473
 anchor_top = 0.138686
 anchor_right = 1.07097
@@ -197,47 +218,20 @@ text = "Voltar ao menu"
 align = 1
 valign = 1
 uppercase = true
+percent_visible = 0.0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="Texto" type="Label" parent="."]
-anchor_top = 0.5125
-anchor_right = 1.0
-anchor_bottom = 0.662501
-custom_fonts/font = SubResource( 5 )
-align = 1
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="animacao" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 8 )
-anims/animacao_botoes = SubResource( 7 )
-anims/animacao_simbolo_certo = SubResource( 4 )
-
-[node name="Pontuacao" type="Label" parent="."]
-visible = false
-anchor_top = 0.435417
-anchor_right = 1.0
-anchor_bottom = 0.465104
-custom_fonts/font = SubResource( 5 )
-align = 1
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="Tempo" type="Timer" parent="."]
+[node name="voltar_ao_menu" type="Timer" parent="voltar_menu"]
 wait_time = 60.0
 autostart = true
 
-[node name="som_acertou" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 1 )
-volume_db = 5.0
+[node name="animacao" type="AnimationPlayer" parent="."]
+anims/animacao_botoes = SubResource( 7 )
+anims/animacao_simbolo_certo = SubResource( 4 )
 
-[connection signal="pressed" from="Botôes/VBoxContainer/Jogar_Novamente" to="." method="_on_Jogar_Novamente_pressed"]
-[connection signal="pressed" from="Botôes/VBoxContainer/voltar_menu3" to="." method="_on_voltar_menu3_pressed"]
-[connection signal="timeout" from="Tempo" to="." method="_on_Tempo_timeout"]
+[connection signal="pressed" from="Jogar_Novamente" to="." method="_on_Jogar_Novamente_pressed"]
+[connection signal="pressed" from="voltar_menu" to="." method="_on_voltar_menu3_pressed"]
+[connection signal="timeout" from="voltar_menu/voltar_ao_menu" to="." method="_on_Tempo_timeout"]

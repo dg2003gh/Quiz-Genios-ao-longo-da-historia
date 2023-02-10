@@ -38,6 +38,10 @@ tracks/0/keys = {
 [node name="Audio" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="musica_bootsplash" type="AudioStreamPlayer2D" parent="."]
+volume_db = -5.0
+bus = "Sons"
+
 [node name="tocar_musica" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.0
 bus = "Musica"
@@ -58,6 +62,18 @@ bus = "Sons"
 [node name="temporizador" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 1
 stream = ExtResource( 3 )
+bus = "Sons"
+
+[node name="Som_cena_acertou" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0
+bus = "Sons"
+
+[node name="Som_cena_errou" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0
+bus = "Sons"
+
+[node name="Som_cena_tempo_esgotado" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0
 bus = "Sons"
 
 [node name="Diminuir_volume_animacao" type="AnimationPlayer" parent="."]

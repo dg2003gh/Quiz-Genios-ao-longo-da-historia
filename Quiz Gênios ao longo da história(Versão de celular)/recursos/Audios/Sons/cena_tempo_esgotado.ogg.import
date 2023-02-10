@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cena_tempo_esgotado.ogg-773af63dcb5930fac09ffebd87bd9757.oggstr"
+
+[deps]
+
+source_file="res://recursos/Audios/Sons/cena_tempo_esgotado.ogg"
+dest_files=[ "res://.import/cena_tempo_esgotado.ogg-773af63dcb5930fac09ffebd87bd9757.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

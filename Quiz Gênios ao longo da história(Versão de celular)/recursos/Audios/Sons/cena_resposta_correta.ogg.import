@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cena_resposta_correta.ogg-df8fc0740cab29334117f15ed76bccd0.oggstr"
+
+[deps]
+
+source_file="res://recursos/Audios/Sons/cena_resposta_correta.ogg"
+dest_files=[ "res://.import/cena_resposta_correta.ogg-df8fc0740cab29334117f15ed76bccd0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

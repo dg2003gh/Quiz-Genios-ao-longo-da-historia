@@ -1,9 +1,8 @@
 extends Control
 
-onready var animacao := $"Botoes/Animacao_botoes"
-onready var modo_txt := $"Caixa de diálogo/modo_atual"
-onready var quadro_txt := $"Caixa de diálogo/texto_quadro"
-onready var foto_caixa_de_dialogo = $"Caixa de diálogo/Gênio"
+onready var modo_txt := $"Caixa_de_diálogo/modo_atual"
+onready var quadro_txt := $"Caixa_de_diálogo/texto_quadro"
+onready var foto_caixa_de_dialogo = $"Caixa_de_diálogo/genio"
 
 
 var Genio1 = preload("res://recursos/Imagens/Albert Einstein(Caixa de Diálogo).png")
@@ -32,16 +31,16 @@ func alterar_foto():
 
 func verificar_modo_txt():
 	if Globais.modo_de_jogo == 4:
-		modo_txt.set_text(str("Modo atual: Pode relaxar!"))
+		modo_txt.set_text("Modo atual: Pode relaxar!")
 	elif Globais.modo_de_jogo == 3:
-		modo_txt.set_text(str("Modo atual: Bate e pronto!"))		
+		modo_txt.set_text("Modo atual: Bate e pronto!")		
 	elif Globais.modo_de_jogo == 2:
-		modo_txt.set_text(str("Modo atual: No final veremos!"))
+		modo_txt.set_text("Modo atual: No final veremos!")
 	else:
-		modo_txt.set_text(str("Modo atual: Não Erre!"))
+		modo_txt.set_text("Modo atual: Não Erre!")
 
 func animacoes():
-		animacao.play("Animacao_texto_botoes")	
+		$animacao.play("animacao_cena")	
 			
 # MODOS DE JOGO.
 		

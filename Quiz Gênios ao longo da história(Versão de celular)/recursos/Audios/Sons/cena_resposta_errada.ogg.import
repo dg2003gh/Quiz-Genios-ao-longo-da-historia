@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cena_resposta_errada.ogg-18fe4ac1a6b0bcd61aaa327b458f1787.oggstr"
+
+[deps]
+
+source_file="res://recursos/Audios/Sons/cena_resposta_errada.ogg"
+dest_files=[ "res://.import/cena_resposta_errada.ogg-18fe4ac1a6b0bcd61aaa327b458f1787.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

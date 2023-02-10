@@ -1,21 +1,20 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=1]
 [ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=3]
 [ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=4]
 [ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=5]
-[ext_resource path="res://recursos/Imagens/Graham bell(Caixa de Diálogo).png" type="Texture" id=7]
 [ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=8]
 [ext_resource path="res://recursos/Imagens/Quadro.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/Menus/modo_de_jogo.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=7]
-size = 46
+size = 47
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 40
+size = 30
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -26,164 +25,187 @@ font_data = ExtResource( 2 )
 size = 75
 font_data = ExtResource( 2 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "Animacao_texto_botoes"
-length = 1.5
+[sub_resource type="Animation" id=8]
+resource_name = "animacao_cena"
 tracks/0/type = "value"
-tracks/0/path = NodePath("VBoxContainer/Modo_1/Label_modo_1:percent_visible")
+tracks/0/path = NodePath("Modo_1:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Vector2( 1200, 521 ), Vector2( 77, 521 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("VBoxContainer/Modo_2/Label_modo_2:percent_visible")
+tracks/1/path = NodePath("Modo_2:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Vector2( 1200, 793 ), Vector2( 77, 793 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("VBoxContainer/Modo_3/Label_modo_3:percent_visible")
+tracks/2/path = NodePath("Modo_3:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Vector2( 1200, 1065 ), Vector2( 77, 1065 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("VBoxContainer/Modo_4/Label_modo_4:percent_visible")
+tracks/3/path = NodePath("Modo_4:rect_position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Vector2( 1200, 1337 ), Vector2( 77, 1337 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("VBoxContainer/Modo_4/Label_modo_4:lines_skipped")
+tracks/4/path = NodePath("continuar:rect_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 1609 ), Vector2( 77, 1609 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../Caixa de diálogo/modo_atual:percent_visible")
+tracks/5/path = NodePath("Modo_1/Label_modo_1:percent_visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Caixa de diálogo/texto_quadro:percent_visible")
+tracks/6/path = NodePath("Modo_2/Label_modo_2:percent_visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../Caixa de diálogo/Gênio:position")
+tracks/7/path = NodePath("Modo_3/Label_modo_3:percent_visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.7 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -230, -105 ), Vector2( 155.998, 186 ) ]
+"values": [ 0.0, 1.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../Caixa de diálogo/Quadro:position")
+tracks/8/path = NodePath("Modo_4/Label_modo_4:percent_visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1738, -142 ), Vector2( 647, 186 ) ]
+"values": [ 0.0, 1.0 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../Caixa de diálogo/Gênio:rotation_degrees")
+tracks/9/path = NodePath("continuar/Label_continuar:percent_visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 1.2 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -15.0, 0.0 ]
+"values": [ 0.0, 1.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath(".:rect_position")
+tracks/10/path = NodePath("Caixa_de_diálogo/Quadro:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 9, 1972 ), Vector2( 0, 419 ) ]
+"values": [ Vector2( 2000, 185.905 ), Vector2( 660.271, 185.905 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Caixa de diálogo/texto_quadro:rect_position")
+tracks/11/path = NodePath("Caixa_de_diálogo/genio:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1384, -264 ), Vector2( 282, 57 ) ]
+"values": [ Vector2( -200, -300 ), Vector2( 154, 190 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../Caixa de diálogo/modo_atual:rect_position")
+tracks/12/path = NodePath("Caixa_de_diálogo/genio:rotation_degrees")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1360, -72 ), Vector2( 287, 260 ) ]
+"values": [ 20.0, 0.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Caixa_de_diálogo/texto_quadro:percent_visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Caixa_de_diálogo/modo_atual:percent_visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
 }
 
 [node name="modo_de_jogo" type="Control"]
@@ -202,7 +224,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Caixa de diálogo" type="Label" parent="."]
+[node name="Caixa_de_diálogo" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 0.229687
 __meta__ = {
@@ -210,24 +232,21 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Quadro" type="Sprite" parent="Caixa de diálogo"]
-position = Vector2( 647, 186 )
+[node name="Quadro" type="Sprite" parent="Caixa_de_diálogo"]
+position = Vector2( 660.271, 185.905 )
 scale = Vector2( 0.398382, 0.199182 )
 texture = ExtResource( 9 )
-
-[node name="Gênio" type="Sprite" parent="Caixa de diálogo"]
-position = Vector2( 148, 189 )
-scale = Vector2( 0.256389, 0.244038 )
-texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="texto_quadro" type="RichTextLabel" parent="Caixa de diálogo"]
-margin_left = 296.0
-margin_top = 71.0
-margin_right = 1057.0
-margin_bottom = 331.0
+[node name="texto_quadro" type="RichTextLabel" parent="Caixa_de_diálogo"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -238.0
+margin_top = 77.0
+margin_right = 501.0
+margin_bottom = 293.0
 custom_fonts/normal_font = SubResource( 7 )
 text = "Escolha um entre estes modos incríveis e desafie-se! Selecione 
 e saiba mais sobre cada um."
@@ -235,15 +254,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="modo_atual" type="Label" parent="Caixa de diálogo"]
-anchor_left = 1.26944
-anchor_top = -0.163266
-anchor_right = 1.58425
-anchor_bottom = -0.00226758
-margin_left = -1073.0
-margin_top = 332.0
-margin_right = 626.97
-margin_bottom = 687.0
+[node name="modo_atual" type="Label" parent="Caixa_de_diálogo"]
+anchor_left = -0.962018
+anchor_top = -0.0997735
+anchor_right = -0.962018
+anchor_bottom = -0.0997735
+margin_left = -10.9952
+margin_top = 0.000152588
+margin_right = 1688.98
+margin_bottom = 355.0
 custom_fonts/font = SubResource( 6 )
 uppercase = true
 __meta__ = {
@@ -251,44 +270,28 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Botoes" type="CenterContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -541.0
-margin_right = 540.0
-margin_bottom = 889.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Botoes"]
-margin_top = 2.0
-margin_right = 1080.0
-margin_bottom = 1428.0
-rect_min_size = Vector2( 1080, 0 )
-size_flags_horizontal = 4
-size_flags_vertical = 4
-custom_constants/separation = 10
-alignment = 1
+[node name="genio" type="Sprite" parent="Caixa_de_diálogo"]
+position = Vector2( 154, 190 )
+scale = Vector2( 0.256389, 0.244038 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Modo_1" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_right = 1005.0
-margin_bottom = 278.0
+[node name="Modo_1" type="TextureButton" parent="."]
+margin_left = 77.0
+margin_top = 521.0
+margin_right = 1007.0
+margin_bottom = 799.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label_modo_1" type="Label" parent="Botoes/VBoxContainer/Modo_1"]
+[node name="Label_modo_1" type="Label" parent="Modo_1"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -306,20 +309,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Modo_2" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 288.0
-margin_right = 1005.0
-margin_bottom = 566.0
+[node name="Modo_2" type="TextureButton" parent="."]
+margin_left = 77.0
+margin_top = 793.0
+margin_right = 1007.0
+margin_bottom = 1071.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label_modo_2" type="Label" parent="Botoes/VBoxContainer/Modo_2"]
+[node name="Label_modo_2" type="Label" parent="Modo_2"]
 anchor_left = 0.419
 anchor_top = 0.5
 anchor_right = 0.5
@@ -339,20 +343,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Modo_3" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 576.0
-margin_right = 1005.0
-margin_bottom = 854.0
+[node name="Modo_3" type="TextureButton" parent="."]
+margin_left = 77.0
+margin_top = 1065.0
+margin_right = 1007.0
+margin_bottom = 1343.0
 size_flags_horizontal = 4
 size_flags_vertical = 2
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label_modo_3" type="Label" parent="Botoes/VBoxContainer/Modo_3"]
+[node name="Label_modo_3" type="Label" parent="Modo_3"]
 anchor_left = -0.083871
 anchor_top = 0.140288
 anchor_right = 1.07849
@@ -367,20 +372,21 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Modo_4" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 864.0
-margin_right = 1005.0
-margin_bottom = 1142.0
+[node name="Modo_4" type="TextureButton" parent="."]
+margin_left = 77.0
+margin_top = 1337.0
+margin_right = 1007.0
+margin_bottom = 1615.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label_modo_4" type="Label" parent="Botoes/VBoxContainer/Modo_4"]
+[node name="Label_modo_4" type="Label" parent="Modo_4"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -398,11 +404,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="continuar" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 1152.0
-margin_right = 1005.0
-margin_bottom = 1426.0
+[node name="continuar" type="TextureButton" parent="."]
+margin_left = 77.0
+margin_top = 1609.0
+margin_right = 1007.0
+margin_bottom = 1883.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 4 )
@@ -411,7 +417,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label_continuar" type="Label" parent="Botoes/VBoxContainer/continuar"]
+[node name="Label_continuar" type="Label" parent="continuar"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -429,13 +435,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Animacao_botoes" type="AnimationPlayer" parent="Botoes"]
-playback_process_mode = 0
-method_call_mode = 1
-anims/Animacao_texto_botoes = SubResource( 3 )
+[node name="animacao" type="AnimationPlayer" parent="."]
+anims/animacao_cena = SubResource( 8 )
 
-[connection signal="pressed" from="Botoes/VBoxContainer/Modo_1" to="." method="_on_Modo_1_pressed"]
-[connection signal="pressed" from="Botoes/VBoxContainer/Modo_2" to="." method="_on_Modo_2_pressed"]
-[connection signal="pressed" from="Botoes/VBoxContainer/Modo_3" to="." method="_on_Modo_3_pressed"]
-[connection signal="pressed" from="Botoes/VBoxContainer/Modo_4" to="." method="_on_Modo_4_pressed"]
-[connection signal="pressed" from="Botoes/VBoxContainer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Modo_1" to="." method="_on_Modo_1_pressed"]
+[connection signal="pressed" from="Modo_2" to="." method="_on_Modo_2_pressed"]
+[connection signal="pressed" from="Modo_3" to="." method="_on_Modo_3_pressed"]
+[connection signal="pressed" from="Modo_4" to="." method="_on_Modo_4_pressed"]
+[connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

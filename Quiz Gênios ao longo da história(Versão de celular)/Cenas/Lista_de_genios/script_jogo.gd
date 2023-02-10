@@ -133,12 +133,11 @@ func modo4(_botao) -> void :
 		Audio.acertou_som()
 		_botao.modulate = cor_certo
 		_botao.disabled = true
+		Globais.pontos += 1
 	else:
 		Audio.errou_som()
 		_botao.disabled = true
 		_botao.modulate = cor_errado
-		if get_tree().change_scene("res://Cenas/Cenas_da_resposta/Errado.tscn") != OK:
-			print("UM ERRO OCORREU AO TENTAR MUDAR PARA A CENA DE ERRADO!!!")
 			
 	yield(get_tree().create_timer(0.2), "timeout")
 	for bt in txt_botoes:
