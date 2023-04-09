@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/cena_tempo_esgotado.ogg-773af63dcb5930fac09ffebd87bd9757.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgta7cqrc6fk"
+path="res://.godot/imported/cena_tempo_esgotado.ogg-773af63dcb5930fac09ffebd87bd9757.oggvorbisstr"
 
 [deps]
 
 source_file="res://recursos/Audios/Sons/cena_tempo_esgotado.ogg"
-dest_files=[ "res://.import/cena_tempo_esgotado.ogg-773af63dcb5930fac09ffebd87bd9757.oggstr" ]
+dest_files=["res://.godot/imported/cena_tempo_esgotado.ogg-773af63dcb5930fac09ffebd87bd9757.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

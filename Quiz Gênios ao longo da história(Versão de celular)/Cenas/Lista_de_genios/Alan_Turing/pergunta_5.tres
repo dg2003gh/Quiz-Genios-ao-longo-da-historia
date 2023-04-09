@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource( 1 )
 pergunta = "Qual o nome da máquina que decifrou os códigos nazistas?"
-opcoes = [ "Light", "Código", "Bomba", "Decifrador" ]
+opcoes = [ "Light3D", "Código", "Bomba", "Decifrador" ]
 correta = "Bomba"

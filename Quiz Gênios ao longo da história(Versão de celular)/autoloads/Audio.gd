@@ -1,7 +1,7 @@
 extends Node2D
 
-onready var tocarMusica = $tocar_musica
-onready var temporizador = $temporizador
+@onready var tocarMusica = $tocar_musica
+@onready var tempNode = $temporizador
 
 var musicaBootplash = load("res://recursos/Audios/Músicas/musica_do_bootsplash.ogg")
 var Musica = load("res://recursos/Audios/Músicas/musica_principal.ogg")
@@ -35,7 +35,7 @@ func aumentar_volume():
 func som_botao():
 		$Som_botao.stream = somBotao
 		$Som_botao.play()
-		yield($Som_botao, "finished")
+		await $Som_botao.finished
 
 func cena_resposta_errada_som():
 	$Som_cena_errou.stream = cenaErrou
@@ -58,5 +58,5 @@ func cena_tempo_esgotado_som():
 	$Som_cena_tempo_esgotado.play()
 	
 func temporizador():	
-		temporizador.stream = temp
-		temporizador.play()
+		tempNode.stream = temp
+		tempNode.play()

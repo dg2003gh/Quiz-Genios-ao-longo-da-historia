@@ -1,270 +1,228 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=15 format=3 uid="uid://cqje1t5uaeym2"]
 
-[ext_resource path="res://Scripts/Menus/menu_de_pausa.gd" type="Script" id=1]
-[ext_resource path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://recursos/Imagens/Fundo.png" type="Texture" id=3]
-[ext_resource path="res://recursos/Imagens/Botão.png" type="Texture" id=4]
-[ext_resource path="res://recursos/Imagens/Botão vermelho apertado.png" type="Texture" id=5]
-[ext_resource path="res://recursos/Imagens/Botão vermelho.png" type="Texture" id=6]
-[ext_resource path="res://recursos/Imagens/Botão verde.png" type="Texture" id=7]
-[ext_resource path="res://recursos/Imagens/Botão verde apertado.png" type="Texture" id=8]
-[ext_resource path="res://recursos/Imagens/Botão apertado.png" type="Texture" id=9]
-[ext_resource path="res://recursos/Imagens/configurações.png" type="Texture" id=10]
-[ext_resource path="res://recursos/Imagens/Botão_Avaliar_pressionado.png" type="Texture" id=11]
-[ext_resource path="res://recursos/Imagens/Botão_Avaliar.png" type="Texture" id=12]
+[ext_resource type="Script" path="res://Scripts/Menus/menu_de_pausa.gd" id="1_ojta3"]
+[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://recursos/Imagens/Fundo.png" id="2_1qdpd"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="3_mmtcd"]
+[ext_resource type="Texture2D" uid="uid://di1054d2fux31" path="res://recursos/Imagens/configurações.png" id="4_mshq1"]
 
-[sub_resource type="DynamicFont" id=6]
-size = 160
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="FontFile_un44h"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("3_mmtcd")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/200/0/ascent = 0.0
+cache/0/200/0/descent = 0.0
+cache/0/200/0/underline_position = 0.0
+cache/0/200/0/underline_thickness = 0.0
+cache/0/200/0/scale = 1.0
+cache/0/200/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/200/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/200/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/200/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/150/0/ascent = 0.0
+cache/0/150/0/descent = 0.0
+cache/0/150/0/underline_position = 0.0
+cache/0/150/0/underline_thickness = 0.0
+cache/0/150/0/scale = 1.0
+cache/0/150/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/150/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=3]
-size = 75
-font_data = ExtResource( 2 )
+[sub_resource type="FontVariation" id="FontVariation_hetwk"]
+base_font = ExtResource("3_mmtcd")
 
-[sub_resource type="DynamicFont" id=4]
-size = 75
-font_data = ExtResource( 2 )
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pajsj"]
+bg_color = Color(0, 0.756863, 1, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
-[sub_resource type="Animation" id=5]
-tracks/0/type = "value"
-tracks/0/path = NodePath("voltar_menu/txt_voltar_ao_menu:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("avalie-nos/txt_avalie-nos:percent_visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("saiba_mais/txt_saiba_mais:percent_visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("voltar_ao_jogo/txt_voltar_ao_jogo:percent_visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avrll"]
+bg_color = Color(0.470588, 0.835294, 1, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
-[sub_resource type="Animation" id=8]
-resource_name = "animacao_pausado"
-length = 3.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../Pausado_frase:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 55, 170 ), Vector2( 55, 175 ), Vector2( 55, 170 ) ]
-}
+[sub_resource type="FontVariation" id="FontVariation_bmvit"]
+base_font = ExtResource("3_mmtcd")
 
-[node name="menu_de_pausa" type="CanvasLayer"]
-script = ExtResource( 1 )
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0quk"]
+bg_color = Color(0.0985251, 0.862252, 0, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7ynt"]
+bg_color = Color(0.532515, 1, 0.489938, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="FontVariation" id="FontVariation_jq61o"]
+base_font = ExtResource("3_mmtcd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe4ry"]
+bg_color = Color(1, 0, 0, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4xiu"]
+bg_color = Color(1, 0.664335, 0.611911, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="menu_de_pausa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ojta3")
+metadata/_edit_lock_ = true
 
 [node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1qdpd")
+metadata/_edit_lock_ = true
 
 [node name="Pausado_frase" type="Label" parent="."]
-margin_left = 55.0
-margin_top = 174.657
-margin_right = 1094.0
-margin_bottom = 578.659
-custom_fonts/font = SubResource( 6 )
+layout_mode = 0
+offset_left = 312.0
+offset_top = 352.0
+offset_right = 1034.0
+offset_bottom = 524.0
+theme_override_fonts/font = SubResource("FontFile_un44h")
+theme_override_font_sizes/font_size = 150
 text = "Pausado"
-valign = 1
 uppercase = true
-__meta__ = {
-"_edit_lock_": true
-}
+metadata/_edit_lock_ = true
 
-[node name="pausado_imagem" type="Sprite" parent="Pausado_frase"]
-position = Vector2( 902, 208 )
-scale = Vector2( 0.481435, 0.46189 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="pausado_img" type="Sprite2D" parent="Pausado_frase"]
+position = Vector2(-131.5, 88)
+scale = Vector2(0.512376, 0.554878)
+texture = ExtResource("4_mshq1")
+metadata/_edit_lock_ = true
 
-[node name="Botoes" type="CenterContainer" parent="."]
-pause_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 461.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Voltar_ao_jogo" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -260.0
+offset_right = 465.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_hetwk")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_pajsj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_avrll")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_avrll")
+theme_override_styles/focus = SubResource("StyleBoxFlat_avrll")
+text = "Voltar ao jogo"
+metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Botoes"]
-margin_top = 183.0
-margin_right = 1080.0
-margin_bottom = 1276.0
-rect_min_size = Vector2( 1080, 0 )
-size_flags_horizontal = 4
-size_flags_vertical = 4
-custom_constants/separation = -5
-alignment = 1
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="avalie_nos" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = 40.0
+offset_right = 465.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_hetwk")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_pajsj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_avrll")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_avrll")
+theme_override_styles/focus = SubResource("StyleBoxFlat_avrll")
+text = "Avalie-nos"
+metadata/_edit_lock_ = true
 
-[node name="voltar_ao_jogo" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_right = 1005.0
-margin_bottom = 278.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Saiba_mais" type="Button" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 1300.0
+offset_right = 1007.0
+offset_bottom = 1550.0
+theme_override_fonts/font = SubResource("FontVariation_bmvit")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0quk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n7ynt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n7ynt")
+theme_override_styles/focus = SubResource("StyleBoxFlat_n7ynt")
+text = "Saiba mais"
+metadata/_edit_lock_ = true
 
-[node name="txt_voltar_ao_jogo" type="Label" parent="Botoes/VBoxContainer/voltar_ao_jogo"]
-anchor_left = -0.083871
-anchor_top = 0.028777
-anchor_right = 1.07849
-anchor_bottom = 0.845324
-custom_fonts/font = SubResource( 3 )
-text = "voltar ao jogo"
-align = 1
-valign = 1
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 1600.0
+offset_right = 1007.0
+offset_bottom = 1850.0
+theme_override_fonts/font = SubResource("FontVariation_jq61o")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe4ry")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h4xiu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h4xiu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h4xiu")
+text = "Voltar ao Menu"
+metadata/_edit_lock_ = true
 
-[node name="saiba_mais" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 273.0
-margin_right = 1005.0
-margin_bottom = 551.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="txt_saiba_mais" type="Label" parent="Botoes/VBoxContainer/saiba_mais"]
-anchor_left = -0.0972222
-anchor_top = 0.0367647
-anchor_right = 1.07372
-anchor_bottom = 0.838235
-custom_fonts/font = SubResource( 3 )
-text = "saiba mais"
-align = 1
-valign = 1
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="avalie-nos" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 546.0
-margin_right = 1005.0
-margin_bottom = 824.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 11 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="txt_avalie-nos" type="Label" parent="Botoes/VBoxContainer/avalie-nos"]
-anchor_left = -0.109677
-anchor_top = 0.0179856
-anchor_right = 1.06452
-anchor_bottom = 0.906475
-custom_fonts/font = SubResource( 3 )
-text = "avalie-nos"
-align = 1
-valign = 1
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="voltar_menu" type="TextureButton" parent="Botoes/VBoxContainer"]
-margin_left = 75.0
-margin_top = 819.0
-margin_right = 1005.0
-margin_bottom = 1093.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="txt_voltar_ao_menu" type="Label" parent="Botoes/VBoxContainer/voltar_menu"]
-anchor_left = -0.0795699
-anchor_top = 0.0182518
-anchor_right = 1.08065
-anchor_bottom = 0.854018
-custom_fonts/font = SubResource( 4 )
-text = "Voltar ao menu"
-align = 1
-valign = 1
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="animacao" type="AnimationPlayer" parent="."]
-pause_mode = 2
-root_node = NodePath("../Botoes/VBoxContainer")
-autoplay = "animacao_botoes"
-anims/animacao_botoes = SubResource( 5 )
-anims/animacao_pausado = SubResource( 8 )
-
-[connection signal="pressed" from="Botoes/VBoxContainer/voltar_ao_jogo" to="." method="_on_voltar_ao_jogo_pressed"]
-[connection signal="pressed" from="Botoes/VBoxContainer/voltar_menu" to="." method="_on_voltar_menu_pressed"]
+[connection signal="pressed" from="avalie_nos" to="." method="_on_avalie_nos_pressed"]

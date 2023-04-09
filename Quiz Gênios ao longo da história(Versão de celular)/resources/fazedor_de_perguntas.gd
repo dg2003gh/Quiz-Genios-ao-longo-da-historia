@@ -1,6 +1,6 @@
 extends Resource
 class_name pergunta
 
-export(String) var pergunta
-export(Array, String) var opcoes
-export(String) var correta
+@export var pergunta: String
+@export var opcoes: Array[String] 
+@export var correta: String

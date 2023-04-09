@@ -1,17 +1,17 @@
-[gd_resource type="Resource" load_steps=12 format=2]
+[gd_resource type="Resource" script_class="BD" load_steps=12 format=3 uid="uid://dqoq3eaftljr0"]
 
-[ext_resource path="res://resources/banco_de_dados.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_6.tres" type="Resource" id=2]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_10.tres" type="Resource" id=3]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_2.tres" type="Resource" id=4]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_5.tres" type="Resource" id=5]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_7.tres" type="Resource" id=6]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_1.tres" type="Resource" id=7]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_9.tres" type="Resource" id=8]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_3.tres" type="Resource" id=9]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_8.tres" type="Resource" id=10]
-[ext_resource path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_4.tres" type="Resource" id=11]
+[ext_resource type="Script" path="res://resources/banco_de_dados.gd" id="1"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_6.tres" id="2"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_10.tres" id="3"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_2.tres" id="4"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_5.tres" id="5"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_7.tres" id="6"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_1.tres" id="7"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_9.tres" id="8"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_3.tres" id="9"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_8.tres" id="10"]
+[ext_resource type="Resource" path="res://Cenas/Lista_de_genios/Issac_Newton/pergunta_4.tres" id="11"]
 
 [resource]
-script = ExtResource( 1 )
-questoes = [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 3 ) ]
+script = ExtResource("1")
+questoes = Array[Resource]([ExtResource("7"), ExtResource("4"), ExtResource("9"), ExtResource("11"), ExtResource("5"), ExtResource("2"), ExtResource("6"), ExtResource("10"), ExtResource("8"), ExtResource("3")])

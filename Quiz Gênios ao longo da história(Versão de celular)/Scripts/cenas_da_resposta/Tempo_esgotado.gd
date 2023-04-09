@@ -1,6 +1,6 @@
 extends Control
 
-onready var animacao := $animacao
+@onready var animacao := $animacao
 
 var textos = ["Tic-tac, Tic-tac,\n Tic-tac...", 
 			"O tempo acabou!\n Olha, está até saindo\n fumaça da sua caixola!", 
@@ -10,7 +10,7 @@ var textos = ["Tic-tac, Tic-tac,\n Tic-tac...",
 
 func _ready():
 	texto()
-	animacoes()
+	#animacoes()
 	
 #---------------------------======---------------------------
 func texto():
@@ -22,7 +22,7 @@ func texto():
 func animacoes():
 		Audio.cena_tempo_esgotado_som()
 		animacao.play("animacao_botoes")
-		yield(animacao, "animation_finished")
+		await animacao.animation_finished
 		animacao.play("animacao_relogio")
 
 #---------------------------======---------------------------			
@@ -32,7 +32,7 @@ func _on_Jogar_Novamente_pressed():
 
 #---------------------------======---------------------------
 	
-func _on_voltar_menu_pressed():
+func _on_voltar_pressed():
 	Audio.som_botao()
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")

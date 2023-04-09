@@ -1,6 +1,6 @@
 extends Control
 
-onready var animacao := $animacao
+@onready var animacao := $animacao
 
 var textos = ["Você errou, mas \n tudo bem, \né só tentar outra vez! ",
 			"Isso acontece, \nfica traquilo, é só \ntentar mais uma vez!", 
@@ -9,14 +9,14 @@ var textos = ["Você errou, mas \n tudo bem, \né só tentar outra vez! ",
 			"Tranquilo,\n volta no almanaque e\n depois tenta de novo." ]
 
 func _ready():
-	animacoes()
+	#animacoes()
 	texto()
 #---------------------------======---------------------------	
 
 func animacoes():
 		Audio.cena_resposta_errada_som()
 		animacao.play("animacao_botoes")
-		yield(animacao, "animation_finished")
+		await animacao.animation_finished
 		animacao.play("animacao_simbolo")
 			
 #---------------------------======---------------------------	
@@ -34,7 +34,7 @@ func _on_Jogar_Novamente_pressed():
 	Transicao.jogar_transicao(Globais.cena_anterior)
 #---------------------------======---------------------------	
 
-func _on_voltar_menu_pressed():
+func _on_voltar_pressed():
 	Audio.som_botao()
 	Audio.tocar_musica()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")

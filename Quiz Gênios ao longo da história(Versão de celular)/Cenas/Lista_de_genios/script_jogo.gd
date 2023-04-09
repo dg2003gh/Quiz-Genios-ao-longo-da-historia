@@ -1,40 +1,35 @@
 extends Control
 
-export(Resource) var BD
-export(Color) var cor_certo 
-export(Color) var cor_errado
-export(Color) var temporizador_quase_acabando
-export(Color) var temporizador_acabou
-export(Color) var infinito
+@export var BD: Resource
+@export var cor_certo: Color 
+@export var cor_errado: Color
 
-onready var pergunta := $Gui/texto_quadro
-onready var botoes := $Gui/Botoes
-onready var nivel_atual := $Gui/nivel_atual
-onready var tempo :=  $Gui/Tempo
-onready var animacao := $Gui/animacao_cena
-onready var foto := $Gui/foto_genio
+@onready var pergunta := $Gui/texto_quadro
+@onready var botoes := $Botoes
+@onready var nivel_atual := $Gui/nivel_atual
+@onready var tempo :=  $Gui/Tempo
+@onready var animacao := $animacao_cena
+@onready var foto := $Gui/foto_genio
 
 var txt_botoes := []
-var segundos1 = 60
-var segundos2= 50
-var segundos3 = 30
 var indice := 0
+
 #---------------------------======---------------------------
 
 func _ready() -> void:
 	
 	genio_escolhido()
 	
-	Globais.cena_anterior = get_tree().current_scene.filename
+	Globais.cena_anterior = get_tree().current_scene.scene_file_path
 	for _botao in botoes.get_children():
 		txt_botoes.append(_botao)
 	
-	animacoes()
+	#animacoes()
 	carregamento_jogo()
 #---------------------------======---------------------------
 func animacoes():
 		animacao.play("animacao_cena")
-		yield(animacao, "animation_finished")
+		await animacao.animation_finished
 		animacao.play("loop_genio")
 #---------------------------======---------------------------
 func genio_escolhido() -> void:
@@ -78,7 +73,9 @@ func carregamento_jogo() -> void:
 		var Questoes = BD.questoes
 		
 		pergunta.set_text(str(Questoes[indice].pergunta))
-		nivel_atual.set_text(str(indice + 1, "ª Pergunta"))
+		
+		nivel_atual.bbcode_enabled = true
+		nivel_atual.set_text(str("[color=#e8c001]", indice + 1, "ª[/color] Pergunta"))
 		
 		var opcoes = BD.questoes[indice].opcoes
 		randomize()
@@ -88,13 +85,14 @@ func carregamento_jogo() -> void:
 				txt_botoes[i].set_text(str(opcoes[i]))
 				
 				if Globais.modo_de_jogo == 4:
-					txt_botoes[i].connect("pressed", self, "modo4", [txt_botoes[i]])
+					txt_botoes[i].connect("pressed", Callable(self, "modo4").bind(txt_botoes[i]))
 				elif Globais.modo_de_jogo == 3:
-					txt_botoes[i].connect("pressed", self, "modo3", [txt_botoes[i]]) 
+					txt_botoes[i].connect("pressed", Callable(self, "modo3").bind(txt_botoes[i])) 
 				elif Globais.modo_de_jogo == 2:
-					txt_botoes[i].connect("pressed", self, "modo2", [txt_botoes[i]])
+					txt_botoes[i].connect("pressed", Callable(self, "modo2").bind(txt_botoes[i]))
 				else:
-					txt_botoes[i].connect("pressed", self, "modo1", [txt_botoes[i]])
+					txt_botoes[i].connect("pressed", Callable(self, "modo1").bind(txt_botoes[i]))
+					
 #---------------------------======---------------------------
 # NÃO ERRE		
 func modo1(_botao) -> void :
@@ -106,13 +104,13 @@ func modo1(_botao) -> void :
 		Audio.errou_som()
 		_botao.modulate = cor_errado
 		_botao.disabled = true
-		if get_tree().change_scene("res://Cenas/Cenas_da_resposta/Errado.tscn") != OK:
+		if get_tree().change_scene_to_file("res://Cenas/Cenas_da_resposta/Errado.tscn") != OK:
 			print("UM ERRO OCORREU AO TENTAR MUDAR PARA A CENA DE ERRADO!!!")
 		
-	yield(get_tree().create_timer(0.2), "timeout")
+	await get_tree().create_timer(0.2).timeout
 	for bt in txt_botoes:
-		bt.modulate = Color.white
-		bt.disconnect("pressed", self, "modo1")
+		bt.modulate = Color.WHITE
+		bt.disconnect("pressed", Callable(self, "modo1"))
 	
 	_botao.disabled = false
 	indice += 1
@@ -131,10 +129,10 @@ func modo2(_botao) -> void :
 		_botao.modulate = cor_errado
 		_botao.disabled = true
 		
-	yield(get_tree().create_timer(0.2), "timeout")
+	await get_tree().create_timer(0.2).timeout
 	for bt in txt_botoes:
-		bt.modulate = Color.white
-		bt.disconnect("pressed", self, "modo2")
+		bt.modulate = Color.WHITE
+		bt.disconnect("pressed", Callable(self, "modo2"))
 	
 	_botao.disabled = false
 	indice += 1
@@ -151,13 +149,13 @@ func modo3(_botao) -> void :
 		Audio.errou_som()
 		_botao.modulate = cor_errado
 		_botao.disabled = true
-		if get_tree().change_scene("res://Cenas/Cenas_da_resposta/Errado.tscn") != OK:
+		if get_tree().change_scene_to_file("res://Cenas/Cenas_da_resposta/Errado.tscn") != OK:
 			print("UM ERRO OCORREU AO TENTAR MUDAR PARA A CENA DE ERRADO!!!")
 		
-	yield(get_tree().create_timer(0.2), "timeout")
+	await get_tree().create_timer(0.2).timeout
 	for bt in txt_botoes:
-		bt.modulate = Color.white
-		bt.disconnect("pressed", self, "modo3")
+		bt.modulate = Color.WHITE
+		bt.disconnect("pressed", Callable(self, "modo3"))
 	
 	_botao.disabled = false
 	indice += 1
@@ -176,10 +174,10 @@ func modo4(_botao) -> void :
 		_botao.disabled = true
 		_botao.modulate = cor_errado
 			
-	yield(get_tree().create_timer(0.2), "timeout")
+	await get_tree().create_timer(0.2).timeout
 	for bt in txt_botoes:
-		bt.modulate = Color.white
-		bt.disconnect("pressed", self, "modo4")
+		bt.modulate = Color.WHITE
+		bt.disconnect("pressed", Callable(self, "modo4"))
 	
 	_botao.disabled = false
 	indice += 1
@@ -188,49 +186,48 @@ func modo4(_botao) -> void :
 
 #TEMPORIZADOR
 func _on_Timer_timeout():
-	
+	tempo.bbcode_enabled = true
 	if Globais.modo_de_jogo == 4:
-		tempo.set_text(str("Tempo restante: ∞"))
-		tempo.modulate = infinito
+		tempo.set_text(str("Tempo restante: [color=1ccd04]∞"))
 		
 	elif Globais.modo_de_jogo == 3:
-		segundos3 -= 1
-		tempo.set_text(str("Tempo restante: 0:", segundos3)) 
-		if segundos3 <= 15:
-			tempo.modulate = temporizador_quase_acabando
-		if segundos3 < 10:
+		var segundos = 30
+		segundos -= 1
+		tempo.set_text(str("Tempo restante: 0:", segundos)) 
+		if segundos <= 15:
+			tempo.set_text(str("Tempo restante: [color=#e8c001]0:", segundos))
+		if segundos < 10:
 			Audio.temporizador()
-			tempo.set_text(str("Tempo restante: 0:0", segundos3))
-			tempo.modulate = temporizador_acabou
-		if segundos3 == -1:
+			tempo.set_text(str("Tempo restante: [color=c90000]0:0", segundos))
+		if segundos == -1:
 			Audio.som_temp.stop()
-			if get_tree().change_scene("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
+			if get_tree().change_scene_to_file("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
 				print("ERRO AO MUDAR CENA PARA TEMPO ESGOTADO")	
 	elif Globais.modo_de_jogo == 2:
-			segundos2 -= 1
-			tempo.set_text(str("Tempo restante: 0:", segundos2))
-			if segundos2 <= 30:
-				tempo.modulate = temporizador_quase_acabando
-			if segundos2 < 10:
+			var segundos = 50
+			segundos -= 1
+			tempo.set_text(str("Tempo restante: 0:", segundos))
+			if segundos <= 30:
+				tempo.set_text(str("Tempo restante: [color=#e8c001]0:", segundos))
+			if segundos < 10:
 				Audio.temporizador()
-				tempo.set_text(str("Tempo restante: 0:0", segundos2))
-				tempo.modulate = temporizador_acabou
-			if segundos2 == -1:
+				tempo.set_text(str("Tempo restante: [color=c90000]0:0", segundos))
+			if segundos == -1:
 				Audio.som_temp.stop()
-				if get_tree().change_scene("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
+				if get_tree().change_scene_to_file("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
 					print("ERRO AO MUDAR CENA PARA TEMPO ESGOTADO") 			
 	else:
-		segundos1 -= 1
-		tempo.set_text(str("Tempo restante: 0:", segundos1))
-		if segundos1 <= 30:
-			tempo.modulate = temporizador_quase_acabando
-		if segundos1 < 10:	
+		var segundos = 60
+		segundos -= 1
+		tempo.set_text(str("Tempo restante: 0:", segundos))
+		if segundos <= 30:
+			tempo.set_text(str("Tempo restante: [color=#e8c001]0:", segundos))
+		if segundos < 10:	
 				Audio.temporizador()
-				tempo.set_text(str("Tempo restante: 0:0", segundos1))
-				tempo.modulate = temporizador_acabou
-		if segundos1 == -1:
-			Audio.temporizador.stop()
-			if get_tree().change_scene("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
+				tempo.set_text(str("Tempo restante: [color=c90000]0:0", segundos))
+		if segundos == -1:
+			Audio.som_temp.stop()
+			if get_tree().change_scene_to_file("res://Cenas/Cenas_da_resposta/tempo_esgotado.tscn") != OK:
 				print("ERRO AO MUDAR CENA PARA TEMPO ESGOTADO") 
 	
 
