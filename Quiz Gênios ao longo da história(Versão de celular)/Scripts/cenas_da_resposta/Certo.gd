@@ -15,31 +15,31 @@ var textos = [
 ]
 
 func _ready():
-	#animacoes()
+	animacoes()
 	if Globais.modo_de_jogo == 2 or Globais.modo_de_jogo == 4:
-		texto2()
+		textos_modos_com_pontuacao()
 		pontuacao()
 	else:
 		texto()
 func animacoes():
 		Audio.cena_resposta_correta_som()
-		animacao.play("animacao_botoes")
+		animacao.play("animacao_inicial")
 		await animacao.animation_finished
-		animacao.play("animacao_simbolo_certo")
+		animacao.play("loop_simbolo")
 		
 #---------------------------======---------------------------
 
 func texto():
-		for texto in textos:
+		for t in textos:
 			randomize()
 			textos.shuffle()
-			$Texto.set_text(str(texto))
+			$Texto.set_text(str(t))
 
 #---------------------------======---------------------------
-func texto2():
+func textos_modos_com_pontuacao():
 	if Globais.pontos <= 4:
-		txt.set_text(str("É... parece que você precisa dar",
-		"\n uma clicadinha no\n botão saiba mais!")) 
+		txt.set_text(str("É... parece que você \nprecisa dar ",
+		"uma clicadinha no\n botão \"saiba mais!\"")) 
 	if Globais.pontos >= 5:
 		txt.set_text(str("É isso aí, você foi demais!",
 		"\nPorém, se você quiser acertar 10/10,\n terá que se esforçar um pouco mais!")) 
@@ -52,6 +52,8 @@ func pontuacao():
 	if Globais.modo_de_jogo == 2 or Globais.modo_de_jogo == 4:
 		pontuacao_txt.show()
 		pontuacao_txt.set_text(str("Parabéns, sua pontuação foi ", Globais.pontos, "/10!!!")) 
+		if Globais.pontos <= 4:
+			pontuacao_txt.set_text(str("Sua pontuação foi ", Globais.pontos, "/10!!!")) 
 		Globais.pontos = 0
 	else:
 		pontuacao_txt.hide()

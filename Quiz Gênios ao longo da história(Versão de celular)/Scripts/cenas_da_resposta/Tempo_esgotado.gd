@@ -10,7 +10,7 @@ var textos = ["Tic-tac, Tic-tac,\n Tic-tac...",
 
 func _ready():
 	texto()
-	#animacoes()
+	animacoes()
 	
 #---------------------------======---------------------------
 func texto():
@@ -21,9 +21,9 @@ func texto():
 #---------------------------======---------------------------	
 func animacoes():
 		Audio.cena_tempo_esgotado_som()
-		animacao.play("animacao_botoes")
+		animacao.play("animacao_inicial")
 		await animacao.animation_finished
-		animacao.play("animacao_relogio")
+		animacao.play("loop_relogio")
 
 #---------------------------======---------------------------			
 func _on_Jogar_Novamente_pressed():

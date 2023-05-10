@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c7tqe3ftc0kuq"]
+[gd_scene load_steps=15 format=3]
 
-[ext_resource type="Texture2D" uid="uid://brxe143ilryvp" path="res://recursos/Imagens/relogio.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://brxe143ilryvp" path="res://assets/Imagens/relogio.png" id="4"]
 [ext_resource type="Script" path="res://Scripts/cenas_da_resposta/Tempo_esgotado.gd" id="5"]
-[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="6"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="6"]
 
 [sub_resource type="FontFile" id="6"]
 fallbacks = Array[Font]([ExtResource("6")])
@@ -66,6 +66,131 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
+[sub_resource type="Animation" id="Animation_uccpl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jogar_Novamente:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(75, 1300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Voltar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(77, 1600)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texto:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Relogio:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(550, 380)]
+}
+
+[sub_resource type="Animation" id="Animation_xvx13"]
+resource_name = "animacao_inicial"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jogar_Novamente:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1300), Vector2(75, 1300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Voltar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1600), Vector2(77, 1600)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texto:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Relogio:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380)]
+}
+
+[sub_resource type="Animation" id="Animation_on1j5"]
+resource_name = "loop_relogio"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Relogio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350), Vector2(550, 380), Vector2(550, 350)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xv57n"]
+_data = {
+"RESET": SubResource("Animation_uccpl"),
+"animacao_inicial": SubResource("Animation_xvx13"),
+"loop_relogio": SubResource("Animation_on1j5")
+}
+
 [node name="tempo_esgotado" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -82,9 +207,10 @@ anchor_bottom = 1.0
 color = Color(0.87451, 0.227451, 0.227451, 1)
 
 [node name="Relogio" type="Sprite2D" parent="."]
-position = Vector2(550, 377.143)
-scale = Vector2(1.14013, 1.07953)
+position = Vector2(550, 380)
+scale = Vector2(2, 2)
 texture = ExtResource("4")
+metadata/_edit_lock_ = true
 
 [node name="Texto" type="Label" parent="."]
 layout_mode = 0
@@ -95,6 +221,7 @@ theme_override_fonts/font = SubResource("6")
 theme_override_font_sizes/font_size = 75
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="Jogar_Novamente" type="Button" parent="."]
 layout_mode = 1
@@ -136,6 +263,11 @@ metadata/_edit_lock_ = true
 [node name="voltar_ao_menu" type="Timer" parent="Voltar"]
 wait_time = 60.0
 autostart = true
+
+[node name="animacao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xv57n")
+}
 
 [connection signal="pressed" from="Jogar_Novamente" to="." method="_on_Jogar_Novamente_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cjs25xnre5oyi"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Em qual ano nasceu Graham Bell?"
+opcoes = Array[String](["1868", "1847", "1892", "1910"])
+correta = "1847"

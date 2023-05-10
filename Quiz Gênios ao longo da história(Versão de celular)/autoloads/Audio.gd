@@ -3,23 +3,22 @@ extends Node2D
 @onready var tocarMusica = $tocar_musica
 @onready var tempNode = $temporizador
 
-var musicaBootplash = load("res://recursos/Audios/Músicas/musica_do_bootsplash.ogg")
-var Musica = load("res://recursos/Audios/Músicas/musica_principal.ogg")
-var somBotao = load("res://recursos/Audios/Sons/Som_Botão.ogg")
-var somTransicao = load("res://recursos/Audios/Sons/Começar.ogg")
-var acertou = load("res://recursos/Audios/Sons/Resposta_correta.ogg")
-var errou = load("res://recursos/Audios/Sons/Resposta_errada.ogg")
-var cenaAcertou = load("res://recursos/Audios/Sons/cena_resposta_correta.ogg")
-var cenaErrou = load("res://recursos/Audios/Sons/cena_resposta_errada.ogg")
-var cenaTempoEsgotado = load("res://recursos/Audios/Sons/cena_tempo_esgotado.ogg")
-var temp = load("res://recursos/Audios/Sons/Temporizador.ogg")
+var musicaBootplash = load("res://assets/Audios/Músicas/musica_do_bootsplash.ogg")
+var Musica = load("res://assets/Audios/Músicas/musica_principal.ogg")
+var somBotao = load("res://assets/Audios/Sons/Som_Botão.ogg")
+var somTransicao = load("res://assets/Audios/Sons/Começar.ogg")
+var acertou = load("res://assets/Audios/Sons/Resposta_correta.ogg")
+var errou = load("res://assets/Audios/Sons/Resposta_errada.ogg")
+var cenaAcertou = load("res://assets/Audios/Sons/cena_resposta_correta.ogg")
+var cenaErrou = load("res://assets/Audios/Sons/cena_resposta_errada.ogg")
+var cenaTempoEsgotado = load("res://assets/Audios/Sons/cena_tempo_esgotado.ogg")
+var temp = load("res://assets/Audios/Sons/Temporizador.ogg")
 
 func musica_bootsplash():
 		$musica_bootsplash.stream = musicaBootplash
 		$musica_bootsplash.play()
 		
 func tocar_musica():
-	
 	tocarMusica.stream = Musica
 	if tocarMusica.playing == false:
 		tocarMusica.play()

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cmkgdfiod1rd3"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual o maior valor pago no seu livro em um leilão?  "
+opcoes = Array[String](["R$ 36 mil", "R$ 49 mil", "R$ 210 mil", "R$ 436 mil"])
+correta = "R$ 436 mil"

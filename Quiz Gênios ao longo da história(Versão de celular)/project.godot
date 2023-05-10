@@ -12,15 +12,11 @@ config_version=5
 
 config/name="Quiz: Gênios ao longo da história"
 run/main_scene="res://Cenas/Bootsplash/Bootsplash.tscn"
-config/features=PackedStringArray("4.0")
-boot_splash/show_image=false
-boot_splash/image="res://recursos/Bootsplash/bootsplash0.png"
-config/icon="res://recursos/Quiz_ Gênios ao longo da História - Ícones/playstore.png"
 config/quit_on_go_back=false
-
-[audio]
-
-buses/default_bus_layout="res://recursos/Audios/buses/default_bus_layout.tres"
+config/features=PackedStringArray("4.0")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://assets/Bootsplash/Bootsplash.png"
+config/icon="res://assets/icones/play_store_512.png"
 
 [autoload]
 
@@ -33,6 +29,8 @@ Audio="*res://autoloads/Audio.tscn"
 window/size/viewport_width=1080
 window/size/viewport_height=1920
 window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
+window/handheld/orientation=1
 
 [global]
 
@@ -42,8 +40,7 @@ menu=false
 
 pausar={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
-]
+"events": []
 }
 configs={
 "deadzone": 0.5,
@@ -72,6 +69,7 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
 quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0

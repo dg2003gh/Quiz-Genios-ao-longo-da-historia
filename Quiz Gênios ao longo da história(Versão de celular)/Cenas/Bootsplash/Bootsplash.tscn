@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://d324k63h3p00a"]
+[gd_scene load_steps=10 format=3]
 
-[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="1"]
 [ext_resource type="Script" path="res://Scripts/Bootsplash/Bootsplash.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://dtnccpad5rwxd" path="res://recursos/Bootsplash/Godot1.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://os0jq6icsq4v" path="res://recursos/Bootsplash/Godot2.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://m7g6kijg0bm8" path="res://recursos/Bootsplash/Godot3.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dtnccpad5rwxd" path="res://assets/Bootsplash/Godot1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://os0jq6icsq4v" path="res://assets/Bootsplash/Godot2.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://m7g6kijg0bm8" path="res://assets/Bootsplash/Godot3.png" id="6"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "bootsplash"

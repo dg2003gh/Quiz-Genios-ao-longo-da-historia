@@ -6,7 +6,7 @@ extends Control
 
 
 func _ready():
-		modo_txt.set_text("Modo atual: Pode relaxar!")
+		verificar_modo_txt()
 		Globais.alterar_foto(foto_caixa_de_dialogo)
 		animacoes()
 		

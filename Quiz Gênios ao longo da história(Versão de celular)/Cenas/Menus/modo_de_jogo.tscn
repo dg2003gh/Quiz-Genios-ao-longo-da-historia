@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://cs1xe2oialqpj"]
+[gd_scene load_steps=15 format=3]
 
-[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://recursos/Imagens/Fundo.png" id="1"]
-[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="2"]
-[ext_resource type="Texture2D" uid="uid://cxehyvwhj15qc" path="res://recursos/Imagens/Quadro.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="1"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="2"]
+[ext_resource type="Texture2D" uid="uid://cxehyvwhj15qc" path="res://assets/Imagens/Quadro.png" id="9"]
 [ext_resource type="Script" path="res://Scripts/Menus/modo_de_jogo.gd" id="10"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_frg3k"]
@@ -139,38 +139,38 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Caixa de dialogo/Texto_quadro:visible_ratio")
+tracks/7/path = NodePath("Caixa de dialogo/genio:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.9, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Caixa de dialogo/modo_atual:visible_ratio")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0.9, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Caixa de dialogo/genio:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0.6, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.523599, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Caixa de dialogo/Texto_quadro:visible_ratio")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.6, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0107527, 1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Caixa de dialogo/modo_atual:visible_ratio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.8, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_kumge"]
@@ -225,14 +225,15 @@ metadata/_edit_lock_ = true
 [node name="quadro" type="Panel" parent="Caixa de dialogo"]
 layout_mode = 0
 offset_left = 256.0
-offset_top = 48.0
+offset_top = -200.0
 offset_right = 992.0
-offset_bottom = 312.0
+offset_bottom = 64.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ysf3t")
 metadata/_edit_lock_ = true
 
 [node name="genio" type="Sprite2D" parent="Caixa de dialogo"]
-position = Vector2(158, 190)
+position = Vector2(-1000, 190)
+rotation = -0.523599
 scale = Vector2(0.256389, 0.244038)
 metadata/_edit_lock_ = true
 
@@ -252,6 +253,8 @@ theme_override_font_sizes/font_size = 40
 text = "Escolha um entre estes modos  
 incríveis e desafie-se! Selecione e 
 saiba mais sobre cada um."
+visible_characters = 0
+visible_ratio = 0.0
 metadata/_edit_lock_ = true
 
 [node name="modo_atual" type="RichTextLabel" parent="Caixa de dialogo"]
@@ -262,6 +265,8 @@ offset_right = 960.0
 offset_bottom = 296.0
 theme_override_fonts/normal_font = ExtResource("2")
 theme_override_font_sizes/normal_font_size = 30
+visible_characters = 0
+visible_ratio = 0.0
 metadata/_edit_lock_ = true
 
 [node name="Modo1" type="Button" parent="."]
@@ -271,9 +276,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -465.0
+offset_left = 660.0
 offset_top = -560.0
-offset_right = 465.0
+offset_right = 1590.0
 offset_bottom = -310.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -294,9 +299,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -465.0
+offset_left = 660.0
 offset_top = -260.0
-offset_right = 465.0
+offset_right = 1590.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -317,9 +322,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -465.0
+offset_left = 660.0
 offset_top = 40.0
-offset_right = 465.0
+offset_right = 1590.0
 offset_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -339,9 +344,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -465.0
+offset_left = 660.0
 offset_top = 340.0
-offset_right = 465.0
+offset_right = 1590.0
 offset_bottom = 590.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -362,9 +367,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -465.0
-offset_top = 640.0
+offset_top = 1040.0
 offset_right = 465.0
-offset_bottom = 890.002
+offset_bottom = 1290.01
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_lda1m")
@@ -372,7 +377,7 @@ theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_ysfwk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbdp3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rbdp3")
-theme_override_styles/focus = SubResource("StyleBoxFlat_rbdp3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ysfwk")
 text = "CONTINUAR"
 metadata/_edit_lock_ = true
 

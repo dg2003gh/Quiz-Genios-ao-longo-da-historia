@@ -1,59 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqje1t5uaeym2"]
+[gd_scene load_steps=17 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Menus/menu_de_pausa.gd" id="1_ojta3"]
-[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://recursos/Imagens/Fundo.png" id="2_1qdpd"]
-[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="3_mmtcd"]
-[ext_resource type="Texture2D" uid="uid://di1054d2fux31" path="res://recursos/Imagens/configurações.png" id="4_mshq1"]
+[ext_resource type="Script" path="res://Scripts/Menus/menu_de_pausa.gd" id="1_ved0q"]
+[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="2_ldo5e"]
+[ext_resource type="Texture2D" uid="uid://di1054d2fux31" path="res://assets/Imagens/configurações.png" id="3_tg27e"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="4_fh5bl"]
 
-[sub_resource type="FontFile" id="FontFile_un44h"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-fallbacks = Array[Font]([ExtResource("3_mmtcd")])
-face_index = null
-embolden = null
-transform = null
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/200/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/150/0 = Vector2(0, 0)
-cache/0/60/0/ascent = 0.0
-cache/0/60/0/descent = 0.0
-cache/0/60/0/underline_position = 0.0
-cache/0/60/0/underline_thickness = 0.0
-cache/0/60/0/scale = 1.0
-cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
-cache/0/60/0/kerning_overrides/200/0 = Vector2(0, 0)
-cache/0/60/0/kerning_overrides/150/0 = Vector2(0, 0)
-cache/0/200/0/ascent = 0.0
-cache/0/200/0/descent = 0.0
-cache/0/200/0/underline_position = 0.0
-cache/0/200/0/underline_thickness = 0.0
-cache/0/200/0/scale = 1.0
-cache/0/200/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/200/0/kerning_overrides/60/0 = Vector2(0, 0)
-cache/0/200/0/kerning_overrides/200/0 = Vector2(0, 0)
-cache/0/200/0/kerning_overrides/150/0 = Vector2(0, 0)
-cache/0/150/0/ascent = 0.0
-cache/0/150/0/descent = 0.0
-cache/0/150/0/underline_position = 0.0
-cache/0/150/0/underline_thickness = 0.0
-cache/0/150/0/scale = 1.0
-cache/0/150/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/150/0/kerning_overrides/60/0 = Vector2(0, 0)
-cache/0/150/0/kerning_overrides/200/0 = Vector2(0, 0)
-cache/0/150/0/kerning_overrides/150/0 = Vector2(0, 0)
+[sub_resource type="FontVariation" id="FontVariation_auejg"]
+base_font = ExtResource("4_fh5bl")
 
-[sub_resource type="FontVariation" id="FontVariation_hetwk"]
-base_font = ExtResource("3_mmtcd")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pajsj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67cy0"]
 bg_color = Color(0, 0.756863, 1, 1)
 border_width_bottom = 30
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
@@ -62,7 +17,7 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avrll"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85c8a"]
 bg_color = Color(0.470588, 0.835294, 1, 1)
 border_width_bottom = 10
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
@@ -71,10 +26,10 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="FontVariation" id="FontVariation_bmvit"]
-base_font = ExtResource("3_mmtcd")
+[sub_resource type="FontVariation" id="FontVariation_8l5v0"]
+base_font = ExtResource("4_fh5bl")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0quk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1typx"]
 bg_color = Color(0.0985251, 0.862252, 0, 1)
 border_width_bottom = 30
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
@@ -83,7 +38,7 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7ynt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5fib"]
 bg_color = Color(0.532515, 1, 0.489938, 1)
 border_width_bottom = 10
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
@@ -92,10 +47,10 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="FontVariation" id="FontVariation_jq61o"]
-base_font = ExtResource("3_mmtcd")
+[sub_resource type="FontVariation" id="FontVariation_2v3ig"]
+base_font = ExtResource("4_fh5bl")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe4ry"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go0ht"]
 bg_color = Color(1, 0, 0, 1)
 border_width_bottom = 30
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
@@ -104,7 +59,7 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4xiu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwwho"]
 bg_color = Color(1, 0.664335, 0.611911, 1)
 border_width_bottom = 10
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
@@ -113,116 +68,212 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[node name="menu_de_pausa" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_ojta3")
-metadata/_edit_lock_ = true
+[sub_resource type="Animation" id="Animation_fymgp"]
+resource_name = "animacao_inicial"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pausado_texto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1200, 106), Vector2(80, 106)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("voltar_ao_jogo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 820), Vector2(75, 820)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Avalie-nos:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1080), Vector2(75, 1080)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Saiba_mais:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1340), Vector2(75, 1340)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Voltar:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1600), Vector2(75, 1600)]
+}
+
+[sub_resource type="Animation" id="Animation_13thy"]
+resource_name = "loop_pausartxt"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pausado_texto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(80, 106), Vector2(80, 80), Vector2(80, 106)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c7cs1"]
+_data = {
+"animacao_inicial": SubResource("Animation_fymgp"),
+"loop_pausartxt": SubResource("Animation_13thy")
+}
+
+[node name="menu_de_pausa" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+visible = false
+script = ExtResource("1_ved0q")
 
 [node name="Fundo" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = ExtResource("2_ldo5e")
+
+[node name="Pausado_texto" type="RichTextLabel" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -873.933
+offset_right = -63.9998
+offset_bottom = -425.933
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1qdpd")
+theme_override_fonts/normal_font = ExtResource("4_fh5bl")
+theme_override_font_sizes/normal_font_size = 175
+bbcode_enabled = true
+text = "[right]
+Pausado"
 metadata/_edit_lock_ = true
 
-[node name="Pausado_frase" type="Label" parent="."]
-layout_mode = 0
-offset_left = 312.0
-offset_top = 352.0
-offset_right = 1034.0
-offset_bottom = 524.0
-theme_override_fonts/font = SubResource("FontFile_un44h")
-theme_override_font_sizes/font_size = 150
-text = "Pausado"
-uppercase = true
+[node name="Configurações" type="Sprite2D" parent="Pausado_texto"]
+position = Vector2(144, 304)
+scale = Vector2(0.606436, 0.591463)
+texture = ExtResource("3_tg27e")
 metadata/_edit_lock_ = true
 
-[node name="pausado_img" type="Sprite2D" parent="Pausado_frase"]
-position = Vector2(-131.5, 88)
-scale = Vector2(0.512376, 0.554878)
-texture = ExtResource("4_mshq1")
-metadata/_edit_lock_ = true
-
-[node name="Voltar_ao_jogo" type="Button" parent="."]
-layout_mode = 1
+[node name="voltar_ao_jogo" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -465.0
-offset_top = -260.0
-offset_right = 465.0
-offset_bottom = -10.0
+offset_top = -140.0
+offset_right = 465.003
+offset_bottom = 110.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = SubResource("FontVariation_hetwk")
+theme_override_fonts/font = SubResource("FontVariation_auejg")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxFlat_pajsj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_avrll")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_avrll")
-theme_override_styles/focus = SubResource("StyleBoxFlat_avrll")
+theme_override_styles/normal = SubResource("StyleBoxFlat_67cy0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85c8a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_85c8a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_85c8a")
 text = "Voltar ao jogo"
 metadata/_edit_lock_ = true
 
-[node name="avalie_nos" type="Button" parent="."]
-layout_mode = 1
+[node name="Avalie-nos" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -465.0
-offset_top = 40.0
-offset_right = 465.0
-offset_bottom = 290.0
+offset_top = 120.0
+offset_right = 465.003
+offset_bottom = 370.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = SubResource("FontVariation_hetwk")
+theme_override_fonts/font = SubResource("FontVariation_auejg")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxFlat_pajsj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_avrll")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_avrll")
-theme_override_styles/focus = SubResource("StyleBoxFlat_avrll")
-text = "Avalie-nos"
+theme_override_styles/normal = SubResource("StyleBoxFlat_67cy0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85c8a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_85c8a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_85c8a")
+text = "Avalie-nos
+"
 metadata/_edit_lock_ = true
 
 [node name="Saiba_mais" type="Button" parent="."]
-layout_mode = 0
-offset_left = 77.0
-offset_top = 1300.0
-offset_right = 1007.0
-offset_bottom = 1550.0
-theme_override_fonts/font = SubResource("FontVariation_bmvit")
+offset_left = 75.0
+offset_top = 1340.0
+offset_right = 1005.0
+offset_bottom = 1590.0
+theme_override_fonts/font = SubResource("FontVariation_8l5v0")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxFlat_s0quk")
-theme_override_styles/hover = SubResource("StyleBoxFlat_n7ynt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_n7ynt")
-theme_override_styles/focus = SubResource("StyleBoxFlat_n7ynt")
-text = "Saiba mais"
+theme_override_styles/normal = SubResource("StyleBoxFlat_1typx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y5fib")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y5fib")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1typx")
+text = "Saiba mais "
 metadata/_edit_lock_ = true
 
 [node name="Voltar" type="Button" parent="."]
-layout_mode = 0
-offset_left = 77.0
-offset_top = 1600.0
-offset_right = 1007.0
-offset_bottom = 1850.0
-theme_override_fonts/font = SubResource("FontVariation_jq61o")
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -465.0
+offset_top = -320.0
+offset_right = 465.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = SubResource("FontVariation_2v3ig")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxFlat_qe4ry")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h4xiu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h4xiu")
-theme_override_styles/focus = SubResource("StyleBoxFlat_h4xiu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_go0ht")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jwwho")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jwwho")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jwwho")
 text = "Voltar ao Menu"
 metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="avalie_nos" to="." method="_on_avalie_nos_pressed"]
+[node name="animacao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c7cs1")
+}
+
+[connection signal="pressed" from="voltar_ao_jogo" to="." method="_on_voltar_ao_jogo_pressed"]
+[connection signal="pressed" from="Saiba_mais" to="." method="_on_saiba_mais_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

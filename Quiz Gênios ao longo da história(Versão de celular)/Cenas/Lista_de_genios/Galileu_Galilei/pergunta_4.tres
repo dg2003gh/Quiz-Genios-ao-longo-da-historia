@@ -1,9 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=2]
-
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
-
-[resource]
-script = ExtResource( 1 )
-pergunta = "Como Galilei ficou conhecido?"
-opcoes = [ "Pai da ciência moderna", "Pai da ciência antiga", "Pai da Maria Celeste", "Tiradentes" ]
-correta = "Pai da ciência moderna"

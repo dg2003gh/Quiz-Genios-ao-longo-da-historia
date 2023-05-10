@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cj1cjc7j6ubm"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual empresa Edison fundou?"
+opcoes = Array[String](["General Eletric", "Apple", "Microsoft", "Google"])
+correta = "General Electric"

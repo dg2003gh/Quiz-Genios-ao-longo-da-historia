@@ -1,14 +1,16 @@
 extends Control
 
+@onready var animacoes: Node = $animacoes
+
 func _ready() -> void:
-	animacoes()
-	pass	
+	tocarAnimacoes()
+		
 #---------------------------======---------------------------
 
-func animacoes():
-		$animacoes.play("animacao_inicial")
-		await $animacoes.animation_finished
-		$animacoes.play("loop_genios")
+func tocarAnimacoes():
+		animacoes.play("animacao_inicial")
+		await get_tree().create_timer(1.3).timeout
+		animacoes.play("loop_genios")
 		
 #---------------------------======---------------------------
 
@@ -25,7 +27,7 @@ func _on_configs_pressed():
 #---------------------------======---------------------------
 
 func _on_saiba_mais_pressed():
-	pass # Replace with function body.
+	Globais.executar_pdf()
 	
 #---------------------------======---------------------------
 func _on_sair_pressed():

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://c13yp4q5cm4x7"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual era o nome da máquina de criptografia que Turing decifrou seus códigos?"
+opcoes = Array[String](["Light3D", "Código", "Bomba", "Decifrador"])
+correta = "Bomba"

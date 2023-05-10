@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cwloom08vme5m"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual destes livros Dumont escreveu?"
+opcoes = Array[String](["O abacateiro", "Os meus balões", "vôo alto", "O vôo"])
+correta = "Os meus balões"

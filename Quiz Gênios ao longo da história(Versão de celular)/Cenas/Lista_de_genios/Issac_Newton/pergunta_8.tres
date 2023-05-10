@@ -1,9 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=2]
-
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
-
-[resource]
-script = ExtResource( 1 )
-pergunta = "Quantas leis de Newton existem? "
-opcoes = [ "1 lei", "2 leis", "3 leis", "5 leis" ]
-correta = "3 leis"

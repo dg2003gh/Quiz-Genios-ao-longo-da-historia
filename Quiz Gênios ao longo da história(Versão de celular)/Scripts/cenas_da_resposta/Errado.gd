@@ -9,15 +9,15 @@ var textos = ["Você errou, mas \n tudo bem, \né só tentar outra vez! ",
 			"Tranquilo,\n volta no almanaque e\n depois tenta de novo." ]
 
 func _ready():
-	#animacoes()
+	animacoes()
 	texto()
 #---------------------------======---------------------------	
 
 func animacoes():
 		Audio.cena_resposta_errada_som()
-		animacao.play("animacao_botoes")
+		animacao.play("animacao_inicial")
 		await animacao.animation_finished
-		animacao.play("animacao_simbolo")
+		animacao.play("loop_simbolo")
 			
 #---------------------------======---------------------------	
 				

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=2]
-
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
-
-[resource]
-script = ExtResource( 1 )
-pergunta = "Por qual destas equações é mais conhecido?"
-opcoes = [ "ax²+bx+c=x", "E=mc²", "a - b . (c + a) ", "cx + d = x" ]
-correta = "E=mc²"

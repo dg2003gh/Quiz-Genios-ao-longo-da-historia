@@ -1,43 +1,35 @@
-[gd_scene load_steps=25 format=3 uid="uid://dugurrtoroyie"]
+[gd_scene load_steps=25 format=3 uid="uid://bwghbogwobsoy"]
 
-[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://recursos/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="3"]
-[ext_resource type="Texture2D" uid="uid://cxehyvwhj15qc" path="res://recursos/Imagens/Quadro.png" id="4"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://cxehyvwhj15qc" path="res://assets/Imagens/Quadro.png" id="4"]
 [ext_resource type="Script" path="res://Scripts/Menus/selecionar_genio.gd" id="5"]
-[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://recursos/Imagens/Fundo.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="10"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dltxt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0oe7"]
 texture = ExtResource("4")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cj5fe"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wo8x"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d2pmb"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmyne"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idl8e"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yei78"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r64ll"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_58y23"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7rsp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hue8r"]
 bg_color = Color(1, 1, 1, 0.784314)
-draw_center = false
-border_width_left = 15
-border_width_top = 15
-border_width_right = 15
-border_width_bottom = 15
-border_color = Color(1, 1, 1, 0.784314)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
-corner_detail = 12
 anti_aliasing_size = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmth4"]
 bg_color = Color(1, 1, 1, 0.784314)
-draw_center = false
 border_width_left = 15
 border_width_top = 15
 border_width_right = 15
@@ -63,14 +55,15 @@ corner_radius_bottom_left = 100
 corner_detail = 12
 
 [sub_resource type="Theme" id="Theme_xsgqw"]
-HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_cj5fe")
-HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_d2pmb")
-HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_idl8e")
-HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_r64ll")
+HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_8wo8x")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_vmyne")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_yei78")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_58y23")
 HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_x7rsp")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_hue8r")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_dmth4")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_yntwf")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_yntwf")
 
 [sub_resource type="FontVariation" id="FontVariation_ksfjj"]
 base_font = ExtResource("3")
@@ -192,6 +185,20 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_otrnb"]
 resource_name = "loop_genio"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Caixa de dialogo/genio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(158, 188), Vector2(158, 170), Vector2(158, 188)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a4lj7"]
 _data = {
@@ -257,12 +264,9 @@ theme_override_font_sizes/font_size = 38
 text = "Vamos, escolha um destes gênios
 incríveis e teste seus conhecimentos
 sobre ele!"
-visible_characters = 31
-visible_ratio = 0.4
 metadata/_edit_lock_ = true
 
 [node name="Seleção" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(1070, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -271,7 +275,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -540.0
 offset_top = -568.0
-offset_right = 530.0
+offset_right = 539.999
 offset_bottom = 598.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -302,7 +306,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O PAI DA COMPUTAÇÃO"
 icon_alignment = 1
 metadata/_edit_lock_ = true
@@ -317,7 +321,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O FÍSICO TEÓRICO
 QUE MUDOU O MUNDO"
 metadata/_edit_lock_ = true
@@ -331,7 +335,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O DESBRAVADOR DA
 ORIGEM DAS ESPÉCIES"
 metadata/_edit_lock_ = true
@@ -346,7 +350,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O PAI DA CIÊNCIA
  MODERNA"
 metadata/_edit_lock_ = true
@@ -361,7 +365,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O HOMEM QUE
 CONECTOU O MUNDO"
 metadata/_edit_lock_ = true
@@ -376,7 +380,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O SIR DA CIÊNCIA"
 metadata/_edit_lock_ = true
 
@@ -390,7 +394,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O INVENTOR A FRENTE
 DO SEU TEMPO"
 metadata/_edit_lock_ = true
@@ -405,7 +409,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O HOMEM QUE VOOU"
 metadata/_edit_lock_ = true
 
@@ -418,7 +422,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O MESTRE DA 
 ELETRICIDADE"
 metadata/_edit_lock_ = true
@@ -432,7 +436,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_shs2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd1dn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cd1dn")
-theme_override_styles/focus = SubResource("StyleBoxFlat_cd1dn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_shs2h")
 text = "O HOMEM DE 1001
 FACETAS"
 metadata/_edit_lock_ = true
@@ -447,7 +451,7 @@ anchor_bottom = 1.0
 offset_left = -465.0
 offset_top = -320.0
 offset_right = 465.0
-offset_bottom = -70.0
+offset_bottom = -70.0004
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = SubResource("FontVariation_1gcq3")
@@ -455,7 +459,7 @@ theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_4bala")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xu0g0")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xu0g0")
-theme_override_styles/focus = SubResource("StyleBoxFlat_xu0g0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4bala")
 text = "Voltar ao Menu"
 metadata/_edit_lock_ = true
 
