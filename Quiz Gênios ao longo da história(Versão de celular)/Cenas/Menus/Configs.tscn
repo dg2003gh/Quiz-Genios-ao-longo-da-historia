@@ -1,10 +1,12 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4frhkwhecq12"]
+[gd_scene load_steps=23 format=3 uid="uid://bh0nog3q4x207"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/Configs.gd" id="1_fggco"]
 [ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="2_71wrf"]
 [ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="3_kkhuo"]
 [ext_resource type="Texture2D" uid="uid://bx6w4buxpstmd" path="res://assets/Imagens/checkButton.png" id="4_rkxrh"]
 [ext_resource type="Texture2D" uid="uid://f8goxxnymg4n" path="res://assets/Imagens/checkButton_checked.png" id="4_vi5dy"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="6_73i2j"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes_toggle.gd" id="6_hfq87"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn5h0"]
 bg_color = Color(0, 0.756863, 1, 1)
@@ -267,6 +269,7 @@ theme_override_font_sizes/font_size = 150
 button_pressed = true
 alignment = 1
 clip_text = true
+script = ExtResource("6_hfq87")
 metadata/_edit_lock_ = true
 
 [node name="Label_musica" type="Label" parent="Panel_do_audio/musica"]
@@ -308,6 +311,7 @@ theme_override_font_sizes/font_size = 150
 button_pressed = true
 alignment = 1
 clip_text = true
+script = ExtResource("6_hfq87")
 metadata/_edit_lock_ = true
 
 [node name="Label_sons" type="Label" parent="Panel_do_audio/sons"]
@@ -345,10 +349,12 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_m40ig")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_vexvg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fd2sy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vexvg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fd2sy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vexvg")
 theme_override_styles/focus = SubResource("StyleBoxFlat_vexvg")
-text = "Avalie-nos"
+text = "AVALIE-NOS"
+script = ExtResource("6_73i2j")
 metadata/_edit_lock_ = true
 
 [node name="creditos" type="Button" parent="."]
@@ -367,11 +373,13 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_m40ig")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_vexvg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fd2sy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vexvg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fd2sy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vexvg")
 theme_override_styles/focus = SubResource("StyleBoxFlat_vexvg")
-text = "Créditos
+text = "CRÉDITOS
 "
+script = ExtResource("6_73i2j")
 metadata/_edit_lock_ = true
 
 [node name="Saiba_mais" type="Button" parent="."]
@@ -383,10 +391,12 @@ offset_bottom = 1590.0
 theme_override_fonts/font = SubResource("FontVariation_6b3il")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_xx5bd")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vnsmp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xx5bd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vnsmp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xx5bd")
 theme_override_styles/focus = SubResource("StyleBoxFlat_xx5bd")
-text = "Saiba mais "
+text = "SAIBA MAIS"
+script = ExtResource("6_73i2j")
 metadata/_edit_lock_ = true
 
 [node name="Voltar" type="Button" parent="."]
@@ -405,10 +415,12 @@ grow_vertical = 0
 theme_override_fonts/font = SubResource("FontVariation_miald")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_dp5m8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uwrfx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dp5m8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uwrfx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dp5m8")
 theme_override_styles/focus = SubResource("StyleBoxFlat_uwrfx")
-text = "Voltar ao Menu"
+text = "VOLTAR AO MENU"
+script = ExtResource("6_73i2j")
 metadata/_edit_lock_ = true
 
 [node name="animacoes" type="AnimationPlayer" parent="."]

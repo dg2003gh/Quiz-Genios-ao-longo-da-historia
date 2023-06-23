@@ -5,11 +5,8 @@ var cena_anterior: String
 var modo_de_jogo: int = 1
 var pontos: int = 0
 
-var isMusica: bool = true
-var isSons: bool = true
-
-func alterar_foto(foto_caixa_de_dialogo):
-	var genios_fotos : Array = [ preload("res://assets/Imagens/Albert Einstein(Caixa de Diálogo).png"),
+func alterar_foto(foto_caixa_de_dialogo: Sprite2D):
+	var genios_fotos : Array[CompressedTexture2D] = [ preload("res://assets/Imagens/Albert Einstein(Caixa de Diálogo).png"),
 								preload("res://assets/Imagens/Alan Turing(Caixa de Diálogo).png"),
 								preload("res://assets/Imagens/Santos Dumont(Caixa de Diálogo).png"),
 								preload("res://assets/Imagens/Charles_Darwin(Caixa de Diálogo).png"), 
@@ -27,15 +24,14 @@ func alterar_foto(foto_caixa_de_dialogo):
 		foto_caixa_de_dialogo.texture = foto
 
 func executar_pdf():
-	var source = "res://pdf/almanaque.pdf"
-	var destino = ProjectSettings.globalize_path("user://almanaque.pdf")
-	var dir = DirAccess.open("user://")
+	var source: String = "res://pdf/almanaque.pdf"
+	var destino: String = ProjectSettings.globalize_path("user://almanaque.pdf")
+	var dir: DirAccess = DirAccess.open("user://")
+	
 	if(!dir.file_exists(destino)):
 		dir.copy(source, destino)
 	else:
 		print(destino, " Já existe!")
 	OS.shell_open(destino)
 
-
-
-  
+		

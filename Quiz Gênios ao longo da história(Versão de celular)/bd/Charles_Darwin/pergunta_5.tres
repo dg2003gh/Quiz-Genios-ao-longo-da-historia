@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Qual o maior valor pago no seu livro em um leilão?  "
-opcoes = Array[String](["R$ 36 mil", "R$ 49 mil", "R$ 210 mil", "R$ 436 mil"])
-correta = "R$ 436 mil"
+pergunta = "Qual o valor pago em seu manuscrito em um leilão? "
+opcoes = Array[String](["US$ 982 mil", "US$ 89 mil", "US$ 210 mil", "US$ 882 mil "])
+correta = "US$ 882 mil "

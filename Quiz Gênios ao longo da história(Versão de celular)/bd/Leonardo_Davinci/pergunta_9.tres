@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Qual era o QI estimado de Da vinci?"
+pergunta = "Qual era o QI estimado de da Vinci?"
 opcoes = Array[String](["120", "200", "180", "400"])
 correta = "180"

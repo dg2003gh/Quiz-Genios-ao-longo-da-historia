@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://1rwoiynq7gss"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Quem foi Leonardo da Vinci?"
-opcoes = [ "Garçom", "Polímata", "Aviador", "Estilista" ]
-correta = "Polímata"
+script = ExtResource("1")
+pergunta = "Em que ano Leonardo da Vinci nasceu?"
+opcoes = Array[String](["1425", "1452", "1627", "1836"])
+correta = "1452"

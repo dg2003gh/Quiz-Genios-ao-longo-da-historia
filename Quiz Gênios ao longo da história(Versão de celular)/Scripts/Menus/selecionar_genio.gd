@@ -1,63 +1,30 @@
 extends Control
 
-@onready var foto_caixa_de_dialogo = $"Caixa de dialogo/genio"
+@onready var foto_caixa_de_dialogo: Node = $"Caixa de dialogo/genio"
+@onready var animacoes_player: Node = $animacoes
+@onready var grupo_botoes = get_tree().get_nodes_in_group("botoes_selecionar")
 
 func _ready():
-	
+	for botao in grupo_botoes:
+		botao.connect("pressed", Callable(self, "entrar_cena_principal").bind(botao))
 	Globais.alterar_foto(foto_caixa_de_dialogo)
 	animacoes()	
+	
 #---------------------------======---------------------------			
+
 func animacoes():
-		$animacoes.play("animacao_inicial")
-		await $animacoes.animation_finished
-		$animacoes.play("loop_genio")
+		animacoes_player.play("animacao_inicial")
+		await animacoes_player.animation_finished
+		animacoes_player.play("loop_genio")
 #---------------------------======---------------------------
 
-#LISTA DE GÊNIOS
-
-func _on_turing_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "turing"
-func _on_einstein_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "einstein"
-func _on_darwin_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "darwin"
-func _on_galilei_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "galilei"	
-func _on_bell_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "bell"
-func _on_newton_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "newton"
-func _on_vinci_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "vinci"
-func _on_dumont_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "dumont"
-func _on_tesla_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "tesla"
-func _on_edison_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn")
-	Globais.genio = "edison"
+func entrar_cena_principal(botao):
+	Transicao.jogar_transicao("res://Cenas/Cena_principal.tscn", false)
+	Audio._tocar_som_botoes()
+	Globais.genio = str(botao.name)
+	
 #---------------------------======---------------------------
 
 func _on_voltar_pressed():
-	Audio.som_botao()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
 	

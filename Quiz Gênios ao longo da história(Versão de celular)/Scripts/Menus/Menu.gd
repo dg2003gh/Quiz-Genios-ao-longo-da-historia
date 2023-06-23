@@ -1,10 +1,11 @@
 extends Control
 
 @onready var animacoes: Node = $animacoes
+@onready var botoes: Array = get_tree().get_nodes_in_group("som_botoes")
 
 func _ready() -> void:
 	tocarAnimacoes()
-		
+	
 #---------------------------======---------------------------
 
 func tocarAnimacoes():
@@ -15,13 +16,11 @@ func tocarAnimacoes():
 #---------------------------======---------------------------
 
 func _on_comecar_pressed():
-	Audio.som_botao()
 	Transicao.mudar_cena("res://Cenas/Menus/modo_de_jogo.tscn")
 
 #---------------------------======---------------------------
 	
 func _on_configs_pressed():
-	Audio.som_botao()
 	Transicao.mudar_cena("res://Cenas/Menus/Configs.tscn")
 
 #---------------------------======---------------------------
@@ -32,7 +31,4 @@ func _on_saiba_mais_pressed():
 #---------------------------======---------------------------
 func _on_sair_pressed():
 	get_tree().quit()
-
-
-
 

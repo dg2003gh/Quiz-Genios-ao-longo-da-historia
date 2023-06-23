@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cskjx1l3pcnek"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Turing era conhecido como pai da:"
-opcoes = [ "Genética", "Aviação", "Computação", "Pintura" ]
+script = ExtResource("1")
+pergunta = "Turing ficou conhecido como o pai da:"
+opcoes = Array[String](["Genética", "Aviação", "Computação", "Pintura"])
 correta = "Computação"

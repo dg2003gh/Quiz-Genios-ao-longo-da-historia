@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cndsx2eehq07k"]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="1"]
 [ext_resource type="Script" path="res://Scripts/Menus/Creditos.gd" id="3"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="3_4py26"]
 
 [sub_resource type="FontFile" id="3"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -23,6 +24,10 @@ cache/0/16/0/kerning_overrides/75/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/45/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/42/0 = Vector2(0, 0)
 cache/0/75/0/ascent = 0.0
 cache/0/75/0/descent = 0.0
 cache/0/75/0/underline_position = 0.0
@@ -38,6 +43,10 @@ cache/0/75/0/kerning_overrides/75/0 = Vector2(0, 0)
 cache/0/75/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/75/0/kerning_overrides/45/0 = Vector2(0, 0)
 cache/0/75/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/42/0 = Vector2(0, 0)
 cache/0/50/0/ascent = 0.0
 cache/0/50/0/descent = 0.0
 cache/0/50/0/underline_position = 0.0
@@ -53,6 +62,10 @@ cache/0/50/0/kerning_overrides/75/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/45/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/42/0 = Vector2(0, 0)
 cache/0/45/0/ascent = 0.0
 cache/0/45/0/descent = 0.0
 cache/0/45/0/underline_position = 0.0
@@ -68,6 +81,10 @@ cache/0/45/0/kerning_overrides/75/0 = Vector2(0, 0)
 cache/0/45/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/45/0/kerning_overrides/45/0 = Vector2(0, 0)
 cache/0/45/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/42/0 = Vector2(0, 0)
 cache/0/48/0/ascent = 0.0
 cache/0/48/0/descent = 0.0
 cache/0/48/0/underline_position = 0.0
@@ -83,9 +100,79 @@ cache/0/48/0/kerning_overrides/75/0 = Vector2(0, 0)
 cache/0/48/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/48/0/kerning_overrides/45/0 = Vector2(0, 0)
 cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/44/0/ascent = 0.0
+cache/0/44/0/descent = 0.0
+cache/0/44/0/underline_position = 0.0
+cache/0/44/0/underline_thickness = 0.0
+cache/0/44/0/scale = 1.0
+cache/0/44/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/43/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/40/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/40/0/glyphs/0/size = Vector2(0, 0)
+cache/0/40/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/40/0/glyphs/0/texture_idx = -1
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/42/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/42/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/42/0/glyphs/0/size = Vector2(0, 0)
+cache/0/42/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/42/0/glyphs/0/texture_idx = -1
+cache/0/42/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/42/0 = Vector2(0, 0)
 
 [sub_resource type="Animation" id="2"]
-resource_name = "txt"
+resource_name = "animacao_inicial"
 length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -97,7 +184,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 14.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 2000), Vector2(0, 0)]
+"values": [Vector2(0, 2000), Vector2(4, 300)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -114,7 +201,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vjwl7"]
 _data = {
-"txt": SubResource("2")
+"animacao_inicial": SubResource("2")
 }
 
 [node name="creditos" type="Control"]
@@ -125,12 +212,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3")
+metadata/_edit_lock_ = true
 
 [node name="cor_fundo" type="ColorRect" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0.462745, 0.772549, 0.290196, 1)
+metadata/_edit_lock_ = true
 
 [node name="Texto" type="Label" parent="."]
 layout_mode = 1
@@ -141,30 +230,60 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -540.0
 offset_top = 1040.0
-offset_right = 532.0
-offset_bottom = 1797.0
+offset_right = 527.0
+offset_bottom = 2465.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = SubResource("3")
-theme_override_font_sizes/font_size = 48
-text = "Créditos
+theme_override_font_sizes/font_size = 40
+text = "O jogo \"Quiz Gênios ao longo da História\" 
+foi desenvolvido no ambiente de pesquisa
+ stricto sensu, no Programa de
+ Pós-Graduação em Ensino em Biociências e
+Saúde da Fundação Oswaldo Cruz/Fiocruz. 
+A pesquisa de doutorado foi conduzida
+por Aline Rinco Dutra Salgado, sob a 
+orientação da Prof. Dra. Cristina Maria 
+Carvalho Delou.
 
-O jogo “Quiz Gênios ao longo da
-História”  foi produzido no programa 
-de pós-graduação EBS/IOC/Fiocruz
-durante a pesquisa de 
-doutoramento 
-de Aline Rinco Dutra Salgado,
-Sob orientação da prof.ª 
-Dra. Cristina Delou, e 
-desenvolvido por
-Douglas Gabriel O. Guimarães
-em parceria com Artur L. Casarim
-e Heitor N. Crochet.
+
+
+
+
+O projeto de pesquisa recebeu aprovação 
+do Comitê de Ética em Pesquisa do 
+Instituto Oswaldo Cruz/Fiocruz, conforme
+ parecer nº 4.926.117 e dados  preenchidos
+ do TALE pelos participantes e do TCLE pelos
+ responsáveis.
+
+
+
+
+
+ Após 4 e 8 meses de curso de doutorado,
+ o jovem Douglas O. Guimarães, que agora é 
+maior de idade, assumiu a responsabilidade
+ pelo desenvolvimento do jogo na plataforma 
+Godot Game Engine. Além disso, ele criou o 
+site de divulgação do jogo e do almanaque 
+a ser hospedado na plataforma GitHub. 
+O almanaque disponível no jogo,
+ onde se encontra mais informações, foi 
+elaborado por Douglas O. Guimarães,
+ Artur L. Casarim e Heitor N. Crochet.
+
+
+
+
+
+
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 uppercase = true
+metadata/_edit_lock_ = true
 
 [node name="versao" type="Label" parent="."]
 layout_mode = 0
@@ -173,7 +292,7 @@ offset_right = 381.0
 offset_bottom = 5060.0
 theme_override_fonts/font = ExtResource("1")
 theme_override_font_sizes/font_size = 50
-text = "Versão: 09.05.23"
+text = "Versão: 19.06.23"
 metadata/_edit_lock_ = true
 
 [node name="Sair" type="TextureButton" parent="."]
@@ -183,9 +302,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_4py26")
 metadata/_edit_lock_ = true
 
-[node name="Animacao_txt" type="AnimationPlayer" parent="."]
+[node name="Animacao" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_vjwl7")
 }

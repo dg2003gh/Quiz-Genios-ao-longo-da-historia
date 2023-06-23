@@ -1,9 +1,9 @@
 extends Control
 
+@onready var animacoes_player: Node = $Animacao
 
 func _ready():
-	$Animacao_txt.play("txt")
+	animacoes_player.play("animacao_inicial")
 	
 func _on_Sair_pressed():
-	Audio.som_botao()
 	Transicao.mudar_cena("res://Cenas/Menus/Configs.tscn")

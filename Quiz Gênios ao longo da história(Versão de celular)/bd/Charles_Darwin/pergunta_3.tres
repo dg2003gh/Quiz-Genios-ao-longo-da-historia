@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-pergunta = "Em qual área Darwin atuava?"
-opcoes = [ "Matemática", "Biologia", "Física", "Química" ]
-correta = "Biologia"
+pergunta = "Em qual ano Darwin nasceu?"
+opcoes = [ "1798", "1809", "1814", "1820" ]
+correta = "1809"

@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://usgni7ingrpl"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Quantos filhos ele teve?"
-opcoes = [ "1 filho", "2 filhos", "6 filhos", "9 filhos" ]
-correta = "6 filhos"
+script = ExtResource("1")
+pergunta = "Quem foi o maior oponente de Edison?"
+opcoes = Array[String](["Albert Einstein", "Nikola Tesla", "Walt Disney", "Pablo Picasso"])
+correta = "Nikola Tesla"

@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://csw0d1o0nkkoi"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "O que é verdadeiro sobre Tesla?"
-opcoes = [ "Fez um foquete", "Era ambientalista", "Inventou a internet", "Detestava pombos" ]
-correta = "Era ambientalista"
+script = ExtResource("1")
+pergunta = "Em qual ano Tesla nasceu?"
+opcoes = Array[String](["1856", "1889", "1902", "1872"])
+correta = "1856"

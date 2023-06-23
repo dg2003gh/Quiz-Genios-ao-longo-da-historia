@@ -1,6 +1,7 @@
 [gd_scene load_steps=14 format=3]
 
 [ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="2_8ncjl"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="3_emaef"]
 [ext_resource type="Script" path="res://Scripts/cenas_da_resposta/Errado.gd" id="7"]
 
 [sub_resource type="FontFile" id="7"]
@@ -48,15 +49,6 @@ base_font = ExtResource("2_8ncjl")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3hh4"]
 bg_color = Color(0, 0.756863, 1, 1)
 border_width_bottom = 30
-border_color = Color(0.34902, 0.364706, 0.368627, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62uch"]
-bg_color = Color(0.470588, 0.835294, 1, 1)
-border_width_bottom = 10
 border_color = Color(0.34902, 0.364706, 0.368627, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
@@ -237,10 +229,12 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_o2jpk")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_k3hh4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_62uch")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_62uch")
-theme_override_styles/focus = SubResource("StyleBoxFlat_62uch")
-text = "Jogar Novamente"
+theme_override_styles/hover = SubResource("StyleBoxFlat_k3hh4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k3hh4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k3hh4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_k3hh4")
+text = "JOGAR NOVAMENTE"
+script = ExtResource("3_emaef")
 metadata/_edit_lock_ = true
 
 [node name="Voltar" type="Button" parent="."]
@@ -252,10 +246,12 @@ offset_bottom = 1850.0
 theme_override_fonts/font = SubResource("FontVariation_q6hmu")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_khyha")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nehyg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_khyha")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nehyg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khyha")
 theme_override_styles/focus = SubResource("StyleBoxFlat_nehyg")
-text = "Voltar ao Menu"
+text = "VOLTAR AO MENU"
+script = ExtResource("3_emaef")
 metadata/_edit_lock_ = true
 
 [node name="voltar_ao_menu" type="Timer" parent="Voltar"]

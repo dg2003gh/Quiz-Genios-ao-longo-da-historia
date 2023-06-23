@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://bqs2ltgddjw8q"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Qual destas premiações Bell recebeu?"
-opcoes = [ "Nobel", "Medalha Hughes", "Medalha Darwin", "Framboesa de ouro" ]
-correta = "Medalha Hughes"
+script = ExtResource("1")
+pergunta = "Quem comprou ações de sua empresa?"
+opcoes = Array[String](["Bill Gates", "Dom Pedro II", "Napoleão Bonaparte", "The Beatles"])
+correta = "Dom Pedro II"

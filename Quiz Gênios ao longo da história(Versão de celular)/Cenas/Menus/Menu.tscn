@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://xq7x1u21c8ar"]
+[gd_scene load_steps=19 format=3 uid="uid://xcdoe51tv3n0"]
 
 [ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="2"]
 [ext_resource type="Script" path="res://Scripts/Menus/Menu.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://bko7lef4kx6qo" path="res://assets/Imagens/Gênios.png" id="4"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="5_y44dm"]
 [ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="9"]
 
 [sub_resource type="FontVariation" id="FontVariation_iaga8"]
@@ -25,6 +26,8 @@ corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_1rn0u"]
 
 [sub_resource type="FontVariation" id="FontVariation_fsg75"]
 base_font = ExtResource("2")
@@ -98,26 +101,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Comecar:position")
+tracks/2/path = NodePath("Sair:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1200, 820), Vector2(75, 820)]
+"values": [Vector2(1200, 1600), Vector2(77, 1600)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Configs:position")
+tracks/3/path = NodePath("Comecar:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.8),
+"times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1200, 1080), Vector2(75, 1080)]
+"values": [Vector2(1200, 820), Vector2(75, 820)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -134,14 +137,14 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Sair:position")
+tracks/5/path = NodePath("Configs:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.2),
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1200, 1600), Vector2(77, 1600)]
+"values": [Vector2(1200, 1080), Vector2(75, 1080)]
 }
 
 [sub_resource type="Animation" id="Animation_diuid"]
@@ -200,7 +203,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9")
 stretch_mode = 3
-metadata/_edit_lock_ = true
 
 [node name="Genios" type="Sprite2D" parent="."]
 position = Vector2(541, -500)
@@ -236,7 +238,7 @@ fit_content = true
 scroll_active = false
 metadata/_edit_lock_ = true
 
-[node name="Comecar" type="Button" parent="."]
+[node name="Comecar" type="Button" parent="." groups=["som_botoes"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -252,13 +254,17 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_iaga8")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_am8l6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ty5vu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_am8l6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ty5vu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_am8l6")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ty5vu")
-text = "Começar"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1rn0u")
+text = "COMEÇAR"
+script = ExtResource("5_y44dm")
 metadata/_edit_lock_ = true
 
-[node name="Configs" type="Button" parent="."]
+[node name="Configs" type="Button" parent="." groups=["som_botoes"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -274,14 +280,18 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_iaga8")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_am8l6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ty5vu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_am8l6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ty5vu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_am8l6")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ty5vu")
-text = "Configurações
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1rn0u")
+text = "CONFIGURAÇÕES
 "
+script = ExtResource("5_y44dm")
 metadata/_edit_lock_ = true
 
-[node name="Saiba_mais" type="Button" parent="."]
+[node name="Saiba_mais" type="Button" parent="." groups=["som_botoes"]]
 layout_mode = 0
 offset_left = 1200.0
 offset_top = 1340.0
@@ -290,13 +300,17 @@ offset_bottom = 1590.0
 theme_override_fonts/font = SubResource("FontVariation_fsg75")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_soa25")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hhrhu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_soa25")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hhrhu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_soa25")
 theme_override_styles/focus = SubResource("StyleBoxFlat_soa25")
-text = "Saiba mais "
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1rn0u")
+text = "SAIBA MAIS"
+script = ExtResource("5_y44dm")
 metadata/_edit_lock_ = true
 
-[node name="Sair" type="Button" parent="."]
+[node name="Sair" type="Button" parent="." groups=["som_botoes"]]
 layout_mode = 0
 offset_left = 1200.0
 offset_top = 1600.0
@@ -305,10 +319,14 @@ offset_bottom = 1850.0
 theme_override_fonts/font = SubResource("FontVariation_i6ouf")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_vb6df")
-theme_override_styles/hover = SubResource("StyleBoxFlat_oxgfj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vb6df")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_oxgfj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vb6df")
 theme_override_styles/focus = SubResource("StyleBoxFlat_oxgfj")
-text = "Sair"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1rn0u")
+text = "SAIR"
+script = ExtResource("5_y44dm")
 metadata/_edit_lock_ = true
 
 [node name="animacoes" type="AnimationPlayer" parent="."]

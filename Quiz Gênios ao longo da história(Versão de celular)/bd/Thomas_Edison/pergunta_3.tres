@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-pergunta = "Como Edison ficou conhecido?"
-opcoes = [ "Inventor do dinheiro", "Inventor da lâmpada", "Inventor do trem", "Inventor da chave" ]
-correta = "Inventor da lâmpada"
+pergunta = "Em qual ano nasceu Thomas Edison?"
+opcoes = [ "1745", "1800", "1947", "1847" ]
+correta = "1847"

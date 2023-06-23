@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://g11fji3a7kwa"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Em qual ano Darwin nasceu?"
-opcoes = [ "1798", "1809", "1814", "1820" ]
-correta = "1809"
+script = ExtResource("1")
+pergunta = "Em qual área Darwin atuava?"
+opcoes = Array[String](["Matemática", "Biologia", "Física", "Química"])
+correta = "Biologia"

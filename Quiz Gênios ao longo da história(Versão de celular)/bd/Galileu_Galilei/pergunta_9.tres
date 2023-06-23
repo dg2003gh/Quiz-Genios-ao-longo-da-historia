@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://d2sdb37j3vb75"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Qual destas teorias galilei defendia?"
-opcoes = [ "Heliocentrismo", "Geocentrismo", "Relativismo", "Egocentrismo" ]
+script = ExtResource("1")
+pergunta = "Qual destas teorias Galilei defendia?"
+opcoes = Array[String](["Heliocentrismo", "Geocentrismo", "Relativismo", "Egocentrismo"])
 correta = "Heliocentrismo"

@@ -1,17 +1,17 @@
-[gd_resource type="Resource" script_class="BD" load_steps=12 format=3]
+[gd_resource type="Resource" script_class="BD" load_steps=12 format=3 uid="uid://tf8lbwx8c7np"]
 
 [ext_resource type="Script" path="res://resources/banco_de_dados.gd" id="1"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_1.tres" id="2"]
+[ext_resource type="Resource" uid="uid://csw0d1o0nkkoi" path="res://bd/Nikola_Tesla/pergunta_9.tres" id="2"]
 [ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_3.tres" id="3"]
 [ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_2.tres" id="4"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_8.tres" id="5"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_9.tres" id="6"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_7.tres" id="7"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_4.tres" id="8"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_10.tres" id="9"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_5.tres" id="10"]
-[ext_resource type="Resource" path="res://bd/Nikola_Tesla/pergunta_6.tres" id="11"]
+[ext_resource type="Resource" uid="uid://biswq5a2t6fdp" path="res://bd/Nikola_Tesla/pergunta_8.tres" id="5"]
+[ext_resource type="Resource" uid="uid://foxrliswdnx" path="res://bd/Nikola_Tesla/pergunta_1.tres" id="6"]
+[ext_resource type="Resource" uid="uid://ranuji15xjhu" path="res://bd/Nikola_Tesla/pergunta_7.tres" id="7"]
+[ext_resource type="Resource" uid="uid://bcbulugrq22ht" path="res://bd/Nikola_Tesla/pergunta_4.tres" id="8"]
+[ext_resource type="Resource" uid="uid://cfvqhap2mocig" path="res://bd/Nikola_Tesla/pergunta_10.tres" id="9"]
+[ext_resource type="Resource" uid="uid://btqe64pji2c2c" path="res://bd/Nikola_Tesla/pergunta_5.tres" id="10"]
+[ext_resource type="Resource" uid="uid://pjoqq108gets" path="res://bd/Nikola_Tesla/pergunta_6.tres" id="11"]
 
 [resource]
 script = ExtResource("1")
-questoes = Array[Resource]([ExtResource("2"), ExtResource("4"), ExtResource("3"), ExtResource("8"), ExtResource("10"), ExtResource("11"), ExtResource("7"), ExtResource("5"), ExtResource("6"), ExtResource("9")])
+questoes = Array[Resource]([ExtResource("6"), ExtResource("4"), ExtResource("3"), ExtResource("8"), ExtResource("10"), ExtResource("11"), ExtResource("7"), ExtResource("5"), ExtResource("2"), ExtResource("9")])

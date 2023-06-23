@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Qual destas pinturas não é de da vinci?"
+pergunta = "Qual destas pinturas não é de da Vinci?"
 opcoes = Array[String](["Mona Lisa", "A Última Ceia", "A Ronda Noturna", "Ginevra de'Benci"])
 correta = "A ronda noturna"

@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Qual era o nome da máquina de criptografia que Turing decifrou seus códigos?"
-opcoes = Array[String](["Light3D", "Código", "Bomba", "Decifrador"])
-correta = "Bomba"
+pergunta = "Quem inspirou Turing?"
+opcoes = Array[String](["Elvis Presley", "Santos Dumont", "Albert Einstein", "Steve Jobs"])
+correta = "Albert Einstein"

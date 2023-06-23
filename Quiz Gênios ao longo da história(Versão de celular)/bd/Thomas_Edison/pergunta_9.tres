@@ -6,4 +6,4 @@
 script = ExtResource("1")
 pergunta = "Qual empresa Edison fundou?"
 opcoes = Array[String](["General Eletric", "Apple", "Microsoft", "Google"])
-correta = "General Electric"
+correta = "General Eletric"

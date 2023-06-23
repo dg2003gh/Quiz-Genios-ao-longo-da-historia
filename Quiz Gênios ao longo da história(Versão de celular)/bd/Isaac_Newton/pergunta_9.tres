@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://q76n1tn1nlys"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1_815j7"]
+
+[resource]
+script = ExtResource("1_815j7")
+pergunta = "Qual Lei de Newton afirma que o corpo tende a ficar em repouso?"
+opcoes = Array[String](["1ª - Inércia", "2ª - Dinâmica", "3ª - Ação e reação", "Nenhuma Delas"])
+correta = "1ª - Inércia"

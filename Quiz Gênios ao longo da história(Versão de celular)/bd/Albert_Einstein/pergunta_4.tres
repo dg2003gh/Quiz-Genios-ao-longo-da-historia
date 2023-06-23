@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Qual é o trabalho mais conhecido de Einstein?"
+pergunta = "Por qual trabalho Einstein ficou conhecido?"
 opcoes = Array[String](["Buraco Negro", "Relatividade Geral", "Big Rip", "Paradoxo de fermi"])
 correta = "Relatividade Geral"

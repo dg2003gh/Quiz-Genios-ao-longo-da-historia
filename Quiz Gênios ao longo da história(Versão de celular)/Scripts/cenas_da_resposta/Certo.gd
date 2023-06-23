@@ -1,12 +1,10 @@
 extends Node
 
-@onready var pontuacao_txt := $Pontuacao
-@onready var animacao := $animacao
-@onready var txt := $Texto
+@onready var pontuacao_label: Node = $Pontuacao
+@onready var animacao: Node = $animacao
+@onready var texto_label: Node = $Texto
 
-
-
-var textos = [
+var textos: Array[String] = [
 	"Parabéns, você respondeu \n todas as perguntas corretamente! \n  Que inteligência!",
 	"Nossa!\nVocê não é um 10, é um 1000! ",
 	"Carambolas!\n  Como você consegue ser tão\n  inteligente?\nLeu nosso conteúdo sobre\n ele, não é?",
@@ -21,8 +19,9 @@ func _ready():
 		pontuacao()
 	else:
 		texto()
+		
 func animacoes():
-		Audio.cena_resposta_correta_som()
+		Audio.tocar_sons("res://assets/Audios/Sons/cena_resposta_correta.ogg")
 		animacao.play("animacao_inicial")
 		await animacao.animation_finished
 		animacao.play("loop_simbolo")
@@ -30,50 +29,50 @@ func animacoes():
 #---------------------------======---------------------------
 
 func texto():
-		for t in textos:
+		for txt in textos:
 			randomize()
 			textos.shuffle()
-			$Texto.set_text(str(t))
+			texto_label.set_text(str(txt))
 
 #---------------------------======---------------------------
 func textos_modos_com_pontuacao():
 	if Globais.pontos <= 4:
-		txt.set_text(str("É... parece que você \nprecisa dar ",
-		"uma clicadinha no\n botão \"saiba mais!\"")) 
+		texto_label.set_text(str("É... parece que você \nprecisa dar ",
+		"uma clicadinha no\n botão \"SAIBA MAIS!\"")) 
 	if Globais.pontos >= 5:
-		txt.set_text(str("É isso aí, você foi demais!",
+		texto_label.set_text(str("É isso aí, foi demais!",
 		"\nPorém, se você quiser acertar 10/10,\n terá que se esforçar um pouco mais!")) 
 	if Globais.pontos == 10:
-		txt.set_text(str("Nossa, que demais! \n",
-		"Você foi excelente. \n Será que leu nosso conteúdo?"))
+		texto_label.set_text(str("Nossa, que demais! \n",
+		"Você foi excelente. \n Será que leu nosso \nconteúdo: em \"SAIBA MAIS\"?"))
 		
 #---------------------------======---------------------------		
 func pontuacao():
 	if Globais.modo_de_jogo == 2 or Globais.modo_de_jogo == 4:
-		pontuacao_txt.show()
-		pontuacao_txt.set_text(str("Parabéns, sua pontuação foi ", Globais.pontos, "/10!!!")) 
+		pontuacao_label.show()
+		pontuacao_label.set_text(str("Parabéns, sua pontuação foi ", Globais.pontos, "/10!!!")) 
 		if Globais.pontos <= 4:
-			pontuacao_txt.set_text(str("Sua pontuação foi ", Globais.pontos, "/10!!!")) 
+			pontuacao_label.set_text(str("Sua pontuação foi ", Globais.pontos, "/10!!!")) 
 		Globais.pontos = 0
 	else:
-		pontuacao_txt.hide()
+		pontuacao_label.hide()
 
 #---------------------------======---------------------------
 
 func _on_Jogar_Novamente_pressed():
-	Audio.som_botao()
-	Transicao.mudar_cena("res://Cenas/Menus/modo_de_jogo.tscn")
+	Globais.pontos = 0
+	Transicao.jogar_transicao(Globais.cena_anterior, true)
 	
 #---------------------------======---------------------------
 
 func _on_voltar_pressed():
-	Audio.som_botao()
-	Audio.tocar_musica()
+	Audio.animar_audio()
+	Globais.pontos = 0
+	Audio.player_sons.stop()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
 	
 #---------------------------======---------------------------
 
 func _on_voltar_ao_menu_timeout():
-	Audio.tocar_musica()
-	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
+	_on_voltar_pressed()
 

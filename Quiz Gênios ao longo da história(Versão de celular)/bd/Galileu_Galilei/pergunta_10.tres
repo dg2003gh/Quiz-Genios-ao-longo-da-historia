@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Qual era a profissão de um dos seus filho?"
-opcoes = Array[String](["Anatomista", "Geólogo", "Músico", "Jardineiro"])
-correta = "Músico"
+pergunta = "Qual instrumento Galilei tocava?"
+opcoes = Array[String](["Piano", "Guitarra", "Cítara", "Baixo"])
+correta = "Cítara"

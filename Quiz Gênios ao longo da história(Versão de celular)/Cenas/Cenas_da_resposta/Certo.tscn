@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bksqsytkkdi5g"]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="2_wvooy"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="3_kjjlm"]
 [ext_resource type="Script" path="res://Scripts/cenas_da_resposta/Certo.gd" id="6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxvx0"]
@@ -244,7 +245,7 @@ offset_bottom = 417.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_wvooy")
-theme_override_font_sizes/font_size = 700
+theme_override_font_sizes/font_size = 600
 text = "✓"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -302,10 +303,12 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_xv0gk")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_5lnfw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d5m6q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lnfw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_d5m6q")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5lnfw")
 theme_override_styles/focus = SubResource("StyleBoxFlat_d5m6q")
-text = "Jogar Novamente"
+text = "JOGAR NOVAMENTE"
+script = ExtResource("3_kjjlm")
 metadata/_edit_lock_ = true
 
 [node name="Voltar" type="Button" parent="."]
@@ -317,10 +320,12 @@ offset_bottom = 1850.0
 theme_override_fonts/font = SubResource("FontVariation_8b6sf")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_d0n85")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3ep63")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d0n85")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3ep63")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_d0n85")
 theme_override_styles/focus = SubResource("StyleBoxFlat_3ep63")
-text = "Voltar ao Menu"
+text = "VOLTAR AO MENU"
+script = ExtResource("3_kjjlm")
 metadata/_edit_lock_ = true
 
 [node name="voltar_ao_menu" type="Timer" parent="Voltar"]

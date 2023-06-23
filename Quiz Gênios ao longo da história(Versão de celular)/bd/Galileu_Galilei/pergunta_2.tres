@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Onde nasceu Galilei?"
+pergunta = "Onde nasceu Galileu Galilei?"
 opcoes = Array[String](["Portugal", "Inglaterra", "Itália", "Arábia Saudita"])
 correta = "Itália"

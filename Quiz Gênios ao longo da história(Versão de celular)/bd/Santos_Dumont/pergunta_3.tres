@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://dcgodn2jvtq8a"]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://bqqnyfm8bsb5r"]
 
 [ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
-pergunta = "Santos Dumont era:"
-opcoes = Array[String](["Aviador", "Bombeiro", "Programador", "Médico"])
-correta = "Aviador"
+pergunta = "Quando nasceu Santos Dumont?"
+opcoes = Array[String](["1823", "1873", "1892", "1902"])
+correta = "1873"

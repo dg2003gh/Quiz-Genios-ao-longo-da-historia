@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://bveawqr1hxcei"]
 
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1_wivs5"]
 
 [resource]
-script = ExtResource( 1 )
-pergunta = "Em qual ano Galilei nasceu?"
-opcoes = [ "1452", "1564", "1669", "1723" ]
-correta = "1564"
+script = ExtResource("1_wivs5")
+pergunta = "Quem foi Galileu Galilei?"
+opcoes = Array[String](["Domador de cavalos", "Balconista", "Astrônomo", "Arqueólogo"])
+correta = "Astrônomo"

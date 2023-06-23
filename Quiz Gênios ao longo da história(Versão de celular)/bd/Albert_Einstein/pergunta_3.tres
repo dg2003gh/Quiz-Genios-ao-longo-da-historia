@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-pergunta = "Por qual destas equações ficou conhecido?"
+pergunta = "Qual destas equações é associada a Einstein?"
 opcoes = Array[String](["ax²+bx+c=x", "E=mc²", "a - b . (c + a) ", "cx + d = x"])
 correta = "E=mc²"

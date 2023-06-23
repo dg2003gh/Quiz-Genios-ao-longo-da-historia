@@ -1,8 +1,9 @@
 extends Control
 
-@onready var animacao := $animacao
+@onready var texto_label: Node = $Texto
+@onready var animacao: Node = $animacao
 
-var textos = ["Tic-tac, Tic-tac,\n Tic-tac...", 
+var textos: Array[String] = ["Tic-tac, Tic-tac,\n Tic-tac...", 
 			"O tempo acabou!\n Olha, está até saindo\n fumaça da sua caixola!", 
 			"O tempo passou\n e você não percebeu?",
 			"Minha avó dizia...\no que ela dizia mesmo?\n Faz tanto tempo...",
@@ -17,29 +18,26 @@ func texto():
 	for txt in textos:
 		randomize()
 		textos.shuffle()
-		$Texto.set_text(str(txt))
+		texto_label.set_text(str(txt))
 #---------------------------======---------------------------	
 func animacoes():
-		Audio.cena_tempo_esgotado_som()
+		Audio.tocar_sons("res://assets/Audios/Sons/cena_tempo_esgotado.ogg")
 		animacao.play("animacao_inicial")
 		await animacao.animation_finished
 		animacao.play("loop_relogio")
 
 #---------------------------======---------------------------			
 func _on_Jogar_Novamente_pressed():
-	Audio.som_botao()
-	Transicao.jogar_transicao(Globais.cena_anterior)
-
+	Transicao.jogar_transicao(Globais.cena_anterior, true)
+	
 #---------------------------======---------------------------
 	
 func _on_voltar_pressed():
-	Audio.som_botao()
-	Audio.tocar_musica()
+	Audio.animar_audio()
+	Audio.player_sons.stop()
 	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
 
 #---------------------------======---------------------------
 
 func _on_voltar_ao_menu_timeout():
-	Audio.som_botao()
-	Audio.tocar_musica()
-	Transicao.mudar_cena("res://Cenas/Menus/Menu.tscn")
+	_on_voltar_pressed()
