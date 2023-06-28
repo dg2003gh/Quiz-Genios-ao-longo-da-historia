@@ -5,3 +5,8 @@ Repositório do Quiz: Gênios ao longo da história.
 ### :us: EN: repository of the quiz game "Quiz: Gênios ao longo da história",  Currently only in Brazilian Portuguese.
 
 Website: https://dg2003gh.github.io/site.quizgeniosaolongodahistoria/
+
+
+![websites light mode screenshot](./screenshots/one.png)
+
+![websites dark mode screenshot](./screenshots/two.png)
