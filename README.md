@@ -7,6 +7,4 @@ Repositório do Quiz: Gênios ao longo da história.
 Website: https://dg2003gh.github.io/site.quizgeniosaolongodahistoria/
 
 
-![websites light mode screenshot](./screenshots/one.png)
-
-![websites dark mode screenshot](./screenshots/two.png)
+![game screenshot](./screenshots/jogo.png)
