@@ -1,0 +1,404 @@
+[gd_scene load_steps=22 format=3 uid="uid://bd4b15w22b3mj"]
+
+[ext_resource type="Script" path="res://Scripts/Cena_principal/script_jogo.gd" id="1_g4ipe"]
+[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="2_p0j0v"]
+[ext_resource type="Texture2D" uid="uid://cxehyvwhj15qc" path="res://assets/Imagens/Quadro.png" id="3_oigev"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="4_yck3l"]
+[ext_resource type="Script" path="res://Scripts/Cena_principal/Temporizador.gd" id="5_kxwv6"]
+[ext_resource type="Texture2D" uid="uid://di1054d2fux31" path="res://assets/Imagens/pausar.png" id="6_thkix"]
+[ext_resource type="Texture2D" uid="uid://diqbmjd077j5d" path="res://assets/Imagens/pausar apertado.png" id="7_5qvfw"]
+[ext_resource type="PackedScene" uid="uid://ba7sv386osxbd" path="res://Cenas/Menus/menu_de_pausa.tscn" id="7_simix"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="8_iw742"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sbfy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tamx6"]
+texture = ExtResource("3_oigev")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pplx5"]
+texture = ExtResource("6_thkix")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qyn6p"]
+texture = ExtResource("7_5qvfw")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lgdv"]
+
+[sub_resource type="FontVariation" id="FontVariation_ynun1"]
+base_font = ExtResource("4_yck3l")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0r3y"]
+bg_color = Color(0, 0.756863, 1, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34nje"]
+bg_color = Color(0.470588, 0.835294, 1, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Animation" id="Animation_4iebe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gui/Tempo:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dbnlb"]
+resource_name = "animacao_inicial"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gui/quadro:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, -300), Vector2(256, 53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gui/foto_genio:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-200, 190), Vector2(150, 190)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gui/pausar:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2000, 1824), Vector2(960, 1790)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gui/nivel_atual:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Gui/alternativas/resposta4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1500), Vector2(75, 1450)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Gui/alternativas/resposta1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 480), Vector2(75, 400)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Gui/alternativas/resposta3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1160), Vector2(75, 1100)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Gui/alternativas/resposta2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 820), Vector2(75, 750)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Gui/Tempo:visible_ratio")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_p2n8q"]
+resource_name = "loop_genio"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gui/foto_genio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(150, 190), Vector2(150, 180), Vector2(150, 190)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3cp5p"]
+_data = {
+"RESET": SubResource("Animation_4iebe"),
+"animacao_inicial": SubResource("Animation_dbnlb"),
+"loop_genio": SubResource("Animation_p2n8q")
+}
+
+[node name="Cena_principal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4ipe")
+metadata/_edit_lock_ = true
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_p0j0v")
+metadata/_edit_lock_ = true
+
+[node name="Gui" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 386.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5sbfy")
+metadata/_edit_lock_ = true
+
+[node name="quadro" type="Panel" parent="Gui"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 53.0
+offset_right = 1064.0
+offset_bottom = 317.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tamx6")
+metadata/_edit_lock_ = true
+
+[node name="texto_quadro" type="Label" parent="Gui/quadro"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 28.0
+offset_right = 784.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("4_yck3l")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="foto_genio" type="Sprite2D" parent="Gui"]
+position = Vector2(150, 190)
+scale = Vector2(0.256389, 0.244038)
+metadata/_edit_lock_ = true
+
+[node name="Tempo" type="RichTextLabel" parent="Gui"]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 248.0
+offset_right = 1024.0
+offset_bottom = 288.0
+theme_override_fonts/normal_font = ExtResource("4_yck3l")
+theme_override_font_sizes/normal_font_size = 35
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("5_kxwv6")
+
+[node name="Timer" type="Timer" parent="Gui/Tempo"]
+process_mode = 1
+process_callback = 0
+autostart = true
+
+[node name="nivel_atual" type="RichTextLabel" parent="Gui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059
+anchor_top = 0.207
+anchor_right = 0.059
+anchor_bottom = 0.207
+offset_left = 232.28
+offset_top = 168.098
+offset_right = 456.28
+offset_bottom = 216.098
+theme_override_fonts/normal_font = ExtResource("4_yck3l")
+theme_override_font_sizes/normal_font_size = 35
+metadata/_edit_lock_ = true
+
+[node name="pausar" type="Button" parent="Gui"]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 1790.0
+offset_right = 1064.0
+offset_bottom = 1877.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pplx5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pplx5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qyn6p")
+theme_override_styles/focus = SubResource("StyleBoxTexture_qyn6p")
+script = ExtResource("8_iw742")
+metadata/_edit_lock_ = true
+
+[node name="alternativas" type="Panel" parent="Gui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0lgdv")
+metadata/_edit_lock_ = true
+
+[node name="resposta1" type="Button" parent="Gui/alternativas"]
+texture_filter = 2
+texture_repeat = 1
+custom_minimum_size = Vector2(930, 300)
+layout_mode = 2
+offset_left = 75.0
+offset_top = 400.0
+offset_right = 1005.0
+offset_bottom = 700.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_ynun1")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_34nje")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s0r3y")
+clip_text = true
+icon_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="resposta2" type="Button" parent="Gui/alternativas"]
+texture_filter = 2
+texture_repeat = 1
+custom_minimum_size = Vector2(930, 300)
+layout_mode = 2
+offset_left = 75.0
+offset_top = 750.0
+offset_right = 1005.0
+offset_bottom = 1050.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_ynun1")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_34nje")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s0r3y")
+clip_text = true
+icon_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="resposta3" type="Button" parent="Gui/alternativas"]
+texture_filter = 2
+texture_repeat = 1
+custom_minimum_size = Vector2(930, 300)
+layout_mode = 2
+offset_left = 75.0
+offset_top = 1100.0
+offset_right = 1005.0
+offset_bottom = 1400.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_ynun1")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_34nje")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s0r3y")
+clip_text = true
+icon_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="resposta4" type="Button" parent="Gui/alternativas"]
+texture_filter = 2
+texture_repeat = 1
+custom_minimum_size = Vector2(930, 300)
+layout_mode = 2
+offset_left = 75.0
+offset_top = 1450.0
+offset_right = 1005.0
+offset_bottom = 1750.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_ynun1")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_34nje")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s0r3y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s0r3y")
+clip_text = true
+icon_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="animacao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3cp5p")
+}
+
+[node name="menu_de_pausa" parent="." instance=ExtResource("7_simix")]
+
+[connection signal="timeout" from="Gui/Tempo/Timer" to="Gui/Tempo" method="_on_timer_timeout"]
+[connection signal="pressed" from="Gui/pausar" to="." method="_on_pausar_pressed"]

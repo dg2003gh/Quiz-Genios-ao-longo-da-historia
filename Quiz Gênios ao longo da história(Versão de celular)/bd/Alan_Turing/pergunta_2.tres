@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://boyhum8adsdvg"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual é a nacionalidade de Turing?"
+opcoes = Array[String](["Britânica", "Argentina", "Brasileira", "Francesa"])
+correta = "Britânica"

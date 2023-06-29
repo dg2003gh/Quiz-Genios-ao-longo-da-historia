@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cidpojs0bh173"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Como Galilei ficou conhecido?"
+opcoes = Array[String](["Pai da Ciência moderna", "Pai da Ciência antiga", "Pai da aviação", "Tiradentes"])
+correta = "Pai da ciência moderna"

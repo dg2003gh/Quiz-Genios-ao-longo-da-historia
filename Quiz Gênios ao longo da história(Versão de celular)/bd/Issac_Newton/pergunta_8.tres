@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cgukxt4y162bp"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Quantas Leis de Newton existem? "
+opcoes = Array[String](["1 lei", "2 leis", "3 leis", "5 leis"])
+correta = "3 leis"
