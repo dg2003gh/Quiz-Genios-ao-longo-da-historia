@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pergunta = "O que é verdadeiro sobre Newton?"
+opcoes = [ "Investigou a Patagônia", "Inventou o cálculo", "Inventou a pilha", "Inventou o relógio" ]
+correta = "Inventou o cálculo"

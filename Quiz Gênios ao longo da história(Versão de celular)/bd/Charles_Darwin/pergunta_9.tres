@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://b6k21n1u6i16v"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual país Darwin não visitou durante expedição?"
+opcoes = Array[String](["Brasil", "Equador", "México", "Uruguai"])
+correta = "México"

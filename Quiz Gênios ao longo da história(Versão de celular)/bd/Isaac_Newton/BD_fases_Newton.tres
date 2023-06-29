@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BD" load_steps=12 format=3 uid="uid://jlwib1u4qr0b"]
+
+[ext_resource type="Script" path="res://resources/banco_de_dados.gd" id="1"]
+[ext_resource type="Resource" uid="uid://csqoind4yl335" path="res://bd/Issac_Newton/pergunta_6.tres" id="2"]
+[ext_resource type="Resource" uid="uid://dkoghkkdp1ywp" path="res://bd/Issac_Newton/pergunta_10.tres" id="3"]
+[ext_resource type="Resource" path="res://bd/Isaac_Newton/pergunta_2.tres" id="4"]
+[ext_resource type="Resource" path="res://bd/Isaac_Newton/pergunta_5.tres" id="5"]
+[ext_resource type="Resource" uid="uid://vkbfrsfg1e6s" path="res://bd/Issac_Newton/pergunta_7.tres" id="6"]
+[ext_resource type="Resource" path="res://bd/Isaac_Newton/pergunta_3.tres" id="7"]
+[ext_resource type="Resource" uid="uid://q76n1tn1nlys" path="res://bd/Isaac_Newton/pergunta_9.tres" id="8"]
+[ext_resource type="Resource" uid="uid://dewmtpceblsyh" path="res://bd/Isaac_Newton/pergunta_1.tres" id="9"]
+[ext_resource type="Resource" uid="uid://cgukxt4y162bp" path="res://bd/Issac_Newton/pergunta_8.tres" id="10"]
+[ext_resource type="Resource" path="res://bd/Isaac_Newton/pergunta_4.tres" id="11"]
+
+[resource]
+script = ExtResource("1")
+questoes = Array[Resource]([ExtResource("9"), ExtResource("4"), ExtResource("7"), ExtResource("11"), ExtResource("5"), ExtResource("2"), ExtResource("6"), ExtResource("10"), ExtResource("8"), ExtResource("3")])

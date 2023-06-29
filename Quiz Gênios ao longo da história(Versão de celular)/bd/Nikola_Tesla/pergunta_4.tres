@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://bcbulugrq22ht"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Quem o contratou para trabalhar?"
+opcoes = Array[String](["Albert Einstein", "Thomas Edison", "Charles Darwin", "Graham Bell"])
+correta = "Thomas Edison"

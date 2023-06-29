@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://bv7bfsfswn3fs"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Onde nasceu Galileu Galilei?"
+opcoes = Array[String](["Portugal", "Inglaterra", "Itália", "Arábia Saudita"])
+correta = "Itália"

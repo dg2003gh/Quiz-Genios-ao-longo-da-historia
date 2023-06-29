@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://ukr84gw5nw33"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual destas equações é associada a Einstein?"
+opcoes = Array[String](["ax²+bx+c=x", "E=mc²", "a - b . (c + a) ", "cx + d = x"])
+correta = "E=mc²"

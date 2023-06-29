@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://bex78s2mpc1hf"]
+
+[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pergunta = "Qual instrumento Galilei inventou?"
+opcoes = Array[String](["Teléscopio", "Lâmpada", "Computador", "Relógio"])
+correta = "Teléscopio"
