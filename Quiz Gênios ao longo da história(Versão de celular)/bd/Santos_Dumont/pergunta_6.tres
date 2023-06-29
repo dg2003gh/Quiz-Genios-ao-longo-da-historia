@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://clqjdtokickao"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Como o avião 14-Bis era conhecido na França?"
-opcoes = Array[String](["Águia", "Condor", "Ave de rapina", "Albatroz"])
-correta = "Ave de rapina"

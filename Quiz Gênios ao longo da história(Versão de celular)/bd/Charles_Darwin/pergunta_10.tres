@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cgiloq7mhmmlm"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "O que é falso sobre Darwin?"
-opcoes = Array[String](["Foi colecionador", "Não foi médico", "Teve 10 filhos", "Conheceu Galilei"])
-correta = "Conheceu Galilei"

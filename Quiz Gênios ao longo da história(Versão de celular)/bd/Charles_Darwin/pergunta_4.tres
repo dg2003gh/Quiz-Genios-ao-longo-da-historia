@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://brtsn5m8wrev7"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "\"A origem das Espécies\" defendia qual “Seleção”?"
-opcoes = Array[String](["Natural", "Artificial", "Extensa", "Curta"])
-correta = "Natural"

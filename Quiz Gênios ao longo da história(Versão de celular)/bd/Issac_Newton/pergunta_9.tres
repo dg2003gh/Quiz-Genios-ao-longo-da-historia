@@ -1,9 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=2]
-
-[ext_resource path="res://resources/fazedor_de_perguntas.gd" type="Script" id=1]
-
-[resource]
-script = ExtResource( 1 )
-pergunta = "Qual Lei de Newton afirma que o corpo tende a ficar em repouso?"
-opcoes = [ "1ª - Inércia", "2ª - Dinâmica", "3ª - Ação e reação", "Rotação da terra" ]
-correta = "1º - Inércia"

@@ -1,0 +1,269 @@
+:root {
+  --clr-primary: #f0e7de;
+  --clr-secondary: #cabaac;
+  --clr-tertiary: black;
+  --clr-quaternary: #0c0c0c3d;
+
+  --cfg-filter-invert: 0%;
+  --cfg-border-radius: 15px;
+}
+
+.darkMode {
+  --clr-primary: #252423;
+  --clr-secondary: #554f4a;
+  --clr-tertiary: white;
+  --clr-quaternary: #ffffff3d;
+
+  --cfg-filter-invert: 100%;
+}
+
+@font-face {
+  font-family: "Anaktoria";
+  src: url("../fonts/Anaktoria.otf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--clr-tertiary);
+  transition: color 500ms;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--clr-quaternary);
+  border-radius: var(--cfg-border-radius);
+}
+
+*::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+body {
+  background-color: var(--clr-primary);
+  font-family: Anaktoria, system-ui, -apple-system;
+  font-size: 20px;
+  transition: background-color 1500ms;
+}
+
+body.u-active {
+  overflow: hidden;
+}
+
+hr {
+  border: 1px solid var(--clr-tertiary);
+  margin: 10px 0;
+  transition: border 500ms;
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+.c-theme {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: var(--clr-secondary);
+  font-size: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 750ms ease-in-out;
+}
+
+.c-theme:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+
+.c-sideImg {
+  position: fixed;
+  height: 100vh;
+  filter: invert(var(--cfg-filter-invert));
+}
+
+.c-mainSection {
+  text-align: center;
+  margin-left: 50px;
+  min-height: 100vh;
+}
+
+.c-mainSection__icon {
+  animation: icons-animation infinite alternate 2000ms;
+}
+
+.c-container {
+  display: flex;
+  text-align: center;
+  padding: 50px;
+}
+
+.c-container__links {
+  padding: 50px;
+}
+
+.c-container__linkButtons {
+  position: relative;
+  background-color: var(--clr-primary);
+  text-decoration: none;
+  border: 1px solid var(--clr-tertiary);
+  padding: 3px 40px;
+  margin-top: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.c-container__linkButtons>i {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  font-size: 17px;
+}
+
+.c-container__linkButtons:hover {
+  background-color: var(--clr-secondary);
+  cursor: pointer;
+}
+
+.c-text-container {
+  width: 75vw;
+  text-align: justify;
+  text-indent: 30px;
+  margin: auto;
+  margin-bottom: 150px;
+}
+
+.c-floatForm {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: var(--clr-secondary);
+  width: 75vw;
+  height: 90vh;
+  padding: 20px 0;
+  border-radius: var(--cfg-border-radius);
+  transition: transform 250ms ease-in-out;
+}
+
+.c-floatForm.u-active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.c-floatForm__closeButton {
+  position: absolute;
+  font-size: 35px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.c-floatForm__closeButton:hover {
+  color: var(--clr-primary);
+}
+
+.c-floatForm li {
+  margin-left: 17px;
+}
+
+.c-floatForm__textBox {
+  font-family: ubuntu, system-ui, -apple-system;
+  height: 95%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: justify;
+  margin-top: 30px;
+  padding: 30px;
+  scrollbar-color: var(--clr-quaternary) transparent;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+  transition: all 500ms;
+}
+
+#overlay.u-active {
+  opacity: 1;
+  background-color: var(--clr-quaternary);
+  pointer-events: all;
+}
+
+.c-footer {
+  display: block;
+  margin: auto;
+  margin-right: 30px;
+  margin-bottom: 5px;
+  background-color: var(--clr-secondary);
+  text-align: center;
+  width: 90vw;
+  height: 100px;
+  padding: 25px;
+  border-radius: var(--cfg-border-radius);
+}
+
+.c-footer__links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.c-footer__links a {
+  text-decoration: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.c-footer i {
+  margin-right: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.c-footer p {
+  font-size: 17px;
+}
+
+@keyframes icons-animation {
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .c-sideImg {
+    width: 70px;
+  }
+
+  .c-mainSection__icon {
+    width: 250px;
+    height: 250px;
+  }
+
+  .c-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .c-floatForm {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+  }
+
+  .c-footer {
+    background-color: transparent;
+    margin-right: 0;
+  }
+}

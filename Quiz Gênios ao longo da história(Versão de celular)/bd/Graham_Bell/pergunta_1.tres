@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cedl0wvfgti14"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1_s8imw"]
-
-[resource]
-script = ExtResource("1_s8imw")
-pergunta = "Quem foi Graham Bell?"
-opcoes = Array[String](["Artista", "Inventor", "Astrólogo", "Escavador"])
-correta = "Inventor"

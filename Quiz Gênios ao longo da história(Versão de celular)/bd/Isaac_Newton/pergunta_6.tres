@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://csqoind4yl335"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1_0oynl"]
-
-[resource]
-script = ExtResource("1_0oynl")
-pergunta = "O que é falso sobre Isaac Newton?"
-opcoes = Array[String](["Foi garçom", "Foi mágico", "Praticou alquimia", "Foi professor"])
-correta = "Foi mágico"

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://ranuji15xjhu"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "O que é falso sobre Tesla?"
-opcoes = Array[String](["Dormia pouco", "Tinha boa memória", "Tinha fixação por gatos", "Tinha fixação pelo nº 3"])
-correta = "Tinha fixação por gatos"

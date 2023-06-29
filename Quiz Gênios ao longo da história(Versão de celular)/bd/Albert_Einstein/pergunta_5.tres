@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://d0xcjbjdwldv1"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Qual foi o 1º emprego de Einstein?"
-opcoes = Array[String](["Secretário", "Artista", "Professor", "Escritor"])
-correta = "Secretário"
