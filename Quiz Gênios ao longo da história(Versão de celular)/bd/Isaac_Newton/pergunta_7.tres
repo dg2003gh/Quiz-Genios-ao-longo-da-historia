@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://vkbfrsfg1e6s"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Qual a fórmula da Gravitação Universal?"
-opcoes = Array[String](["E = m.c²", "F = G. M¹.M²/d²", "a + b = c ", "G = M.C²"])
-correta = "F = G. M¹.M²/d²"

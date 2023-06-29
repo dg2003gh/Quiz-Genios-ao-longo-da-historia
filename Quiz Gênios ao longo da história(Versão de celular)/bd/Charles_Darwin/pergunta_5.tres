@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://cmkgdfiod1rd3"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Qual o valor pago em seu manuscrito em um leilão? "
-opcoes = Array[String](["US$ 982 mil", "US$ 89 mil", "US$ 210 mil", "US$ 882 mil "])
-correta = "US$ 882 mil "

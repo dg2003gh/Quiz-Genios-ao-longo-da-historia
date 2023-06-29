@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://dwg1c5b3um0w1"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Onde nasceu Albert Einstein?"
-opcoes = Array[String](["EUA", "Brasil", "Alemanha", "Angola"])
-correta = "Alemanha"

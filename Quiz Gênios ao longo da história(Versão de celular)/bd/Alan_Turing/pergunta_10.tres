@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://egysuefht73a"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Qual é o nome da máquina de criptografia criada por Turing ?"
-opcoes = Array[String](["Enigma", "Obstáculo", "Die wand", "The wall"])
-correta = "Enigma"

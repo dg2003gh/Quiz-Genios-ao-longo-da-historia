@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://c13yp4q5cm4x7"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Quem inspirou Turing?"
-opcoes = Array[String](["Elvis Presley", "Santos Dumont", "Albert Einstein", "Steve Jobs"])
-correta = "Albert Einstein"

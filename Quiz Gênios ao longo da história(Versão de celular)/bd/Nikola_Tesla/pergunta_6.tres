@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="pergunta" load_steps=2 format=3 uid="uid://pjoqq108gets"]
-
-[ext_resource type="Script" path="res://resources/fazedor_de_perguntas.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-pergunta = "Quantas patentes estima-se que Tesla registrou?"
-opcoes = Array[String](["200", "500", "600", "700"])
-correta = "700"
