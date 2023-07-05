@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc4irds3lh1hu"]
+
+[ext_resource type="Script" path="res://autoloads/Audio.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://1cvon2jt0hva" path="res://assets/Audios/Sons/Temporizador.ogg" id="2_s8xkj"]
+
+[sub_resource type="Animation" id="Animation_sgufw"]
+resource_name = "animacao_audio"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_musica:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7gsre"]
+_data = {
+"animacao_audio": SubResource("Animation_sgufw")
+}
+
+[node name="Audio" type="Node2D"]
+script = ExtResource("2")
+
+[node name="player_musica" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+bus = &"Musica"
+
+[node name="player_sons" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+volume_db = -10.0
+bus = &"Sons"
+
+[node name="player_botao" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+bus = &"Sons"
+
+[node name="player_temporizador" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_s8xkj")
+bus = &"Sons"
+
+[node name="animacao_audio" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7gsre")
+}

@@ -1,0 +1,433 @@
+[gd_scene load_steps=23 format=3 uid="uid://bh0nog3q4x207"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/Configs.gd" id="1_fggco"]
+[ext_resource type="Texture2D" uid="uid://csht4t6nxx877" path="res://assets/Imagens/Fundo.png" id="2_71wrf"]
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="3_kkhuo"]
+[ext_resource type="Texture2D" uid="uid://bx6w4buxpstmd" path="res://assets/Imagens/checkButton.png" id="4_rkxrh"]
+[ext_resource type="Texture2D" uid="uid://f8goxxnymg4n" path="res://assets/Imagens/checkButton_checked.png" id="4_vi5dy"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="6_73i2j"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes_toggle.gd" id="6_hfq87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn5h0"]
+bg_color = Color(0, 0.756863, 1, 1)
+border_width_left = 10
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yr0xv"]
+bg_color = Color(0.0980392, 0.862745, 0, 1)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n36xn"]
+
+[sub_resource type="Theme" id="Theme_ioicc"]
+CheckButton/icons/checked = ExtResource("4_vi5dy")
+CheckButton/icons/unchecked = ExtResource("4_rkxrh")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_n36xn")
+
+[sub_resource type="FontVariation" id="FontVariation_m40ig"]
+base_font = ExtResource("3_kkhuo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vexvg"]
+bg_color = Color(0, 0.756863, 1, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fd2sy"]
+bg_color = Color(0.470588, 0.835294, 1, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="FontVariation" id="FontVariation_6b3il"]
+base_font = ExtResource("3_kkhuo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xx5bd"]
+bg_color = Color(0.0985251, 0.862252, 0, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnsmp"]
+bg_color = Color(0.532515, 1, 0.489938, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="FontVariation" id="FontVariation_miald"]
+base_font = ExtResource("3_kkhuo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp5m8"]
+bg_color = Color(1, 0, 0, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrfx"]
+bg_color = Color(1, 0.664335, 0.611911, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Animation" id="Animation_7octv"]
+resource_name = "animacao_inicial"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel_do_audio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1200, 188), Vector2(108.5, 188)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel_do_audio/audio_label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0001, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(293, -500), Vector2(293, -1000), Vector2(293, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel_do_audio/musica:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1500, 220), Vector2(59.5, 220)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel_do_audio/sons:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2500, 220), Vector2(570.5, 220)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("politicas:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 820), Vector2(75, 820)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("creditos:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1080), Vector2(75, 1080)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Saiba_mais:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1340), Vector2(77, 1340)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Voltar:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 1600), Vector2(75, 1600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s8p1q"]
+_data = {
+"animacao_inicial": SubResource("Animation_7octv")
+}
+
+[node name="configs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fggco")
+metadata/_edit_lock_ = true
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_71wrf")
+metadata/_edit_lock_ = true
+
+[node name="Panel_do_audio" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -431.5
+offset_top = 188.0
+offset_right = 431.506
+offset_bottom = 613.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bn5h0")
+metadata/_edit_lock_ = true
+
+[node name="audio_label" type="Label" parent="Panel_do_audio"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.503
+offset_right = 138.497
+offset_bottom = 98.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_kkhuo")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_yr0xv")
+text = "ÁUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="musica" type="CheckButton" parent="Panel_do_audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -372.003
+offset_top = 7.5
+offset_right = 214.004
+offset_bottom = 343.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+theme = SubResource("Theme_ioicc")
+theme_override_fonts/font = ExtResource("3_kkhuo")
+theme_override_font_sizes/font_size = 150
+alignment = 1
+clip_text = true
+script = ExtResource("6_hfq87")
+metadata/_edit_lock_ = true
+
+[node name="Label_musica" type="Label" parent="Panel_do_audio/musica"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0184868
+anchor_top = -0.417659
+anchor_right = 0.970705
+anchor_bottom = 0.162698
+offset_left = -3.05176e-05
+offset_top = 0.000442505
+offset_right = 0.00012207
+offset_bottom = 0.000480652
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_kkhuo")
+theme_override_font_sizes/font_size = 170
+text = "Música"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="sons" type="CheckButton" parent="Panel_do_audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 138.997
+offset_top = 7.5
+offset_right = 724.987
+offset_bottom = 343.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+theme = SubResource("Theme_ioicc")
+theme_override_fonts/font = ExtResource("3_kkhuo")
+theme_override_font_sizes/font_size = 150
+alignment = 1
+clip_text = true
+script = ExtResource("6_hfq87")
+metadata/_edit_lock_ = true
+
+[node name="Label_sons" type="Label" parent="Panel_do_audio/sons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153584
+anchor_top = -0.416666
+anchor_right = 0.808874
+anchor_bottom = 0.163691
+offset_left = 0.000938416
+offset_top = -0.000228882
+offset_right = 0.00765991
+offset_bottom = -0.000175476
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_kkhuo")
+theme_override_font_sizes/font_size = 170
+text = "Sons"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="politicas" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -140.0
+offset_right = 465.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_m40ig")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_vexvg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vexvg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fd2sy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vexvg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vexvg")
+text = "POLÍTICAS"
+script = ExtResource("6_73i2j")
+metadata/_edit_lock_ = true
+
+[node name="creditos" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = 120.0
+offset_right = 465.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_m40ig")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_vexvg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vexvg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fd2sy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vexvg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vexvg")
+text = "CRÉDITOS
+"
+script = ExtResource("6_73i2j")
+metadata/_edit_lock_ = true
+
+[node name="Saiba_mais" type="Button" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 1340.0
+offset_right = 1007.0
+offset_bottom = 1590.0
+theme_override_fonts/font = SubResource("FontVariation_6b3il")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_xx5bd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xx5bd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vnsmp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xx5bd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xx5bd")
+text = "SAIBA MAIS"
+script = ExtResource("6_73i2j")
+metadata/_edit_lock_ = true
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -465.0
+offset_top = -320.0
+offset_right = 465.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = SubResource("FontVariation_miald")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_dp5m8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dp5m8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uwrfx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dp5m8")
+theme_override_styles/focus = SubResource("StyleBoxFlat_uwrfx")
+text = "VOLTAR AO MENU"
+script = ExtResource("6_73i2j")
+metadata/_edit_lock_ = true
+
+[node name="animacoes" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s8p1q")
+}
+
+[connection signal="toggled" from="Panel_do_audio/musica" to="." method="_on_musica_toggled"]
+[connection signal="toggled" from="Panel_do_audio/sons" to="." method="_on_sons_toggled"]
+[connection signal="pressed" from="politicas" to="." method="_on_politicas_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Saiba_mais" to="." method="_on_saiba_mais_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

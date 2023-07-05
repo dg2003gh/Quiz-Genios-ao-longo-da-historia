@@ -1,0 +1,435 @@
+[gd_scene load_steps=17 format=3 uid="uid://cv5m75skvbbqx"]
+
+[ext_resource type="FontFile" uid="uid://58peuvhwwdw0" path="res://assets/Fontes/Ubuntu Bold (TFF)/Ubuntu-Bold.ttf" id="1"]
+[ext_resource type="Script" path="res://Scripts/Menus/politicas.gd" id="1_nw1fg"]
+[ext_resource type="Script" path="res://Scripts/scripts_globais/som_botoes.gd" id="3_4py26"]
+
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("1")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/16/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/16/0/glyphs/0/size = Vector2(0, 0)
+cache/0/16/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/16/0/glyphs/0/texture_idx = -1
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/75/0/ascent = 0.0
+cache/0/75/0/descent = 0.0
+cache/0/75/0/underline_position = 0.0
+cache/0/75/0/underline_thickness = 0.0
+cache/0/75/0/scale = 1.0
+cache/0/75/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/75/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/75/0/glyphs/0/size = Vector2(0, 0)
+cache/0/75/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/75/0/glyphs/0/texture_idx = -1
+cache/0/75/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/50/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/50/0/glyphs/0/size = Vector2(0, 0)
+cache/0/50/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/50/0/glyphs/0/texture_idx = -1
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
+cache/0/45/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/45/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/45/0/glyphs/0/size = Vector2(0, 0)
+cache/0/45/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/45/0/glyphs/0/texture_idx = -1
+cache/0/45/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/48/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/48/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/48/0/glyphs/0/size = Vector2(0, 0)
+cache/0/48/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/48/0/glyphs/0/texture_idx = -1
+cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/44/0/ascent = 0.0
+cache/0/44/0/descent = 0.0
+cache/0/44/0/underline_position = 0.0
+cache/0/44/0/underline_thickness = 0.0
+cache/0/44/0/scale = 1.0
+cache/0/44/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/44/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/43/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/43/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/40/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/40/0/glyphs/0/size = Vector2(0, 0)
+cache/0/40/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/40/0/glyphs/0/texture_idx = -1
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/42/0 = Vector2(0, 0)
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/42/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/42/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/42/0/glyphs/0/size = Vector2(0, 0)
+cache/0/42/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/42/0/glyphs/0/texture_idx = -1
+cache/0/42/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/44/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/43/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/42/0/kerning_overrides/42/0 = Vector2(0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_ooka0"]
+base_font = ExtResource("1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjb37"]
+bg_color = Color(0, 0.756863, 1, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1eyi"]
+bg_color = Color(0.470588, 0.835294, 1, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_6c1ma"]
+
+[sub_resource type="FontVariation" id="FontVariation_8bv25"]
+base_font = ExtResource("1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smjia"]
+bg_color = Color(0.0985251, 0.862252, 0, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gea7w"]
+bg_color = Color(0.532515, 1, 0.489938, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="FontVariation" id="FontVariation_te7e2"]
+base_font = ExtResource("1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6hi1"]
+bg_color = Color(1, 0, 0, 1)
+border_width_bottom = 30
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcdr1"]
+bg_color = Color(1, 0.664335, 0.611911, 1)
+border_width_bottom = 10
+border_color = Color(0.34902, 0.364706, 0.368627, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Animation" id="2"]
+resource_name = "animacao_inicial"
+length = 3.0
+step = 0.0996
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.996),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1500, -100), Vector2(4, -100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("versao:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.988),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 5000), Vector2(15, 1846)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("politicas:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6972),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1500, 1040), Vector2(75, 1040)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("aceitar e continuar:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8964),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1500, 1300), Vector2(77, 1300)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sair:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.0956),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1500, 1560), Vector2(77, 1560)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjwl7"]
+_data = {
+"animacao_inicial": SubResource("2")
+}
+
+[node name="politicas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nw1fg")
+metadata/_edit_lock_ = true
+
+[node name="cor_fundo" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.917647, 0.807843, 0.368627, 1)
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2040.0
+offset_top = -1060.0
+offset_right = -973.0
+offset_bottom = 365.028
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 40
+text = "POLÍTICA DE PRIVACIDADE E TERMOS E CONDIÇÕES
+ 
+Mesmo que nosso aplicativo seja totalmente livre e gratuíto devemos lhe apresentar as nossas políticas.
+Abaixo, o botão \"políticas\",  leva ao nosso site onde você pode ler todas elas."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="politicas" type="Button" parent="." groups=["som_botoes"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 960.0
+offset_top = 80.0
+offset_right = 1890.0
+offset_bottom = 330.005
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_ooka0")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjb37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xjb37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a1eyi")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xjb37")
+theme_override_styles/focus = SubResource("StyleBoxFlat_a1eyi")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_6c1ma")
+text = "POLÍTICAS
+"
+script = ExtResource("3_4py26")
+metadata/_edit_lock_ = true
+
+[node name="aceitar e continuar" type="Button" parent="." groups=["som_botoes"]]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 1300.0
+offset_right = 2430.0
+offset_bottom = 1550.0
+theme_override_fonts/font = SubResource("FontVariation_8bv25")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_smjia")
+theme_override_styles/hover = SubResource("StyleBoxFlat_smjia")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gea7w")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_smjia")
+theme_override_styles/focus = SubResource("StyleBoxFlat_smjia")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_6c1ma")
+text = "ACEITAR
+ E CONTINUAR"
+script = ExtResource("3_4py26")
+metadata/_edit_lock_ = true
+
+[node name="Sair" type="Button" parent="." groups=["som_botoes"]]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 1560.0
+offset_right = 2430.0
+offset_bottom = 1810.0
+theme_override_fonts/font = SubResource("FontVariation_te7e2")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_x6hi1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x6hi1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kcdr1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_x6hi1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kcdr1")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_6c1ma")
+text = "RECUSAR 
+E SAIR"
+script = ExtResource("3_4py26")
+metadata/_edit_lock_ = true
+
+[node name="versao" type="Label" parent="."]
+layout_mode = 0
+offset_top = 5000.0
+offset_right = 381.0
+offset_bottom = 5060.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 50
+text = "Versão: 05.07.23"
+metadata/_edit_lock_ = true
+
+[node name="Animacao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vjwl7")
+}
+
+[connection signal="pressed" from="politicas" to="." method="_on_politicas_pressed"]
+[connection signal="pressed" from="aceitar e continuar" to="." method="_on_aceitar_e_continuar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
