@@ -47,6 +47,21 @@ document.querySelectorAll("[data-modal-target]").forEach((CloseButton) => {
   CloseButton.addEventListener("click", () => {
     const modalTag = document.querySelector(CloseButton.dataset.modalTarget);
     toggleModal(modalTag);
-    console.log("fui clicado");
   });
 });
+
+function goToPolicies() {
+  const hash = window.location.hash;
+  const privacyID = document.querySelector("#js-privacyPopup");
+  const conditionsID = document.querySelector("#js-termsConditionsPopup");
+  if (hash == "#privacy") {
+    toggleModal(privacyID);
+  } else if (hash == "#conditions") {
+    toggleModal(conditionsID);
+  } else if (hash == "#privacy&conditions") {
+    toggleModal(privacyID);
+    toggleModal(conditionsID);
+  } else return;
+}
+
+goToPolicies();

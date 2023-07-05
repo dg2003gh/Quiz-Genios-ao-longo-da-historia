@@ -128,6 +128,23 @@ h4 {
   cursor: pointer;
 }
 
+.c-languages__row {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.c-languages__language {
+  background-color: var(--clr-quaternary);
+  width: 100vw;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: var(--cfg-border-radius);
+}
+
+
+
 .c-text-container {
   width: 75vw;
   text-align: justify;
@@ -257,9 +274,9 @@ h4 {
   }
 
   .c-floatForm {
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    padding: 30px;
+    padding: 25px 0;
   }
 
   .c-footer {
