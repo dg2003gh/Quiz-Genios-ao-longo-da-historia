@@ -7,7 +7,7 @@ class Translator {
   translate() {
     const xrhFile = new XMLHttpRequest();
 
-    xrhFile.open("GET", "/translations/" + this.lng + ".json", true);
+    xrhFile.open("GET", "./translations/" + this.lng + ".json", true);
     xrhFile.onload = () => {
       if (xrhFile.readyState === 4) {
         if (xrhFile.status === 200 || xrhFile.status == 0) {
@@ -18,7 +18,7 @@ class Translator {
             const key = elem.getAttribute(this.tagAttr);
             if (key != null) {
               elem.innerHTML = LngObject[key];
-            } 
+            }
           }
         } else {
           console.error(xrhFile.statusText);
