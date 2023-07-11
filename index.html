@@ -39,6 +39,26 @@
   <body>
     <main>
       <i class="c-theme ri-moon-line" onclick="toggleTheme()"></i>
+      <i
+        class="c-popups__Button ri-file-warning-line"
+        data-modal-target="#js-knowProblemsPopup"
+      ></i>
+      <span id="js-knowProblemsPopup" class="c-popups u-active">
+        <i
+          class="u-closeButton ri-close-circle-fill"
+          data-modal-target="#js-knowProblemsPopup"
+        ></i>
+        <h4 translation-key="knownProblems_title">Known problems</h4>
+        <hr />
+        <ul class="c-popups__list">
+          <li
+            translation-key="knownProblems_list-firstItem"
+            data-modal-target="#js-cantInstallFromGooglePlayPopup"
+          >
+            I can't install the game from Google Play
+          </li>
+        </ul>
+      </span>
       <article>
         <img class="c-sideImg" src="./imgs/side.png" alt="" />
       </article>
@@ -47,7 +67,7 @@
           <img
             class="c-mainSection__icon"
             src="./imgs/Genios.png"
-            alt=" ícone dos Genios 400x400"
+            alt="Ícone dos Gênios 400x400"
             width="400px"
             height="400px"
           />
@@ -55,13 +75,12 @@
         <div class="c-container">
           <span class="c-container__links">
             <h4 translation-key="playstore-link_text">
-              If you want to access the GAME "Quiz: Gênios ao longo da
-              história", to Android phone/tablet, Click the button below.(soon
-              on Google playstore)
+              If you want to access the GAME "Quiz: Gênios ao longo da história"
+              on your Android phone/tablet, click the button below.
             </h4>
             <a
               class="c-container__linkButtons"
-              href="https://github.com/dg2003gh/Quiz-Genios-ao-longo-da-historia/releases/tag/v05.07.23-2_7"
+              href="https://play.google.com/store/apps/details?id=com.dg2003.quizgenios"
               download="Game"
               target="_blank"
               translation-key="playstore-link_button_text"
@@ -86,61 +105,271 @@
         </div>
         <article class="c-text-container">
           <p translation-key="main-text-first-paragraph">
-            "Gênios ao Longo da História" is an educational quiz game, developed
+            "Gênios ao Longo da História" is an educational quiz game developed
             in the Graduate Program in Teaching in Biosciences and Health at
             Instituto Oswaldo Cruz/Fiocruz, linked to the thesis "Teaching
-            Sciences, high skills and scientific vocation: protagonism youth in
-            remote psychopedagogical enrichment", developed by doctoral student
-            Aline Rinco Dutra Salgado under the guidance of professor Dr.
+            Sciences, high skills and scientific vocation: youth protagonism in
+            remote psychopedagogical enrichment," developed by doctoral student
+            Aline Rinco Dutra Salgado under the guidance of Professor Dr.
             Cristina Maria Carvalho Delou. Created by Douglas Gabriel O.
             Guimarães in partnership with Artur Lanini Casarim and Heitor Neves
             Crochet.
           </p>
           <p></p>
           <p translation-key="main-text-second-paragraph">
-            It was designed to arouse students' interest in science. by
-            presenting the biography of ten renowned scientists, inventors and
-            leaders who were precocious or self-taught in childhood, so
+            It was designed to arouse students' interest in science by
+            presenting the biography of ten renowned scientists, inventors, and
+            leaders who were precocious or self-taught in childhood. It is
             accessible and interesting, making learning more playful and
             motivating. The game has an attractive and colorful design and is
-            available online and can be accessed from any device connected to
-            the internet. It challenges players to answer questions related to
-            the geniuses featured in the educational almanac associated, in
-            multiple-choice format, with four alternatives Give me an answer.
+            available online, accessible from any device connected to the
+            internet. It challenges players to answer questions related to the
+            featured geniuses in the educational almanac associated, in a
+            multiple-choice format, with four alternative answers.
           </p>
           <p></p>
           <p translation-key="main-text-third-paragraph">
-            The questions cover various aspects of geniuses' lives, from their
-            discoveries and works to personal details and curiosities. besides
-            the challenge of the game itself, players can also deepen their
-            knowledge about these geniuses and the importance of their
-            contributions to history and society. Already the almanac associated
-            educational background includes historical facts, illustrations,
-            curiosities and suggests complementary materials, such as
-            documentaries, films, online games, exhibitions and virtual museums,
-            presented by through hyperlinks, making learning more dynamic and
-            interactive.
+            The questions cover various aspects of the geniuses' lives, from
+            their discoveries and works to personal details and curiosities.
+            Besides the challenge of the game itself, players can also deepen
+            their knowledge about these geniuses and the importance of their
+            contributions to history and society. The associated educational
+            almanac includes historical facts, illustrations, curiosities, and
+            suggests complementary materials such as documentaries, films,
+            online games, exhibitions, and virtual museums, presented through
+            hyperlinks, making learning more dynamic and interactive.
           </p>
           <p></p>
           <p translation-key="main-text-fourth-paragraph">
-            "Gênios ao Longo da História is an educational tool indicated for
+            "Gênios ao Longo da História" is an educational tool recommended for
             students in the Final Years of Elementary and High School, as well
             as for anyone interested in expanding their knowledge about the
             history and achievements of mankind.
           </p>
         </article>
       </section>
-      <form class="c-floatForm" id="js-privacyPopup">
+      <form class="c-modal" id="js-cantInstallFromGooglePlayPopup">
         <i
-          class="c-floatForm__closeButton ri-close-circle-fill"
-          data-modal-target="#js-privacyPopup"
+          class="u-closeButton ri-close-circle-fill"
+          data-modal-target="#js-cantInstallFromGooglePlayPopup"
         ></i>
-        <article class="c-floatForm__textBox">
+        <article class="c-modal__textBox">
           <span class="c-languages__row">
-            <i class="c-languages__language" onclick="setTranslation('pt-br')">
+            <i
+              class="c-languages__language"
+              translation-key="lang_pt-br"
+              onclick="setTranslation('pt-br')"
+            >
               🇧🇷 Portuguese</i
             >
-            <i class="c-languages__language" onclick="setTranslation('en')">
+            <i
+              class="c-languages__language"
+              translation-key="lang_en"
+              onclick="setTranslation('en')"
+            >
+              🇺🇸 English</i
+            >
+          </span>
+          <h1 translation-key="cantInstallFromGooglePlay__first-title">
+            Google Play doesn't support my device or my Android version
+          </h1>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__first-paragraph">
+            If you are trying to download the game on Google Play and that
+            message appears:
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/no-longer-compatible.png"
+            alt="This app is no longer compatible image"
+            width="70%"
+          />
+          <p translation-key="cantInstallFromGooglePlay__second-paragraph">
+            Don't get sad, probably our game runs on your device. But, for some
+            reason, Google Play detects that it doesn't. There are so many
+            possibilities, the most common is that your Android version is old
+            or your device doesn't meet some specific requirements or even your
+            device has specific hardware. Okay then, how can I resolve this
+            problem? It's quite simple, perhaps you can't do it through Google
+            Play.
+          </p>
+          <p translation-key="cantInstallFromGooglePlay__third-paragraph">
+            You'll basically need to go to our GitHub repository and download
+            the .apk or .abb and run it. I understand that for some people it
+            may be a little hard, so in the next part of this tutorial, I'll
+            show you how to do that.
+          </p>
+          <h4 translation-key="cantInstallFromGooglePlay__first-subtitle">
+            GitHub Repository
+          </h4>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__fourth-paragraph">
+            If you are a little in the developers' world, you have probably
+            heard about GitHub. But if you don't, it's totally okay. You just
+            need to download the game package from there. Enter this link below
+            and you'll be exactly where you need to be, in our repository. There
+            you can see the game source, the packages, and this website's source
+            too; so... go there!
+            <a
+              href="https://github.com/dg2003gh/Quiz-Genios-ao-longo-da-historia/releases/tag/v05.07.23-2_7"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Go to our GitHub releases page =></a
+            >
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/github_releases_tutorial.png"
+            alt="GitHub releases page image"
+            width="100%"
+          />
+          <h4 translation-key="cantInstallFromGooglePlay__second-subtitle">
+            Which file should I choose?
+          </h4>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__fifth-paragraph">
+            Well, you'll probably need the one that has "all" in its name. And
+            if you are on an old device, you will need the ".apk" file. If you
+            are on a new device, probably the ".abb" file is for you since
+            Google Play recommends using it.
+          </p>
+
+          <h4 translation-key="cantInstallFromGooglePlay__third-subtitle">
+            I want to know more.
+          </h4>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__sixth-paragraph">
+            About nomenclature:
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/nomenclature_explication.png"
+            alt="A package image with the nomenclature"
+            width="100%"
+          />
+          <ul translation-key="cantInstallFromGooglePlay__list">
+            <li>The "quiz_genios" part is to identify the game.</li>
+            <li>
+              The "v05.07.23-2_7" in this case means that it is a version that
+              was created on 07-05-2023. The "2_7" means that it is the second
+              version of the day and is the seventh code in the store.
+            </li>
+            <li>
+              The "all", "armeabi-7a", "arm64-v8", "x86", "x86 64"... It's about
+              your device's architecture.
+            </li>
+            <li>
+              The ".apk" and ".aab" are two Android package formats that are
+              used to install an app on your phone.
+            </li>
+          </ul>
+          <h4 translation-key="cantInstallFromGooglePlay__fourth-subtitle">
+            OK, I downloaded it, what now?
+          </h4>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__seventh-paragraph">
+            Well, go to where you downloaded it and just click on it. Then,
+            Android will ask you to configure to permit installing it on your
+            device. The message will probably look like this:
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/request_to_permit_unknown_sources.jpeg"
+            alt="Image of Android requesting to permit unknown sources"
+            width="100%"
+          />
+          <h4 translation-key="cantInstallFromGooglePlay__fifth-subtitle">
+            ATTENTION!
+          </h4>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__eighth-paragraph">
+            Android will probably say that the installation is not secure, but
+            that's not true. The app is totally secure, and it's official from
+            our repository. Your device will say that because it is recommended
+            to install only apps from Google Play, and that's right in most
+            cases, just not in this one. So, when you finish this tutorial,
+            please turn the option off in the configuration again for your
+            device's security.
+          </p>
+          <p translation-key="cantInstallFromGooglePlay__ninth-paragraph">
+            The next step is to press on "Settings," and you'll go to a screen
+            like this:
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/android_settings.jpeg"
+            alt="Image of Android security settings"
+            width="100%"
+          />
+          <p translation-key="cantInstallFromGooglePlay__tenth-paragraph">
+            Now, click on "Unknown sources" to enable it.
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/android_unknown_sources_disabled.jpeg"
+            alt="Image of Android unknown sources disabled"
+            width="100%"
+          />
+          <label translation-key="cantInstallFromGooglePlay__first-label">
+            Enabled:
+          </label>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/android_unknown_sources_enabled.jpeg"
+            alt="Image of Android unknown sources enabled"
+            width="100%"
+          />
+          <p translation-key="cantInstallFromGooglePlay__eleventh-paragraph">
+            Click "OK" and press Android's go back button until you get back to
+            the installation screen.
+          </p>
+          <p translation-key="cantInstallFromGooglePlay__twelfth-paragraph">
+            Clicking to install, you will probably get a message from Google
+            Play asking you to be careful that will look like that:
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/Google play message.jpeg"
+            alt="Image of Google play's message"
+            width="100%"
+          />
+          <p translation-key="cantInstallFromGooglePlay__thirteenth-paragraph">
+            Click on "Install anyway" and wait until it finishes.
+          </p>
+          <h4 translation-key="cantInstallFromGooglePlay__sixth-subtitle">
+            That's all, folks.
+          </h4>
+          <hr />
+          <p translation-key="cantInstallFromGooglePlay__fourteenth-paragraph">
+            When it's all finished, congratulations, it's time to play!
+          </p>
+          <img
+            class="u-image"
+            src="./imgs/known_problems/I_cant_install_from_google_play/game.png"
+            alt="Image of the game running"
+            width="100%"
+          />
+        </article>
+      </form>
+      <form class="c-modal" id="js-privacyPopup">
+        <i
+          class="u-closeButton ri-close-circle-fill"
+          data-modal-target="#js-privacyPopup"
+        ></i>
+        <article class="c-modal__textBox">
+          <span class="c-languages__row">
+            <i
+              class="c-languages__language"
+              translation-key="lang_pt-br"
+              onclick="setTranslation('pt-br')"
+            >
+              🇧🇷 Portuguese</i
+            >
+            <i
+              class="c-languages__language"
+              translation-key="lang_en"
+              onclick="setTranslation('en')"
+            >
               🇺🇸 English</i
             >
           </span>
@@ -306,17 +535,25 @@
           </p>
         </article>
       </form>
-      <form class="c-floatForm" id="js-termsConditionsPopup">
+      <form class="c-modal" id="js-termsConditionsPopup">
         <i
-          class="c-floatForm__closeButton ri-close-circle-fill"
+          class="u-closeButton ri-close-circle-fill"
           data-modal-target="#js-termsConditionsPopup"
         ></i>
-        <article class="c-floatForm__textBox">
+        <article class="c-modal__textBox">
           <span class="c-languages__row">
-            <i class="c-languages__language" onclick="setTranslation('pt-br')">
+            <i
+              class="c-languages__language"
+              translation-key="lang_pt-br"
+              onclick="setTranslation('pt-br')"
+            >
               🇧🇷 Portuguese</i
             >
-            <i class="c-languages__language" onclick="setTranslation('en')">
+            <i
+              class="c-languages__language"
+              translation-key="lang_en"
+              onclick="setTranslation('en')"
+            >
               🇺🇸 English</i
             >
           </span>
