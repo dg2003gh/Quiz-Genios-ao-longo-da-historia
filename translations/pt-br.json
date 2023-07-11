@@ -25,7 +25,7 @@
   "cantInstallFromGooglePlay__fifth-paragraph": "Bem, você provavelmente precisará daquele .apk que tem \"all\" no nome. Mas caso você saiba a arquitetura do seu dispositivo pode pegar aquele que tem a arquitetura do dispositivo no nome que tende a ter um tamanho de arquivo em MB reduzido.",
   "cantInstallFromGooglePlay__third-subtitle": "Quero saber mais.",
   "cantInstallFromGooglePlay__sixth-paragraph": "Sobre a nomenclatura:",
-  "cantInstallFromGooglePlay__list": "<li>A parte \"quiz_genios\" é para identificar o jogo.</li><li>O \"v05.07.23-2\" neste caso significa que é uma versão que foi criada em 05/07/2023. O \"2\" significa que é a segunda versão do dia.</li><li>O \"all\", \"armeabi-7a\", \"arm64-v8\", \"x86\", \"x86 64\"... É sobre a arquitetura do seu dispositivo.</li><li>O \".apk\"  é um  formato de pacote Android que é usado para instalar um aplicativo em seu dispositivo.</li>",
+  "cantInstallFromGooglePlay__list": "<li>A parte \"quiz_genios\" é para identificar o jogo.</li><li>O \"v11.07.23-1\" neste caso significa que é uma versão que foi criada em 11/07/2023. O \"1\" significa que é a primeira versão do dia.</li><li>O \"all\", \"armeabi-7a\", \"arm64-v8\", \"x86\", \"x86 64\"... É sobre a arquitetura do seu dispositivo.</li><li>O \".apk\"  é um  formato de pacote Android que é usado para instalar um aplicativo em seu dispositivo.</li>",
   "cantInstallFromGooglePlay__fourth-subtitle": "OK, baixei, e agora?",
   "cantInstallFromGooglePlay__seventh-paragraph": "Bem, você vai para onde você o baixou e clique nele. Então, o Android irá questioná-lo para configurar para permitir instalá-lo em seu dispositivo. A mensagem provavelmente se parecerá com:",
   "cantInstallFromGooglePlay__fifth-subtitle": "ATENÇÃO",
