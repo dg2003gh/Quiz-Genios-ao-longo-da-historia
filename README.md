@@ -4,8 +4,6 @@
 
 ### :us: EN: Site of the quiz game "Quiz: Gênios ao longo da história", containing information such as: project description, links and licenses. Currently the game is only Brazilian Portuguese.
 
-Website: https://dg2003gh.github.io/site.quizgeniosaolongodahistoria/
-
 ![websites light mode screenshot](./screenshots/light.png)
 
 ![websites dark mode screenshot](./screenshots/dark.png)
