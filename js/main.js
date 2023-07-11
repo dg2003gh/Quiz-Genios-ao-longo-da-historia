@@ -4,11 +4,15 @@ function toggleModal(modalTag) {
   const overlay = document.querySelector("#overlay");
 
   if (modalTag == null) return;
+  else if (modalTag.id == "js-knowProblemsPopup") {
+    //this is one of the moments you sure that you don't know what you are doing LOL ;)
+  } else {
+    overlay.classList.toggle("u-active");
+    overlay.setAttribute("data-modal-target", `#${modalTag.id}`);
+    document.body.classList.toggle("u-active");
+  }
 
   modalTag.classList.toggle("u-active");
-  overlay.classList.toggle("u-active");
-  overlay.setAttribute("data-modal-target", `#${modalTag.id}`);
-  document.body.classList.toggle("u-active");
 }
 
 function toggleTheme() {
