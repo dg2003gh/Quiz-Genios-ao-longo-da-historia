@@ -118,6 +118,7 @@ h4 {
 }
 
 .c-popups__Button {
+  z-index: 2;
   position: fixed;
   top: 20px;
   right: 30px;
