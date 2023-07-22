@@ -1,2 +1,17 @@
 Quiz-genios-ao-longo-da-historia-source/export_presets.cfg
+Quiz-genios-ao-longo-da-historia-source/export.cfg
 Quiz-genios-ao-longo-da-historia-source/android/
+
+# Godot 4+ specific ignores
+Quiz-genios-ao-longo-da-historia-source/.godot/
+
+# Godot-specific ignores
+Quiz-genios-ao-longo-da-historia-source/.import/
+
+# Imported translations (automatically generated from CSV files)
+#*.translation
+
+# Mono-specific ignores
+Quiz-genios-ao-longo-da-historia-source/.mono/
+Quiz-genios-ao-longo-da-historia-source/data_*/
+Quiz-genios-ao-longo-da-historia-source/mono_crash.*.json
