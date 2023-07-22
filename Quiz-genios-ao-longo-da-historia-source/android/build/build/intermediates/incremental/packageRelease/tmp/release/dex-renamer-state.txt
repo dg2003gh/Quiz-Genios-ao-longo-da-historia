@@ -1,4 +1,0 @@
-#Wed Jul 05 14:27:45 BRT 2023
-base.0=/home/dg2003/Documentos/Github/dg2003/Quiz-Genios-ao-longo-da-historia/Quiz-genios-ao-longo-da-historia-source/android/build/build/intermediates/dex/release/mergeDexRelease/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
